@@ -152,7 +152,6 @@ public class MyQueue<AnyType>{
         myQueue.remove();
         for(int i=8; i<11; i++){
             myQueue.add(i);
-
         }
         System.out.println(myQueue.elementToString());
         System.out.println(myQueue.toString());
