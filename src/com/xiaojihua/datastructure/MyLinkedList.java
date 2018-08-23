@@ -1,4 +1,4 @@
-package com.xiaojihua.study;
+package com.xiaojihua.datastructure;
 
 import java.util.Iterator;
 

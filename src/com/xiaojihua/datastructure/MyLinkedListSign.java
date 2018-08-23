@@ -1,6 +1,4 @@
-package com.xiaojihua.study;
-
-import org.omg.CORBA.Any;
+package com.xiaojihua.datastructure;
 
 import java.util.Iterator;
 

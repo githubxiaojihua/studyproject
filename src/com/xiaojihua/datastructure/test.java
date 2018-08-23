@@ -1,4 +1,4 @@
-package com.xiaojihua.study;
+package com.xiaojihua.datastructure;
 
 /**
  * 求最大组序列的算法

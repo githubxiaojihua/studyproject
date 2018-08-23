@@ -1,4 +1,4 @@
-package com.xiaojihua.study;
+package com.xiaojihua.datastructure;
 
 public class BinarySearchTree<AnyType extends Comparable> {
 

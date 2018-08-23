@@ -1,4 +1,4 @@
-package com.xiaojihua.study;
+package com.xiaojihua.datastructure;
 
 /**
  * 递归实现折半查找

@@ -1,4 +1,4 @@
-package com.xiaojihua.study;
+package com.xiaojihua.datastructure;
 
 /**
  * 通过单链表实现栈

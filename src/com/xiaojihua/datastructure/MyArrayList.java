@@ -1,4 +1,4 @@
-package com.xiaojihua.study;
+package com.xiaojihua.datastructure;
 
 
 public class MyArrayList<AnyType> implements Iterable<AnyType>

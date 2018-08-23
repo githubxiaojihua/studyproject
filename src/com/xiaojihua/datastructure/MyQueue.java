@@ -1,10 +1,7 @@
-package com.xiaojihua.study;
+package com.xiaojihua.datastructure;
 
 
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.NoSuchElementException;
-import java.util.Queue;
 
 /**
  * 数组实现队列
