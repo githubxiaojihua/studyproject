@@ -23,10 +23,70 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
+     * 公共方法：调用内部方法删除元素
+     * @param x
+     */
+    public void remove(AnyType x){
+        root = this.remove(x,root);
+    }
+
+    /**
      * 公共方法：调用内部方法打印树
      */
     public void printTree(){
         this.printTree(root);
+    }
+
+    /**
+     * 内部方法：删除元素
+     * * 删除逻辑分析：
+     * 	 * 如果节点是一片树叶那么可以立即删除。如果节点有一个儿子，则可以直接用儿子代替节点。
+     * 	 * 如果具有两个儿子节点，则用其右子树的最小数据代替该节点的数据并递归的删除那个节点，
+     * 	 * 因为右子树的最小节点不可能有左儿子，因此很好删除。
+     * @param x
+     * @param t
+     * @return
+     */
+    private AvlNode<AnyType> remove(AnyType x, AvlNode<AnyType> t){
+
+
+        if(t == null){
+            return t;// 如果t为空则什么也不做，返回t
+        }
+
+        int compareRes = x.compareTo(t.element);
+        if(compareRes > 0 ){
+            t.right = remove(x,t.right);
+        }else if(compareRes <0){
+            t.left = remove(x,t.left);
+        }else{
+            if(t.left != null && t.right != null){
+                // 当有左右子树的时候，用右子树中的最小值代替本节点元素，然后删除最小值。
+                t.element = this.findMin(t.right).element;
+                remove(t.element,t.right);
+            }else{
+                // 当只有一颗子树的时候，直接将本节点换成其子树
+                t = (t.left == null)?t.right:t.left;
+            }
+        }
+
+        return balance(t);
+    }
+
+    /**
+     * 内部方法：寻找最小值
+     * @param t
+     * @return
+     */
+    private AvlNode<AnyType> findMin(AvlNode<AnyType> t){
+
+        if(t == null){
+            return t;
+        }
+        while(t.left != null){
+            t = t.left;
+        }
+        return t;
     }
 
     /**
@@ -216,6 +276,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
             avlTree.insert(i);
         }
 
+        avlTree.remove(2);
         avlTree.printTree();
     }
 }
