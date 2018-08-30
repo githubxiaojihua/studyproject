@@ -38,6 +38,39 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
+     * 公用方法：检查节点的平衡性
+     */
+    public void checkBalance(){
+        this.checkBalance(root);
+    }
+
+
+    /**
+     * 内部方法：检查节点的平衡性
+     * @param t
+     * @return
+     */
+    private int checkBalance(AvlNode<AnyType> t){
+
+        // 基本情况
+        if( t == null )
+            return -1;
+
+        if( t != null )
+        {
+            // 不断推进
+            int hl = checkBalance( t.left );
+            int hr = checkBalance( t.right );
+            // 业务判断
+            if( Math.abs( height( t.left ) - height( t.right ) ) > 1 ||
+                    height( t.left ) != hl || height( t.right ) != hr )
+                System.out.println( "OOPS!!" );
+        }
+
+        // 基本情况
+        return height( t );
+    }
+    /**
      * 内部方法：删除元素
      * * 删除逻辑分析：
      * 	 * 如果节点是一片树叶那么可以立即删除。如果节点有一个儿子，则可以直接用儿子代替节点。
@@ -278,5 +311,6 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
 
         avlTree.remove(2);
         avlTree.printTree();
+        avlTree.checkBalance();
     }
 }
