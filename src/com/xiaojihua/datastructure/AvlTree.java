@@ -44,6 +44,27 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
         this.checkBalance(root);
     }
 
+    /**
+     * 公用方法：返回树的高度
+     * @return
+     */
+    public int heightForEpilogue(){
+        return this.heightForEpilogue(root);
+    }
+
+    /**
+     * 内部方法：后续遍历求解节点的高度
+     * @param t
+     * @return
+     */
+    private int heightForEpilogue(AvlNode<AnyType> t){
+
+        if(t == null){
+            return -1;
+        }
+        return Math.max(heightForEpilogue(t.left),heightForEpilogue(t.right)) + 1;
+    }
+
 
     /**
      * 内部方法：检查节点的平衡性
@@ -158,7 +179,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
             }
         }
         // 更新节点高度
-        t.height = Math.max(height(t.left),height(t.right));
+        t.height = Math.max(height(t.left),height(t.right)) + 1;
         return t;
     }
 
@@ -312,5 +333,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
         avlTree.remove(2);
         avlTree.printTree();
         avlTree.checkBalance();
+        System.out.println("通过直接获取root节点的高度变量获取树的高度：" + avlTree.height(avlTree.root));
+        System.out.println("通过后序遍历获取整个树的高度：" + avlTree.heightForEpilogue());
     }
 }
