@@ -45,7 +45,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
-     * 公用方法：返回树的高度
+     * 公用方法：返回树的高度(调用后续遍历求解)
      * @return
      */
     public int heightForEpilogue(){
