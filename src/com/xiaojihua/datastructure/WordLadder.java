@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.*;
 
 /**
+ * map的使用
  * 要求：找出可以通过单个字母替换可以变为至少15个其他单词的单词
  */
 public class WordLadder {
