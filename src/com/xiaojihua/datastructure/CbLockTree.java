@@ -1,38 +1,133 @@
 package com.xiaojihua.datastructure;
 
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ *
+ */
 public class CbLockTree {
 
 
 	private TreeNode<NodeInfo> rootNode;// 定义根节点
+	//定义根节点默认值
+	private static final long DEFAULT_ID = 1;
+	private static final String DEFAULT_NAME = "WEBPAGE";
+	private static final float DEFAULT_POSITION_X = 0;
+	private static final float DEFAULT_POSITION_Y = 0;
+	private static final float DEFAULT_SIZE_HIGHT = 700;
+	private static final float DEFAULT_SIZE_WEIGHT = 500;
+	//获取node方法公用容器
+	private List<TreeNode<NodeInfo>> nodes = new ArrayList<>();
 
 	/**
-	 * 初始化整棵树，初始情况下只有root节点
+	 * 根据默认值初始化树
 	 */
 	public void init(){
-		NodeInfo rootInfo = new NodeInfo(1,"webpage",0,0,700,500);
+		this.init(DEFAULT_ID,DEFAULT_NAME,DEFAULT_POSITION_X,DEFAULT_POSITION_Y,DEFAULT_SIZE_HIGHT,DEFAULT_SIZE_WEIGHT);
+	}
+
+	/**
+	 * 根据参数初始化树
+	 * @param ID
+	 * @param name
+	 * @param positionX
+	 * @param positionY
+	 * @param hight
+	 * @param weight
+	 */
+	public void init(long ID,String name,float positionX,float positionY,float hight,float weight){
+		NodeInfo rootInfo = new NodeInfo(ID,name,positionX,positionY,hight,weight);
 		rootNode = new TreeNode<NodeInfo>(rootInfo);
+	}
+
+	/**
+	 * 获取所有具有相同name属性的节点
+	 * @param name
+	 * @return
+	 */
+	public List<TreeNode<NodeInfo>> getNodesByName(String name){
+		return this.getNodesByName(name,rootNode,nodes);
+	}
+	/**
+	 * 递归获取所有具有相同name属性的节点
+	 * @param name
+	 * @param node 搜索起始位置
+	 * @param nodes 最终结果
+	 * @return
+	 */
+	public List<TreeNode<NodeInfo>> getNodesByName(String name,TreeNode<NodeInfo> node,List<TreeNode<NodeInfo>> nodes){
+
+		// node为null直接返回null
+		if(node == null){
+			return null;
+		}
+		// name相等则增加到nodes列表中
+		if(node.element.name.equals(name)){
+			nodes.add(node);
+		}
+		// 遍历子节点
+		getNodesByName(name,node.firstChild,nodes);
+		// 遍历兄弟节点
+		getNodesByName(name,node.nextSibling,nodes);
+
+		return nodes;
+	}
+
+	/**
+	 * 根据id返回node
+	 * @param id
+	 * @return
+	 */
+	public TreeNode<NodeInfo> getNodeByID(long id){
+		return this.getNodeByID(id,rootNode);
 	}
 
 	/**
 	 * 根据id返回对应的node
 	 * @param id
-	 * @param node
+	 * @param node 查询起始node
 	 * @return
 	 */
-	public TreeNode<NodeInfo> listAll(long id,TreeNode<NodeInfo> node){
+	public TreeNode<NodeInfo> getNodeByID(long id,TreeNode<NodeInfo> node){
 
 		if(node == null){
 			return null;
 		}else if(node.element.ID == id ){
 			return node;
 		}else{
-			TreeNode<NodeInfo> tempNode = listAll(id,node.firstChild);
+			TreeNode<NodeInfo> tempNode = getNodeByID(id,node.firstChild);
 			if(tempNode == null){
-				tempNode = listAll(id,node.nextSibling);
+				tempNode = getNodeByID(id,node.nextSibling);
 			}
 			return tempNode;
 		}
 
+	}
+
+	/**
+	 * 在指定id下增加node，默认增加到该id的最后一个子节点之后
+	 * @param id
+	 * @param node
+	 * @return
+	 */
+	public boolean addNode(long id,TreeNode<NodeInfo> node){
+
+		boolean flag = false;
+		TreeNode<NodeInfo> parentNode = getNodeByID(id,rootNode);
+		if(parentNode.firstChild == null){
+			parentNode.firstChild = node;
+			flag = true;
+		}else{
+			TreeNode<NodeInfo> child = parentNode.firstChild;
+			while(child.nextSibling != null){
+				child = child.nextSibling;
+			}
+			child.nextSibling = node;
+			flag = true;
+		}
+
+		return flag;
 	}
 
 	/**
@@ -52,31 +147,6 @@ public class CbLockTree {
 	}
 
 	/**
-	 * 在制定id下增加node，默认增加到该id的最后一个子节点之后
-	 * @param id
-	 * @param node
-	 * @return
-	 */
-	public boolean addNode(long id,TreeNode<NodeInfo> node){
-
-		boolean flag = false;
-		TreeNode<NodeInfo> parentNode = listAll(id,rootNode);
-		if(parentNode.firstChild == null){
-			parentNode.firstChild = node;
-			flag = true;
-		}else{
-			TreeNode<NodeInfo> child = parentNode.firstChild;
-			while(child.nextSibling != null){
-				child = child.nextSibling;
-			}
-			child.nextSibling = node;
-			flag = true;
-		}
-
-		return flag;
-	}
-
-	/**
 	 * 定义节点
 	 * @author Administrator
 	 *
@@ -87,10 +157,6 @@ public class CbLockTree {
 		AnyType element;//节点本身数据
 		TreeNode firstChild;//第一个孩子
 		TreeNode nextSibling;//下一个兄弟
-
-		public TreeNode(){
-
-		}
 
 		public TreeNode(AnyType theElement){
 			this(theElement,null,null);
@@ -111,14 +177,14 @@ public class CbLockTree {
 	 */
 	private static class NodeInfo{
 
-		private long ID;
+		private long ID;// 唯一id
 		private String name;
-		private float positionX;
-		private float positionY;
-		private int hight;
-		private int weight;
+		private float positionX;// 左上角位置x
+		private float positionY;// 左上角位置y
+		private float hight;//高度
+		private float weight;//宽度
 
-		public NodeInfo(long theId,String theName,float thePositionX,float thePositionY,int theHight,int theWeight){
+		public NodeInfo(long theId,String theName,float thePositionX,float thePositionY,float theHight,float theWeight){
 			ID = theId;
 			name = theName;
 			positionX = thePositionX;
@@ -127,7 +193,6 @@ public class CbLockTree {
 			weight = theWeight;
 		}
 
-		public NodeInfo(){}
 	}
 
 
@@ -153,7 +218,7 @@ public class CbLockTree {
 		TreeNode<NodeInfo> node1_1 = new TreeNode<NodeInfo>(rootInfo1_1);
 		cbLockTree.addNode(2, node1_1);
 
-		NodeInfo rootInfo1_2 = new NodeInfo(6,"vb1_2",0,1,200,100);
+		NodeInfo rootInfo1_2 = new NodeInfo(6,"vb1_1",0,1,200,100);
 		TreeNode<NodeInfo> node1_2 = new TreeNode<NodeInfo>(rootInfo1_2);
 		cbLockTree.addNode(2, node1_2);
 
@@ -166,7 +231,10 @@ public class CbLockTree {
 		cbLockTree.addNode(7, node2_1_1);
 
 		//打印树
-		cbLockTree.listAll(node2_1,0);
+		cbLockTree.listAll(cbLockTree.rootNode,0);
+		//获取相同name的节点
+		String searName = "vb1_1";
+		System.out.println("name:" + searName + "的节点一共有：" + cbLockTree.getNodesByName("vb1_1").size() + "个");
 
 
 	}
