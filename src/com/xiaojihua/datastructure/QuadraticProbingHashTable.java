@@ -261,7 +261,5 @@ public class QuadraticProbingHashTable<AnyType> {
             H.remove( ""+i );
 
         System.out.println(H.currentSize);
-
-        System.out.println(H.contains("8999"));
     }
 }

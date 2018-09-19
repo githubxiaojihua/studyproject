@@ -6,7 +6,7 @@ package com.xiaojihua.datastructure;
 public class Prime {
 
     public static void main(String[] args) {
-        System.out.println(isPrime(101));
+        System.out.println(isPrime(37));
         System.out.println(nextPrime(32));
     }
 
