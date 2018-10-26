@@ -7,6 +7,10 @@ import java.util.Comparator;
  * 具体使用是在main方法中的System.out.println(findMax(arr,new CaseInsensitiveCompare()));
  * @author Administrator
  *
+ * 定义函数对象应该先定义一个接口。
+ * 然后定义一个接口的实现类，或者使用匿名内部类，作为参数传递
+ * 比如下面的 findMax(AnyType[] arr, Comparator<? super AnyType> cmp)，引用的是接口
+ * 但是实际传给他的就是 findMax(arr,new CaseInsensitiveCompare())
  */
 public class GenericMemoryCell {
 
@@ -32,6 +36,9 @@ public class GenericMemoryCell {
 
 }
 
+/**
+ * 函数对象的实现类
+ */
 class CaseInsensitiveCompare implements Comparator<String>{
 
     @Override
