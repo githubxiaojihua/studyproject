@@ -2,6 +2,7 @@ package com.xiaojihua.datastructure;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * 一个网页可以看成一个具有树型结构的矩形区域R，根据某种特性R可以被划分成若干不相交的矩形小块，每个小块同样能被继续细分。
@@ -12,7 +13,6 @@ import java.util.List;
  */
 public class CbLockTree {
 
-
 	private TreeNode<NodeInfo> rootNode;// 定义根节点
 	//定义根节点默认值
 	private static final long DEFAULT_ID = 1;
@@ -21,7 +21,7 @@ public class CbLockTree {
 	private static final float DEFAULT_POSITION_Y = 0;
 	private static final float DEFAULT_SIZE_HIGHT = 700;
 	private static final float DEFAULT_SIZE_WEIGHT = 500;
-	//获取node方法公用容器
+	//获取node方法的公用容器
 	private List<TreeNode<NodeInfo>> nodes = new ArrayList<>();
 
 	/**
@@ -53,6 +53,7 @@ public class CbLockTree {
 	public List<TreeNode<NodeInfo>> getNodesByName(String name){
 		return this.getNodesByName(name,rootNode,nodes);
 	}
+
 	/**
 	 * 递归获取所有具有相同name属性的节点
 	 * @param name
@@ -60,14 +61,14 @@ public class CbLockTree {
 	 * @param nodes 最终结果
 	 * @return
 	 */
-	public List<TreeNode<NodeInfo>> getNodesByName(String name,TreeNode<NodeInfo> node,List<TreeNode<NodeInfo>> nodes){
+	private List<TreeNode<NodeInfo>> getNodesByName(String name,TreeNode<NodeInfo> node,List<TreeNode<NodeInfo>> nodes){
 
 		// node为null直接返回null
 		if(node == null){
 			return null;
 		}
 		// name相等则增加到nodes列表中
-		if(node.element.name.equals(name)){
+		if(node.element.getName().equals(name)){
 			nodes.add(node);
 		}
 		// 遍历子节点
@@ -93,11 +94,11 @@ public class CbLockTree {
 	 * @param node 查询起始node
 	 * @return
 	 */
-	public TreeNode<NodeInfo> getNodeByID(long id,TreeNode<NodeInfo> node){
+	private TreeNode<NodeInfo> getNodeByID(long id,TreeNode<NodeInfo> node){
 
 		if(node == null){
 			return null;
-		}else if(node.element.ID == id ){
+		}else if(node.element.getID() == id ){
 			return node;
 		}else{
 			TreeNode<NodeInfo> tempNode = getNodeByID(id,node.firstChild);
@@ -119,6 +120,11 @@ public class CbLockTree {
 
 		boolean flag = false;
 		TreeNode<NodeInfo> parentNode = getNodeByID(id,rootNode);
+
+		if(parentNode == null){
+			throw new NoSuchElementException();
+		}
+
 		if(parentNode.firstChild == null){
 			parentNode.firstChild = node;
 			flag = true;
@@ -135,7 +141,7 @@ public class CbLockTree {
 	}
 
 	/**
-	 * 从node节点开始按层次打印树
+	 * 从node节点开始按层次打印树（先序遍历）
 	 * @param node
 	 * @param deepth
 	 */
@@ -144,14 +150,14 @@ public class CbLockTree {
 			for(int i=1; i<=deepth; i++){
 				System.out.print(" ");
 			}
-			System.out.println(node.element.name);
+			System.out.println(node.element.getName());
 			listAll(node.firstChild,deepth + 1);
 			listAll(node.nextSibling,deepth);
 		}
 	}
 
 	/**
-	 * 定义节点
+	 * 定义树节点
 	 * @author Administrator
 	 *
 	 * @param <AnyType>
@@ -173,32 +179,6 @@ public class CbLockTree {
 		}
 
 	}
-
-	/**
-	 * 节点数据类型
-	 * @author Administrator
-	 *
-	 */
-	private static class NodeInfo{
-
-		private long ID;// 唯一id
-		private String name;
-		private float positionX;// 左上角位置x
-		private float positionY;// 左上角位置y
-		private float hight;//高度
-		private float weight;//宽度
-
-		public NodeInfo(long theId,String theName,float thePositionX,float thePositionY,float theHight,float theWeight){
-			ID = theId;
-			name = theName;
-			positionX = thePositionX;
-			positionY = thePositionY;
-			hight = theHight;
-			weight = theWeight;
-		}
-
-	}
-
 
 	public static void main(String[] args) {
 		//初始化树
@@ -242,5 +222,77 @@ public class CbLockTree {
 
 
 	}
+
 }
 
+/**
+ * 节点数据类型
+ * @author Administrator
+ *
+ */
+class NodeInfo{
+
+	private long ID;// 唯一id
+	private String name;
+	private float positionX;// 左上角位置x
+	private float positionY;// 左上角位置y
+	private float hight;//高度
+	private float weight;//宽度
+
+	public NodeInfo(long theId,String theName,float thePositionX,float thePositionY,float theHight,float theWeight){
+		ID = theId;
+		name = theName;
+		positionX = thePositionX;
+		positionY = thePositionY;
+		hight = theHight;
+		weight = theWeight;
+	}
+
+	public long getID() {
+		return ID;
+	}
+
+	public void setID(long ID) {
+		this.ID = ID;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public float getPositionX() {
+		return positionX;
+	}
+
+	public void setPositionX(float positionX) {
+		this.positionX = positionX;
+	}
+
+	public float getPositionY() {
+		return positionY;
+	}
+
+	public void setPositionY(float positionY) {
+		this.positionY = positionY;
+	}
+
+	public float getHight() {
+		return hight;
+	}
+
+	public void setHight(float hight) {
+		this.hight = hight;
+	}
+
+	public float getWeight() {
+		return weight;
+	}
+
+	public void setWeight(float weight) {
+		this.weight = weight;
+	}
+}

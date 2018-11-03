@@ -8,8 +8,8 @@ import java.util.Iterator;
  */
 public class MyLinkedList<AnyType> implements Iterable<AnyType> {
 
-	private int theSize;
-	private int modCount = 0;
+	private int theSize;//元素个数
+	private int modCount = 0;//修改次数
 	private Node<AnyType> beginMaker;
 	private Node<AnyType> endMaker;
 

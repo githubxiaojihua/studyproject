@@ -301,9 +301,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
          * @param theElement
          */
         AvlNode(AnyType theElement){
-            this.element = theElement;
-            this.left = null;
-            this.right = null;
+          this(theElement, null, null);
         }
 
         /**

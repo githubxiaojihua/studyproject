@@ -1,6 +1,6 @@
 package com.xiaojihua.datastructure;
 
-public class BinarySearchTree<AnyType extends Comparable> {
+public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
 	private BinaryNode<AnyType> root;
 

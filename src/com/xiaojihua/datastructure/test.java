@@ -93,6 +93,13 @@ public class test {
 	}
 
 
+	/**
+	 * O(NlogN)
+	 * @param a
+	 * @param left
+	 * @param right
+	 * @return
+	 */
 	public static int maxSubSum4(int[] a,int left, int right){
 
 		int leftMaxSum=0,rightMaxSum=0,leftTempSum=0,rightTempSum=0;
