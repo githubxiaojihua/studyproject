@@ -3,7 +3,7 @@ package com.xiaojihua.datastructure;
 /**
  * 探测散列表：不使用分离链接的散列表，装填因子等于0.5，不使用分离链接解决冲突的方法是尝试其他单元，直到找到
  * 空的单元为止，常见的操作是h0(x),h1(x),h2(x),h3(x)...相继被试选，其中hi(x)=(hash(x)+f(i)) mod tablesize,
- * 切f(0)=0,函数f就是冲突解决函数。
+ * 且f(0)=0,函数f就是冲突解决函数。
  *
  * 探测散列表有三种冲突
  * 散列：线性探测法、平方探测法、双散列法
@@ -13,7 +13,7 @@ package com.xiaojihua.datastructure;
  * 删除探测散列表元素应该使用懒惰删除，否则contains操作都将失效。平方探测方法是消除线性探测法的一次聚集问题的
  * 冲突解决方法。平方探测法就是冲突函数为二次的探测方法。流行的选择是f(i)=i^2
  *
- * 线性探测法：检测到冲突的时候（其哈希值对应的位置已经有数据），以当前元素为基础对与后续元素逐个依次检测（必要时可以绕回）。
+ * 线性探测法：检测到冲突的时候（其哈希值对应的位置已经有数据），以当前元素为基础对于后续元素逐个依次检测（必要时可以绕回）。
  * 在线性探测法中f是i的线性函数，典型的情况是f(i)=i,相当于逐个探测。线性检测会造成插入的值都集中在一个连续的区域中，这样会造成
  * 查找、插入会检测很多次，这叫做一次聚集问题。
  *
@@ -24,7 +24,7 @@ public class QuadraticProbingHashTable<AnyType> {
     private static final int DEFAULT_TABLE_SIZE = 11;//默认大小
     private HashEntity<AnyType>[] array;//列表
     private int currentSize;//当前列表中的有效元素个数
-    private int occupied;//当前列表被占用改了多少，由于是懒惰删除。
+    private int occupied;//当前列表被占用了多少，由于是懒惰删除。
 
     /**
      * 默认构造函数
@@ -51,7 +51,7 @@ public class QuadraticProbingHashTable<AnyType> {
 
         int hashVal = findPos(x);//返回一个可插入的位置：为空或者已经存在相同元素的位置
 
-        //如果位置为空，或者位置出于已删除状态
+        //如果节点出于活动状态，则说明重复插入
         if(isActive(hashVal)){
             return false;
         }
@@ -123,7 +123,7 @@ public class QuadraticProbingHashTable<AnyType> {
      * @return
      */
     public boolean isActive(int position){
-        return array[position]==null?false:array[position].isActive;
+        return array[ position ] != null && array[ position ].isActive;
     }
 
     /**
@@ -148,6 +148,19 @@ public class QuadraticProbingHashTable<AnyType> {
     /**
      * 二次探测方法确定存储位置。
      * 书中缩写是二次探测方法，但是方法中使用的仍然是线性方法（不解？）
+     * 对于以上不解的说明：
+     * 平方探测就是冲突函数为二次的探测方法，流行的选择是f(i)=i^2
+     * 意思是说，当根据hashcode(x)计算的位置中已经存储了值，那么就是用如上探测函数探测下一个存储位置，
+     * 从1开始，当i=1的时候，探测的位置是hash(x) + 1^2，也就是冲突位置的下一个单元，
+     * 若此单元继续冲突则i=2,探测的位置是hash(x) + 2^2, 也就是冲突位置的下4个单元，
+     * 若此单元继续冲突则i=3,探测的位置是hash(x) + 3^2, 也就是冲突位置的下9个单元。
+     *
+     * 那么实际上这些探测位置可以用函数f(i)=f(i-1) + 2i -1,来表示：
+     * 从1开始，当i=1时，探测的位置是f(1) = hash(x) + 1,也就是冲突位置的下一个单元，
+     * 若此单元继续冲突则i=2，探测的位置是f(2) = f(1) + 3,也就是冲突位置的下4个单元，
+     * 若次单元继续通途则i=3，探测的位置是f(3) = f(2) + 5,也就是冲突位置的下9个单元。
+     *
+     * 以上两种计算完全相等。
      *
      * 在列表中查找为空或者与存储值相同的位置
      * @param x
@@ -160,7 +173,8 @@ public class QuadraticProbingHashTable<AnyType> {
         // 先判断是否为null ，然后判断是否与戴插入元素相同
         while(array[hashVal] != null && !array[hashVal].element.equals(x)){
             hashVal += offset;
-            offset += 2;//此处为何仍然使用线性方法，二次探测方法比应该是i^2形式的吗？
+            offset += 2;//此处是平方探测函数的快速标识方法
+            //超出长度则绕回
             if(hashVal >= array.length){
                 hashVal -= array.length;
             }

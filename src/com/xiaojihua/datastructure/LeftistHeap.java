@@ -58,6 +58,10 @@ public class LeftistHeap<AnyType extends Comparable<? super AnyType>> {
      * 合并的第三个方法也是主方法。
      * 递归的合并两个节点。
      * 合并思路：将大者的当前节点（h2）与小者当前节点(h1)的右子树进行合并。
+     *
+     * 递归的思想：
+     * 既然我们能处理基准情形（发生在一棵树为空的时候），当然可以假设，只要能够完成合并那么递归步骤就是成立的，这是
+     * 递归法则三。
      * @param h1
      * @param h2
      * @return

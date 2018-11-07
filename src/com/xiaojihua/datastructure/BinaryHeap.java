@@ -13,7 +13,7 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 
     private static final int DEFAULT_CAPACITY = 10;
     private int currentSize;
-    private AnyType[] array;
+    private AnyType[] array;//数组的0索引不存储数据，因为对于索引0进行乘除都为零，不符合数组存储的二叉堆结构
 
     /**
      * 构造方法
@@ -34,7 +34,7 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
     BinaryHeap(AnyType[] items){
 
         currentSize = items.length;
-        array = (AnyType[]) new Comparable[(2 * currentSize)*11/10];
+        array = (AnyType[]) new Comparable[(2 + currentSize)*11/10];
         for(int i=0; i<currentSize; i++){
             array[i] = items[i];
         }
@@ -134,7 +134,7 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
             throw new UnderflowException();
         }
         AnyType minElement = findMin();
-        array[1] = array[currentSize];
+        array[1] = array[currentSize--];
         percolateDown(1);
         return minElement;
     }
@@ -149,8 +149,8 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 
         //此处不会出现array[chile]或者array[chile+1]超出数组界限的问题
         //因为在插入操作，当cruuentSize == array.length-1的时候就会自动扩展，也就是说currentSize最大就是length-1
-        //下面的预计保证2*hole<currentSize也就是保证了2*hole最大是length-2。
-        for(;2 * hole < currentSize; hole = child){
+        //并且在insert中currentSize--了
+        for(;2 * hole <= currentSize; hole = child){
             child = 2 * hole;
             if(array[child].compareTo(array[child+1]) > 0){
                 child++;

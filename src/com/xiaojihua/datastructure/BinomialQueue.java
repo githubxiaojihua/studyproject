@@ -38,14 +38,18 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
             return;
         }
         currentSize += rhs.currentSize;
-        if(currentSize > capacity()){//当currentsize>thetrees.length*2的时候进行扩展？
+        if(currentSize > capacity()){
             expandTheTrees(Math.max(theTrees.length, rhs.theTrees.length) + 1);
         }
         Node<AnyType> curr = null;
+        //由于二巷队列最多有logN棵树，因此如下循环
         for(int i=0,j=1; j<=currentSize; j *= 2, i++){
             Node<AnyType> t1 = theTrees[i];
             Node<AnyType> t2 = i<rhs.theTrees.length?rhs.theTrees[i]:null;
 
+            //三个元素的组合显示，使相加的值反应组合的顺序
+            //switchNum一共有8中组合（0-7）
+            //如果在加一层，比如， switchNum += curr1==null?0:8;，这就代表了四个元素的随机组合顺序
             int switchNum = t1==null?0:1;
             switchNum += t2==null?0:2;
             switchNum += curr==null?0:4;
@@ -202,6 +206,7 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 合并两个同样大小的二项树
+     * 此方法能保证每一棵二项树的儿子节点都是根据其高度递减排序
      * @param t1
      * @param t2
      * @return
@@ -219,10 +224,12 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
     /**
      * 返回整个二项队列的元素数量
      * 规律：
-     * 二项队列是一个数组标识
+     * 二项队列是一个数组表示
      * 数组的下标代表唯一的高度。比如0代表高度为0的二项树、1代表高度为1的二项树。。。
      * 二项树：高度为k的二项树恰好有2^k个节点。
      * 整个二项队列的元素数量是2的二项队列数组长度次方-1。
+     * 可以想象一下在二项队列上再抽象一个根元素，将二项队列的各个二项树链接起来，组成一颗大的二项树，
+     * 那么这颗二项树的元素树为2^theTrees.length个元素，那么二项队列的元素为此值-1.
      * @return
      */
     private int capacity(){
