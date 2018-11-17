@@ -1,7 +1,13 @@
 package com.xiaojihua.javabasic.chapter7;
 
 /**
- * 复用类的方式之一：代理
+ * 知识点：复用类的方式之一：代理
+ * 复用类有三种方式：组合、继承、以及代理
+ * 其中代理是介于组合和继承之间。
+ * 既有组合的属性（使用其他类构建新类），也有继承的属性（将父类的接口暴露给导出类，但是这个暴露是代理了组合对象的公共接口）
+ * 在此类中：
+ * 使用组合SpaceShipControlls类的方法代替了从他继承。同时通过代理方法将SpaceShipControlls类的公共借口暴露。
+ * 这种方式避免了继承的层级架构，更加灵活。
  */
 public class SpaceShipDelegation {
     private String name;
