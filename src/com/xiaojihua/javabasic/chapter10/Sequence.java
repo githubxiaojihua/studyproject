@@ -47,7 +47,7 @@ public class Sequence<U> {
         int next = 0;
         @Override
         public boolean end() {
-            return next >= items.length;
+            return next >= Sequence.this.items.length;//注意这个写法，内部类要引用外部类的对象可以使用 外部类.this 来实现
         }
 
         @Override
