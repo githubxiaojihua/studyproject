@@ -6,6 +6,7 @@ import static com.xiaojihua.javabasic.util.Print.*;
  *
  * 闭包：书中的定义是，是一个可调用的对象，它记录了一些信息，这些信息来自于创建它的作用域。对应本例
  * 闭包是指内部类Closure。它是与诶个可调用的对象，同时可以通过它访问Callee2的所有信息包括private成员。
+ * 闭包的概念和javascript中的是一致的，javascript中是一个函数可以访问另外一个函数作用域中的变量。
  *
  * 接口与接口的实现分离：最对外公布接口而隐藏接口的实现细节。
  * 具体到下面的例子：
@@ -57,14 +58,14 @@ class Callee2 extends MyIncretable{
      * 内部类实现闭包
      */
     private class Closure implements Incretable{
-        //返回一个Callee2的钩子
+        //返回一个Callee2的钩子，回调方法
         @Override
         public void increment() {
             Callee2.this.increment();
         }
     }
 
-    //通过公用方是法返回Incretable引用指向实现类，实现了接口与接口实现的分离。也返回闭包对象
+    //通过公用方是法返回Incretable引用指向实现类，实现了接口与接口实现的分离。也返回闭包对象，也是回调引用
     public Incretable getCallbackRefrence(){
         return new Closure();
     }
@@ -74,7 +75,7 @@ class Caller{
     Incretable incretable;
     Caller(Incretable incretable){
         this.incretable = incretable;
-    }
+    }//接收一个回调引用，可以在回调Callee类
     public void go(){
         incretable.increment();
     }
