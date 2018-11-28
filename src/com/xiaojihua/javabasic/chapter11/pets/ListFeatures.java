@@ -1,4 +1,4 @@
-package com.xiaojihua.javabasic.chapter11;
+package com.xiaojihua.javabasic.chapter11.pets;
 
 import java.util.*;
 
@@ -51,7 +51,7 @@ public class ListFeatures {
         List<Pet> copy = new ArrayList<>(pets);
         sub = Arrays.asList(pets.get(1),pets.get(4));//接收可变类型参数返回List
         print(sub);
-        copy.retainAll(sub);//使copy只保留在sub中存在的元素
+        copy.retainAll(sub);//交集操作，copy只保留交集部分，内部使用equals
         print("13:" + copy);
         copy = new ArrayList<>(pets);
         copy.remove(2);
@@ -60,7 +60,7 @@ public class ListFeatures {
         print("15:" + copy);
         copy.set(1,new Mouse());
         print("16:" + copy);
-        copy.addAll(2,sub);
+        copy.addAll(2,sub);//在指定位置addall
         print("17:" + copy);
         print("18:" + pets.isEmpty());
         pets.clear();//清空
@@ -74,62 +74,6 @@ public class ListFeatures {
     }
 }
 
-class Pet implements Comparable<Pet>{
-    public String name;
-    Pet(String name){
-      this.name = name;
-    }
-    public String toString(){
-        return name;
-    }
-
-
-    @Override
-    public int compareTo(Pet o) {
-
-        return this.name.compareTo(o.name);
-    }
-}
-
-class Hamster extends Pet{
-    Hamster(){
-        super("Hamster");
-    }
-}
-class Cymirc extends Pet{
-    Cymirc(){
-        super("Cymirc");
-    }
-}
-
-class Mouse extends Pet{
-    Mouse(){
-        super("Mouse");
-    }
-}
-
-class Rat extends Pet{
-    Rat(){
-        super("Rat");
-    }
-}
-
-class Manx extends Pet{
-    Manx(){
-        super("Manx");
-    }
-}
-class Mutt extends Pet{
-    Mutt(){
-        super("Mutt");
-    }
-}
-
-class Pug extends Pet{
-    Pug(){
-        super("Pug");
-    }
-}
 
 
 
