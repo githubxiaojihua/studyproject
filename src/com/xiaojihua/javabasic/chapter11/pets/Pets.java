@@ -15,10 +15,16 @@ public class Pets {
     private static Random random = new Random(47);
     private static Class[] types = {Cymirc.class,Hamster.class,Manx.class,Mouse.class,Mutt.class,Pug.class,Rat.class};
 
-    public static List<Pet> arrayList(int num) throws IllegalAccessException, InstantiationException {
+    public static List<Pet> arrayList(int num)  {
         List<Pet> pets = new ArrayList<>();
         for(int i = 0; i < num ; i++){
-            pets.add(next());
+            try {
+                pets.add(next());
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            }
         }
         return pets;
     }

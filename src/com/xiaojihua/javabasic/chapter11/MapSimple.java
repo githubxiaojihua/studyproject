@@ -24,8 +24,10 @@ public class MapSimple {
         print(m.values());//返回value的Collection
         print(m.entrySet());
         //利用entryset来遍历map，entryset也是一个set，是一个键值对的set
+        //由于这个set实现了iterable接口因此可以用foreach
         for(Map.Entry<Integer,Integer> entry : m.entrySet()){
             print(entry.getKey() + ":" + entry.getValue());
         }
+
     }
 }
