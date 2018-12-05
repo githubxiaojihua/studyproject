@@ -15,15 +15,18 @@ import java.util.concurrent.TimeUnit;
  * 5、多线程会自动适应多个CPU。开发者无需关心
  * 6、多线程如果是运行在单CPU环境中它的作用在于解决程序的阻塞，也就是说程序的响应性更好，因为并不是顺序执行的所以在一些线程阻塞后程序的其他线程
  * 还是能进行响应。多线程如果是运行在多CPU中那么确实是提高了效率，因为可以将任务自动分配给不同的处理器处理。
- * 7、使用Executor
+ * 7、使用Executor（优先选择），俗成执行器，内部生成一个Thread并且执行对应的任务（Runable，或者继承自Thread）。
  * 8、sleep的两种写法
+ *
+ * 一些基本概念：
+ * 创建任务（C0LiftOff），并通过某种途径将一个线程附着到一个任务上，使得线程驱动任务。
  */
-public class LiftOff implements Runnable {
+public class C01LiftOff implements Runnable {
     private int countDown = 10;
     private static int taskCount = 0;
     private final int id = taskCount++;
-    public LiftOff(){}
-    public LiftOff(int countDown){ this.countDown = countDown; }
+    public C01LiftOff(){}
+    public C01LiftOff(int countDown){ this.countDown = countDown; }
 
     public String status(){
         return "#" + id + "(" + (countDown > 0 ? countDown : "LiftOff!") + "),";
@@ -67,11 +70,12 @@ public class LiftOff implements Runnable {
         //实例四：比较优雅的管理线程，Executor在线程(Thread)和任务（Runnable）之间提供了一个中间层，用于管理线程。
         //ExecutorService(具有线程生命周期管理的Executor，比如shutdown)
         //单个Executor可以被用来创建和管理系统中的所有任务。
+        //应该优先选择Executor方式
         ExecutorService service = Executors.newCachedThreadPool();
         // ExecutorService service = Executors.newFixedThreadPool(5);//限制进程池中的进程数量
         //ExecutorService service = Executors.newSingleThreadExecutor();//进程数量为1的进程池。
         for(int i = 0; i < 5; i++){
-            service.execute(new LiftOff());
+            service.execute(new C01LiftOff());
         }
         service.shutdown();
 

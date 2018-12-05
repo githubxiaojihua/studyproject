@@ -8,9 +8,9 @@ import java.util.concurrent.*;
  * 1、从任务中获取返回值，需要任务继承Callable而并非Runnable，泛型为返回值的类型，必须实现call方法，必须使用ExecutorService.submit方法调用。
  * 2、
  */
-public class TaskWithResult implements Callable<String> {
+public class C02TaskWithResult implements Callable<String> {
     private int id;
-    TaskWithResult(int id){
+    C02TaskWithResult(int id){
         this.id = id;
     }
     @Override
@@ -25,7 +25,7 @@ public class TaskWithResult implements Callable<String> {
         for(int i = 0; i < 10; i++){
             //submit产生Future对象，可以使用isDone来检查Future是否完成，当完成后会有一个结果可以使用get来获取该结果。当Future还没有处理完的时候
             //调用get，那么get会堵塞，直到结果返回
-            results.add(service.submit(new TaskWithResult(i)));
+            results.add(service.submit(new C02TaskWithResult(i)));
         }
         System.out.println("in the main Thread");
         for(Future<String> fs : results){

@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
  * 知识点：
  * 1、后台线程。所谓的后台线程是指在程序运行期间在后台提供一种通用服务的线程，当所有非后台线程结束时，程序终止了，同时会杀死所有的后台线程。
  */
-public class SimpleDaemons implements Runnable {
+public class C03SimpleDaemons implements Runnable {
     @Override
     public void run() {
         try{
@@ -22,7 +22,7 @@ public class SimpleDaemons implements Runnable {
 
     public static void main(String[] args) throws InterruptedException {
         for(int i = 0; i < 10; i++){
-            Thread t = new Thread(new SimpleDaemons());
+            Thread t = new Thread(new C03SimpleDaemons());
             t.setDaemon(true);//设置为后台线程
             t.start();
         }
