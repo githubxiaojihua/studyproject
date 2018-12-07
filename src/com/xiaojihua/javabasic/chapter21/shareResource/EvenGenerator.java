@@ -1,5 +1,8 @@
 package com.xiaojihua.javabasic.chapter21.shareResource;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * 具体的IntGenerator，返回偶数
  * 知识点：
@@ -16,8 +19,9 @@ package com.xiaojihua.javabasic.chapter21.shareResource;
  * 这个锁的数量可以增加，比如一个对象的synchronized方法中调用了同一个对象的另一个synchronized
  * 方法，那么当前锁的数量加1，当一个synchronized方法调用完成锁数量减1直到为0，释放锁。
  * 当然只有首先获得锁的任务才能继续访问synchronized方法，增加和减少锁的数量。
+ * 6、使用Lock显式的声明锁、锁定、释放。
  */
-public class EvenGenerator extends IntGenerator{
+public class EvenGenerator extends IntGenerator {
     private int currentEvenValue = 0;
 
     /**
@@ -36,7 +40,24 @@ public class EvenGenerator extends IntGenerator{
         return currentEvenValue;
     }
 
+    /**
+     * 这是另一种锁机制，属于显式声明锁、锁定和释放。
+     * 他与上面的synchronized相比编码更多，但是更加灵活
+     */
+    private Lock lock = new ReentrantLock();//声明
+    public int nextByLock(){
+        lock.lock();//锁定
+        try{
+            ++currentEvenValue;
+            ++currentEvenValue;
+            return currentEvenValue;
+        }finally {
+            lock.unlock();//解锁
+        }
+    }
+
     public static void main(String[] args) {
+
         EvenChecker.test(new EvenGenerator());
     }
 }
