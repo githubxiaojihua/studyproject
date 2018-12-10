@@ -18,61 +18,93 @@ import java.util.*;
  *
  * 假设：表达式由字母和操作符组成
  */
-public class TestDemo {
-    private static final Map<Character,Integer> operMap = new HashMap<>();
-    static{
-        operMap.put('(',0);
-        operMap.put(')',0);
-        operMap.put('*',1);
-        operMap.put('+',2);
+public class TestDemo<AnyType> {
+    private AnyType[] theArray;
+    private int theSize;
+    private int front,tail;
+    private static final int DEFAULT_SIZE = 10;
+
+    TestDemo(int capacity){
+        theArray = (AnyType[]) new Object[capacity];
+        theSize = 0;
+        front = tail = 0;
     }
 
-    public static String translate(String expression){
-        StringBuffer str = new StringBuffer();
-        Stack<Character> stack = new Stack<>();
-        for(char c : expression.toCharArray()){
-            if(Character.isLetter(c)){
-                str.append(c);
-            }else{
-                str.append(popOpreater(stack,c));
-                if(c != ')'){
-                    stack.push(c);
-                }
-
-            }
-        }
-        while(!stack.empty()){
-            str.append(stack.pop());
-        }
-        return str.toString();
+    TestDemo(){
+        this(DEFAULT_SIZE);
     }
 
-    public static String popOpreater(Stack<Character> stack, char operator){
-        StringBuffer str = new StringBuffer();
+    public int size(){ return theSize; }
 
-        if(')' == operator){
-            while(!stack.empty() && stack.peek() != '('){
-                str.append(stack.pop());
-            }
-            stack.pop();
-        }else{
-            while(!stack.empty() && isPop(stack.peek(),operator)){
-                if(stack.peek() == '('){
-                    break;
-                }
-                str.append(stack.pop());
-            }
+    public boolean isEmpty(){ return front == tail; }
+
+    public boolean add(AnyType x){
+        if(size() + 1 == theArray.length){
+            ensureCapacity(2 * theArray.length + 1);
         }
-        return str.toString();
+
+        theArray[tail] = x;
+        tail = (tail + 1) % theArray.length;
+        theSize++;
+        return true;
     }
 
-    public static boolean isPop(char peekOper,char oper){
-        return operMap.get(peekOper) <= operMap.get(oper);
+    public AnyType remove(){
+        if(isEmpty()){
+            throw new NoSuchElementException();
+        }
+        AnyType removeItem = theArray[front];
+        front = (front + 1) % theArray.length;
+        theSize--;
+        return removeItem;
+    }
+
+    private void ensureCapacity(int capacity){
+        if(capacity < size()){
+            throw new IllegalStateException();
+        }
+        AnyType[] old = theArray;
+        theArray = (AnyType[])new Object[capacity];
+        int j = 0;
+        for(int i = front; i != tail; i = (i + 1) % old.length){
+            theArray[j++] = old[i];
+        }
+        front = 0;
+        tail = j;
+
+    }
+
+    /**
+     * toString
+     * @return
+     */
+    public String elementToString(){
+        StringBuffer sb = new StringBuffer();
+        sb.append("[");
+        for(int i=0; i<theArray.length; i++){
+            sb.append(theArray[i]);
+            sb.append(",");
+        }
+        sb.append("]");
+        return sb.toString();
     }
 
     public static void main(String[] args) {
-        String preFixExp = "a+b*c+(d*e+f)*g";
-        System.out.println(translate(preFixExp));
+        TestDemo<Integer> myQueue = new TestDemo<>();
+        for(int i=0; i<15; i++){
+            myQueue.add(i);
+        }
+        System.out.println(myQueue.elementToString());
+        myQueue.remove();
+        myQueue.remove();
+        myQueue.remove();
+        myQueue.remove();
+        myQueue.remove();
+        for(int i=8; i<11; i++){
+            myQueue.add(i);
+        }
+        System.out.println(myQueue.elementToString());
+        System.out.println(myQueue.toString());
     }
 
 }

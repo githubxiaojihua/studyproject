@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
  * 使用循环数组实现
  * @param <AnyType>
  */
-public class MyQueue<AnyType>{
+public class C10MyQueue<AnyType>{
 
     // 存值数组
     private AnyType[] elements;
@@ -23,7 +23,7 @@ public class MyQueue<AnyType>{
     /**
      * 初始构造函数
      */
-    MyQueue(){
+    C10MyQueue(){
         elements = (AnyType[])new Object[DEFAULT_SIZE];
         front = tail = 0;
     }
@@ -32,7 +32,7 @@ public class MyQueue<AnyType>{
      * 根据初始值初始化
      * @param capacity
      */
-    MyQueue(int capacity){
+    C10MyQueue(int capacity){
         elements = (AnyType[])new Object[capacity];
         front = tail = 0;
     }
@@ -140,7 +140,7 @@ public class MyQueue<AnyType>{
         }
 
     public static void main(String[] args) {
-        MyQueue<Integer> myQueue = new MyQueue<>();
+        C10MyQueue<Integer> myQueue = new C10MyQueue<>();
         for(int i=0; i<15; i++){
             myQueue.add(i);
         }
