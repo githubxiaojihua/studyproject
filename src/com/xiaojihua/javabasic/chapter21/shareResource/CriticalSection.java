@@ -58,7 +58,10 @@ class Pair{
  * 通过使用本类将原本线程不安全的Pair类进行了线程安全的包装
  */
 abstract class PairManager{
-    AtomicInteger checkCount = new AtomicInteger(0);//使用原子类保证本Integer的原子性
+    //使用原子类保证本Integer的原子性
+    //由于普通的Integer的自增操作不是原子的，但是原子类的操作却是原子的，其他的
+    //原子类包括：AtomicInteger,AtomicLong,AtomicReference
+    AtomicInteger checkCount = new AtomicInteger(0);
     protected Pair p = new Pair();
     //提供线程安全的List对象
     private List<Pair> storge = Collections.synchronizedList(new ArrayList<Pair>());
@@ -106,6 +109,13 @@ class PairManager2 extends PairManager{
     @Override
     public void increment() {
         Pair temp;
+        /**
+         * synchronized块必须给定一个对象作为参数，在本例中是正在被调用的对象this
+         * 如果某个线程获取了此synchronized对象参数上的锁那么该对象其他的synchronized
+         * 方法和synchronized块儿就不能被调用了。
+         * 这个参数可以是this之外的其他对象，但是一旦指定为其他对象，那么其他相关的同步方法和
+         * 同步块应该都是以此对象作为参数，否则同步机制是各自独立的
+         */
         synchronized (this){
             p.incrementX();
             p.incrementY();
