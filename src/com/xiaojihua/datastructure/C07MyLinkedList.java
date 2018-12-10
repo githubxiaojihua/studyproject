@@ -6,7 +6,7 @@ import java.util.Iterator;
  * 双联表
  * @param <AnyType>
  */
-public class MyLinkedList<AnyType> implements Iterable<AnyType> {
+public class C07MyLinkedList<AnyType> implements Iterable<AnyType> {
 
 	private int theSize;//元素个数
 	private int modCount = 0;//修改次数
@@ -16,7 +16,7 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
 	/**
 	 * 构造方法
 	 */
-	public MyLinkedList(){
+	public C07MyLinkedList(){
 		this.clear();
 	}
 
@@ -60,15 +60,9 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
 	}
 
 	/**
-	 * 是否为空
-	 * @return
-	 */
-	public boolean isEmpty(){
-		return size()>0;
-	}
-
-	/**
 	 * 在指定NODE前增加元素
+	 *  p.privous = p.privous.next = new Node<>(x,p.privous,p);
+	 * 可以使用上面的一句代替笨方法中的前三句
 	 * @param p
 	 * @param x
 	 */
@@ -78,6 +72,14 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
 		p.pre = newNode;
 		theSize++;
 		modCount++;
+	}
+
+	/**
+	 * 是否为空
+	 * @return
+	 */
+	public boolean isEmpty(){
+		return size()>0;
 	}
 
 	/**
@@ -111,39 +113,10 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
 		return this.remove(this.getNode(index));
 	}
 
-	/**
-	 * 删除一个NODE
-	 * @param node
-	 * @return
-	 */
-	private AnyType remove(Node<AnyType> node){
-		node.next.pre = node.pre;
-		node.pre.next = node.next;
-		theSize--;
-		modCount++;
-		return node.data;
-	}
-	/**
-	 * NODE类(嵌套类)
-	 * @author Administrator
-	 *
-	 * @param <AnyType>
-	 */
-	private static class Node<AnyType>{
-
-		public Node(AnyType data, Node<AnyType> pre, Node<AnyType> next){
-			this.data = data;
-			this.pre = pre;
-			this.next = next;
-		}
-		public AnyType data;
-		public Node<AnyType> pre;
-		public Node<AnyType> next;
-
-	}
 
 	/**
 	 * 根据index返回对应位置的NODE
+	 * 此处避免了顺序遍历，提高了效率
 	 * @param index
 	 * @return
 	 */
@@ -168,6 +141,40 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
 
 		return p;
 	}
+
+	/**
+	 * 删除一个NODE
+	 * @param node
+	 * @return
+	 */
+	private AnyType remove(Node<AnyType> node){
+		node.next.pre = node.pre;
+		node.pre.next = node.next;
+		theSize--;
+		modCount++;
+		return node.data;
+	}
+	/**
+	 * NODE类(嵌套类)
+	 * @author Administrator
+	 * 由于本嵌套类是private的所以其中的字段的可访问权限是无所谓的
+	 * 外部类可以访问Node的所有成员，而其他的类则不能访问Node类
+	 *
+	 * @param <AnyType>
+	 */
+	private static class Node<AnyType>{
+
+		public Node(AnyType data, Node<AnyType> pre, Node<AnyType> next){
+			this.data = data;
+			this.pre = pre;
+			this.next = next;
+		}
+		public AnyType data;
+		public Node<AnyType> pre;
+		public Node<AnyType> next;
+
+	}
+
 
 	@Override
 	public Iterator<AnyType> iterator() {
@@ -237,7 +244,7 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
 				throw new IllegalStateException();
 			}
 
-			MyLinkedList.this.remove(current.pre);
+			C07MyLinkedList.this.remove(current.pre);
 			okToRemove = false;
 			expectedModCount++;
 
@@ -247,7 +254,7 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		MyLinkedList<String> mylinkedList = new MyLinkedList<String>();
+		C07MyLinkedList<String> mylinkedList = new C07MyLinkedList<String>();
 		mylinkedList.add("first");
 		mylinkedList.add(0,"secoend");
 		mylinkedList.add("third");

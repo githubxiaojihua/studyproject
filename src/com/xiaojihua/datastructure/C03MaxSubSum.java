@@ -6,7 +6,7 @@ package com.xiaojihua.datastructure;
  * @author Administrator
  *
  */
-public class test {
+public class C03MaxSubSum {
 
 	public static void main(String[] args) {
 
@@ -19,7 +19,9 @@ public class test {
 	}
 
 	/**
-	 * O(N3)
+	 * O(N3)。
+	 * 关于时间复杂度的计算：
+	 * 属于三层for循环因此时间复杂度为O(N*N*N*1)=O(N³)
 	 * @param paramArr
 	 * @return
 	 */
@@ -27,14 +29,14 @@ public class test {
 
 		int maxSubSum = 0;
 
-		for(int i=0; i<paramArr.length; i++){
+		for(int i=0; i<paramArr.length; i++){//运行N次
 
-			for(int j=i; j< paramArr.length; j++){
+			for(int j=i; j< paramArr.length; j++){//运行最多为N次，我们设定为N次
 
 				int sumTmp = 0;
 
-				for(int k=i; k<=j; k++){
-					sumTmp += paramArr[k];
+				for(int k=i; k<=j; k++){//j-i+1次最多也为N次，设定为N次
+					sumTmp += paramArr[k];//设消耗一个时间单位
 				}
 
 				if(sumTmp > maxSubSum){
@@ -48,7 +50,7 @@ public class test {
 	}
 
 	/**
-	 * O(n2)
+	 * O(n2)，计算方法同上
 	 * @param paramArr
 	 * @return
 	 */
@@ -73,6 +75,7 @@ public class test {
 
 	/**
 	 * O(N)
+	 * 算法正确性的分析参考书本，但是还不是很明白
 	 * @param paramArr
 	 * @return
 	 */
@@ -95,6 +98,8 @@ public class test {
 
 	/**
 	 * O(NlogN)
+	 * 具体的计算逻辑可以参考课本2.4节
+	 * 使用了分治算法设计方法
 	 * @param a
 	 * @param left
 	 * @param right

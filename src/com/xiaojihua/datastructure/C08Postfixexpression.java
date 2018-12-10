@@ -7,7 +7,7 @@ import java.util.Stack;
  * @author Administrator
  *
  */
-public class Postfixexpression {
+public class C08Postfixexpression {
 
 	public static void main(String[] args) {
 		String expression = "6523+8*+3+*";
@@ -28,8 +28,8 @@ public class Postfixexpression {
 		// 这里默认字符串元素不是数字就是操作符
 		for(int i=0; i<expression.length(); i++){
 			Character ch = expression.charAt(i);
-			if(ch.isDigit(ch)){
-				pfStack.push(Character.getNumericValue(ch));
+			if(ch.isDigit(ch)){//新用法
+				pfStack.push(Character.getNumericValue(ch));//新用法
 			}else{
 				int x = pfStack.pop();
 				int y = pfStack.pop();

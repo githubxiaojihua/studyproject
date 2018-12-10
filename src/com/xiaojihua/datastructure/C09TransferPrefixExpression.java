@@ -9,11 +9,18 @@ import java.util.Stack;
  * 1、当读取到一个操作数的时候（在本例中是char），立即把它放到输出中
  * 2、操作符不立即输出，放到栈中。
  * 3、如果遇到右括号则弹出栈，并将弹出的符号放到输出中，直到遇到左括号为止，左括号只弹出但是不输出
- * 4、如果遇到+*（等则将栈等优先级高的元素弹出（含优先级相同的）并放到输出中，知道遇到更低优先级。但是除非是在处理）否则绝不将（弹出。
+ * 4、如果遇到+*（等则将栈等优先级高的元素弹出（含优先级相同的）并放到输出中，直到遇到更低优先级。但是除非是在处理）否则绝不将（弹出。
  * 5、弹出工作完成以后则压入当前操作符。
  * 6、如果输入结束则将栈中所有元素弹出，并放到输出中。
  */
-public class TransferPrefixExpression {
+public class C09TransferPrefixExpression {
+    private static final Map<Character,Integer> operMap = new HashMap<>();
+    static{
+        operMap.put('(',0);
+        operMap.put(')',0);
+        operMap.put('*',1);
+        operMap.put('+',2);
+    }
 
     public static void main(String[] args) {
         String preFixExp = "a+b*c+(d*e+f)*g";
@@ -50,21 +57,12 @@ public class TransferPrefixExpression {
 
     /**
      * 检验是否应该弹出。通过判断优先级，如果栈顶的优先级高那么弹出
-     * @param op1 栈顶操作符
-     * @param op2 输入操作符
+     * @param peekOper 栈顶操作符
+     * @param oper 输入操作符
      * @return
      */
-    public static boolean isPop(char op1, char op2){
-        Map<Character,Integer> priorityMap = new HashMap<Character,Integer>();
-        //设置操作符优先级，越小优先级越高
-        priorityMap.put('(',0);
-        priorityMap.put(')',0);
-        priorityMap.put('*',1);
-        priorityMap.put('+',2);
-
-        int op1Num = priorityMap.get(op1);
-        int op2Num = priorityMap.get(op2);
-        return op1Num<=op2Num;
+    public static boolean isPop(char peekOper, char oper){
+        return operMap.get(peekOper) <= operMap.get(oper);
     }
 
     /**

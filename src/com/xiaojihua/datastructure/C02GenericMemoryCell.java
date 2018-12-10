@@ -12,7 +12,8 @@ import java.util.Comparator;
  * 比如下面的 findMax(AnyType[] arr, Comparator<? super AnyType> cmp)，引用的是接口
  * 但是实际传给他的就是 findMax(arr,new CaseInsensitiveCompare())
  */
-public class GenericMemoryCell {
+public class C02GenericMemoryCell {
+
 
     public static <AnyType> AnyType findMax(AnyType[] arr, Comparator<? super AnyType> cmp){
 
