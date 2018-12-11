@@ -5,7 +5,7 @@ import java.io.File;
 /**
  * 递归打印文件系统跟名称(带缩进)
  */
-public class RecursionPrintFile {
+public class C11RecursionPrintFile {
 
     /**
      * 递归打印文件目录带缩进（先序遍历）
@@ -26,7 +26,7 @@ public class RecursionPrintFile {
 
 
     public static void main(String[] args) {
-        File rootFile = new File("H:\\");
+        File rootFile = new File("H:\\肖吉华\\01工作任务\\黄岛调研\\01电商平台");
         printDirs(1,rootFile);
     }
 }

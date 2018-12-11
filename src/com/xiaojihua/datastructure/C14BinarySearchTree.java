@@ -1,13 +1,18 @@
 package com.xiaojihua.datastructure;
 
-public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
+/**
+ * 二叉树的平均深度为O(logN)，但是容易出现极端不平衡的状态，
+ * 比如一次插入已排序的序列。会导致左子树比右子树长的多
+ * @param <AnyType>
+ */
+public class C14BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
 	private BinaryNode<AnyType> root;
 
 	/**
 	 * 无参初始化二叉查找树
 	 */
-	public BinarySearchTree() {
+	public C14BinarySearchTree() {
 		root = null;
 	}
 
@@ -99,7 +104,7 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 	 * @param x
 	 */
 	public void remove(AnyType x){
-		this.remove(x, root);
+		root = this.remove(x, root);
 	}
 
 	/**
@@ -250,7 +255,7 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
 	public static void main( String [ ] args )
 	{
-		BinarySearchTree<Integer> t = new BinarySearchTree<>( );
+		C14BinarySearchTree<Integer> t = new C14BinarySearchTree<>( );
 		final int NUMS = 4000;
 		final int GAP  =   37;
 

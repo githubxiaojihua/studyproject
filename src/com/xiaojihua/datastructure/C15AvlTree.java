@@ -1,16 +1,20 @@
 package com.xiaojihua.datastructure;
 
 /**
- * 平衡二叉树
+ * 平衡二叉树(AVL)
+ * AVL树是每个节点的左子树和右子树的高度最多差1的二叉查找树。
+ * AVL树保证深度为O(logN)，也就是说操作的时间复杂度为O(logN)
+ * Avl树的重新平衡是通过单旋转和双旋转来完成的。
+ * 空节点的高度为-1
  * @param <AnyType>
  */
-public class AvlTree<AnyType extends Comparable<? super AnyType>> {
+public class C15AvlTree<AnyType extends Comparable<? super AnyType>> {
 
     private AvlNode<AnyType> root;
     // 触发平衡调整的临界值。大于此值则进行调整
     private static final int ALLOWED_IMBALANCE = 1;
 
-    public AvlTree(){
+    public C15AvlTree(){
         root = null;
     }
 
@@ -320,7 +324,7 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     public static void main(String[] args) {
-        AvlTree<Integer> avlTree = new AvlTree<>();
+        C15AvlTree<Integer> avlTree = new C15AvlTree<>();
         final int NUMS = 4000;
         final int GAP = 37;
 

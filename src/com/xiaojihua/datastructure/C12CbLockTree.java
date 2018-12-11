@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
  * 2、提供函数以遍历树的方式根据name得到节点（如果多个节点具有相同的名字则返回所有）
  * 3、提供函数将一个节点插入树中指定节点的下面
  */
-public class CbLockTree {
+public class C12CbLockTree {
 
 	private TreeNode<NodeInfo> rootNode;// 定义根节点
 	//定义根节点默认值
@@ -182,7 +182,7 @@ public class CbLockTree {
 
 	public static void main(String[] args) {
 		//初始化树
-		CbLockTree cbLockTree = new CbLockTree();
+		C12CbLockTree cbLockTree = new C12CbLockTree();
 		cbLockTree.init();
 
 		//增加节点
