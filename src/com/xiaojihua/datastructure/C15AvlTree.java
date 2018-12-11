@@ -1,7 +1,7 @@
 package com.xiaojihua.datastructure;
 
 /**
- * 平衡二叉树(AVL)
+ * 平衡二叉树(AVL),这是一种比较古老的平衡二叉树
  * AVL树是每个节点的左子树和右子树的高度最多差1的二叉查找树。
  * AVL树保证深度为O(logN)，也就是说操作的时间复杂度为O(logN)
  * Avl树的重新平衡是通过单旋转和双旋转来完成的。
@@ -121,7 +121,7 @@ public class C15AvlTree<AnyType extends Comparable<? super AnyType>> {
             if(t.left != null && t.right != null){
                 // 当有左右子树的时候，用右子树中的最小值代替本节点元素，然后删除最小值。
                 t.element = this.findMin(t.right).element;
-                remove(t.element,t.right);
+                t.right = remove(t.element,t.right);
             }else{
                 // 当只有一颗子树的时候，直接将本节点换成其子树
                 t = (t.left == null)?t.right:t.left;
@@ -281,7 +281,7 @@ public class C15AvlTree<AnyType extends Comparable<? super AnyType>> {
             // do nothing
         }
 
-        // 每插入一个节点都要进行其路径上所有节点的平衡调整
+        // 每插入一个节点都要进行其路径上所有节点的平衡调整，当递归返回的时候每个节点都会执行这句，而且是从底层到高层
         return this.balance(t);
     }
 
