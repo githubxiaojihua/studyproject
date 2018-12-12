@@ -6,7 +6,7 @@ package com.xiaojihua.datastructure;
  * 且f(0)=0,函数f就是冲突解决函数。
  *
  * 探测散列表有三种冲突
- * 散列：线性探测法、平方探测法、双散列法
+ * 散列：线性探测法、平方探测法、双散列法(书中未给出实现思路，并且在实际中基本不使用，不如平方探测实用)
  *
  * 平方探测法
  * 规则：使用平法探测法，并且表的大小是素数，那么当表至少有一半为空的时候，总能够插入一个新元素(书中有详细的证明过程)。
@@ -19,7 +19,7 @@ package com.xiaojihua.datastructure;
  *
  * 实现：不使用链表数组，使用散列表项所构成的数组
  */
-public class QuadraticProbingHashTable<AnyType> {
+public class C20QuadraticProbingHashTable<AnyType> {
 
     private static final int DEFAULT_TABLE_SIZE = 11;//默认大小
     private HashEntity<AnyType>[] array;//列表
@@ -29,7 +29,7 @@ public class QuadraticProbingHashTable<AnyType> {
     /**
      * 默认构造函数
      */
-    QuadraticProbingHashTable(){
+    C20QuadraticProbingHashTable(){
         this(DEFAULT_TABLE_SIZE);
     }
 
@@ -37,7 +37,7 @@ public class QuadraticProbingHashTable<AnyType> {
      * 按照指定大小初始化散列表
      * @param size
      */
-    QuadraticProbingHashTable(int size){
+    C20QuadraticProbingHashTable(int size){
         allocateArray(size);
         makeEmpty();
     }
@@ -105,7 +105,7 @@ public class QuadraticProbingHashTable<AnyType> {
     private void reHash(){
 
         HashEntity<AnyType>[] oldArray = array;
-        allocateArray(2 * oldArray.length);
+        allocateArray(nextPrime(2 * oldArray.length));
         currentSize = 0;
         occupied = 0;
         for(HashEntity<AnyType> entity : oldArray){
@@ -261,7 +261,7 @@ public class QuadraticProbingHashTable<AnyType> {
     }
 
     public static void main(String[] args) {
-        QuadraticProbingHashTable<String> H = new QuadraticProbingHashTable<>( );
+        C20QuadraticProbingHashTable<String> H = new C20QuadraticProbingHashTable<>( );
 
         final int NUMS = 2000000;
         final int GAP  =   37;

@@ -16,7 +16,7 @@ package com.xiaojihua.datastructure;
  *   = x(x(x(2x -1) -3) +1) -5
  * 这种方法的时间复杂度为O(n)
  */
-public class HornerRule {
+public class C17HornerRule {
 
     public static void main(String[] args) {
         System.out.println(horner(new int[]{-5,1,-3,-1,2},3));

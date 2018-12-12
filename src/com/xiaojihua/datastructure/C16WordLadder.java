@@ -10,7 +10,7 @@ import java.util.*;
  * map的使用
  * 要求：找出可以通过单个字母替换可以变为至少15个其他单词的单词
  */
-public class WordLadder {
+public class C16WordLadder {
 
     public static void main(String[] args) {
 
@@ -174,7 +174,7 @@ public class WordLadder {
                 }
             }
         }
-        // 比直接写 return true;要好一点，增加了一层保障
+        // 比直接写 return true;要好一点，增加了一层保障，避免了两个相同的字符说
         return diffCon == 1;
     }
 
@@ -203,7 +203,8 @@ public class WordLadder {
 
     /**
      * 根据key和value更新map
-     * 注意keyType的使用
+     * 注意keyType的使用，使用泛型可以提高update的复用
+     * 比如：按字符长度分组以及单字母变化分组都可以用此方法。90、101、102行
      * @param m
      * @param key
      * @param value

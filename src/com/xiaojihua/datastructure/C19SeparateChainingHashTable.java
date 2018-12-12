@@ -25,7 +25,7 @@ import java.util.List;
  * 分离链表法，使用链表来解决冲突（hash值相同的元素）
  * @param <AnyType>
  */
-public class SeparateChainingHashTable<AnyType> {
+public class C19SeparateChainingHashTable<AnyType> {
 
     private static final int DEFAULT_TABLE_SIZE = 101;// 默认数组大小
     private List<AnyType>[] theLists;// 存储数据的链表数组
@@ -34,7 +34,7 @@ public class SeparateChainingHashTable<AnyType> {
     /**
      * 重写默认构造函数，按默认大小创建链表数组
      */
-    SeparateChainingHashTable(){
+    C19SeparateChainingHashTable(){
         this(DEFAULT_TABLE_SIZE);
     }
 
@@ -42,7 +42,7 @@ public class SeparateChainingHashTable<AnyType> {
      * 根据指定大小构建。
      * @param size
      */
-    SeparateChainingHashTable(int size){
+    C19SeparateChainingHashTable(int size){
         theLists = new LinkedList[nextPrime(size)];
         for(int i=0; i<theLists.length; i++){
             theLists[i] = new LinkedList<AnyType>();
@@ -202,7 +202,7 @@ public class SeparateChainingHashTable<AnyType> {
     }
 
     public static void main(String[] args) {
-        SeparateChainingHashTable<Integer> h = new SeparateChainingHashTable<>();
+        C19SeparateChainingHashTable<Integer> h = new C19SeparateChainingHashTable<>();
         final int NUMS = 2000000;
         final int GAP  =   37;
 

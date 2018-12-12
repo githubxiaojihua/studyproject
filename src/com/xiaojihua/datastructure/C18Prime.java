@@ -3,7 +3,7 @@ package com.xiaojihua.datastructure;
 /**
  * 判断一个数是否为素数/质数
  */
-public class Prime {
+public class C18Prime {
 
     public static void main(String[] args) {
         System.out.println(isPrime(37));

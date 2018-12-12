@@ -1,15 +1,15 @@
 package com.xiaojihua.datastructure;
 
 /**
- * 堆的通用实现二叉堆
- *
+ * 堆的通用实现:二叉堆
+ * 二叉堆，是完全二叉树，因此运行时间界为O(logN)
  * 编写方法的原则：
  * 1、要条理清晰
  * 2、分离可供其他方法使用的公用方法
  * 3、应充分利用其他方法
  * @param <AnyType>
  */
-public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
+public class C21BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 
     private static final int DEFAULT_CAPACITY = 10;
     private int currentSize;
@@ -18,11 +18,11 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
     /**
      * 构造方法
      */
-    BinaryHeap(){
+    C21BinaryHeap(){
         this(DEFAULT_CAPACITY);
     }
 
-    BinaryHeap(int size){
+    C21BinaryHeap(int size){
         currentSize = 0;
         array = (AnyType[]) new Comparable[size + 1];// 注意实例化的写法，不可写成new AnyType[newSize];
     }
@@ -31,7 +31,7 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
      * 根据给定列表创建二叉堆
      * @param items
      */
-    BinaryHeap(AnyType[] items){
+    C21BinaryHeap(AnyType[] items){
 
         currentSize = items.length;
         array = (AnyType[]) new Comparable[(2 + currentSize)*11/10];
@@ -206,7 +206,7 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 
     public static void main(String[] args) {
         int numItems = 10;
-        BinaryHeap<Integer> h = new BinaryHeap<>( );
+        C21BinaryHeap<Integer> h = new C21BinaryHeap<>( );
         int i = 37;
 
         for( i = 1; i<11; i++ )

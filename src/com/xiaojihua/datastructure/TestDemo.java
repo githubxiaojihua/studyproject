@@ -2,235 +2,175 @@ package com.xiaojihua.datastructure;
 
 import com.sun.org.apache.xalan.internal.lib.NodeInfo;
 
-import java.io.File;
+import java.io.*;
+import java.nio.Buffer;
 import java.util.*;
 
 /**
  * 练习专用类
  *
  */
-public class TestDemo<AnyType extends Comparable<? super AnyType>> {
-
-    private Node<AnyType> root;
-    private static final int ALLOW_IMBLANCE = 1;
+public class TestDemo<AnyType> {
+    private static final int DEFAULT_SIZE = 11;
+    private HashEntity<AnyType>[] array;
+    private int currentSize;
+    private int occupied;
 
     TestDemo(){
-        root= null;
+        this(DEFAULT_SIZE);
     }
 
-    public void printTree(){
-        printTree(root);
+    TestDemo(int size){
+        allocateTheArray(size);
+        makeEnpty();
     }
 
-    /**
-     * 内部方法：打印节点子树
-     * @param t
-     */
-    private void printTree(Node<AnyType> t){
-
-        if(t!=null){
-            printTree(t.left);
-            System.out.println(t.element);
-            printTree(t.right);
+    public boolean insert(AnyType x){
+        int index = findPos(x);
+        if(isActive(index)){
+            return false;
+        }
+        if(array[index] == null){
+            occupied++;
         }
 
-    }
+        array[index] = new HashEntity<>(x);
+        currentSize++;
 
-    public void checkBalance(){
-        checkBalance(root);
-    }
-
-    private int checkBalance(Node<AnyType> node){
-        if(node == null){
-            return -1;
+        if(occupied >= array.length / 2){
+            //rehash
+            rehash();
         }
-        int hl = checkBalance(node.left);
-        int hr = checkBalance(node.right);
-        if(Math.abs(hl - hr) > ALLOW_IMBLANCE || hl != hight(node.left) || hr != hight(node.right)){
-            System.out.println("oops");
-        }
-        return hight(node);
+        return true;
     }
 
-    public int heightForEpilogue(){
-        return heightForEpilogue(root);
-    }
-
-    private int heightForEpilogue(Node<AnyType> node){
-        if(node == null){
-            return -1;
-        }
-
-        return Math.max(heightForEpilogue(node.left), heightForEpilogue(node.right)) + 1;
-    }
-
-
-
-    public void remove(AnyType x){
-        root = remove(x, root);
-    }
-
-    private Node<AnyType> remove(AnyType x, Node<AnyType> node){
-        if(node == null){
-            return null;
-        }
-        int compareResult = x.compareTo(node.element);
-        if(compareResult > 0){
-            node.right = remove(x, node.right);
-        }else if(compareResult < 0 ){
-            node.left = remove(x, node.left);
+    public boolean remove(AnyType x){
+        int index = findPos(x);
+        if(isActive(index)){
+            array[index].isActive = false;
+            currentSize--;
+            return true;
         }else{
-            if(node.left != null && node.right != null){
-                node.element = findMin(node.right).element;
-                node.right = remove(node.element, node.right);
-            }else{
-                node = node.left == null ? node.right : node.left;
+            return false;
+        }
+    }
+
+    public boolean contains(AnyType x){
+        return isActive(findPos(x));
+    }
+
+    private void rehash(){
+        HashEntity<AnyType>[] oldArr = array;
+        array = new HashEntity[nextPrime(2 * oldArr.length)];
+        for(int i = 0; i < array.length; i++){
+            array[i] = null;
+        }
+        occupied = 0;
+        currentSize =0;
+        for(HashEntity<AnyType> entity : oldArr){
+            if(entity != null && entity.isActive){
+                insert(entity.element);
             }
         }
-
-        return balance(node);
     }
 
-    public Node<AnyType> findMin(Node<AnyType> node){
-        if(node == null){
-            return null;
-        }
-        if(node.left == null){
-            return node;
-        }
-        return findMin(node.left);
-    }
-
-    public void insert(AnyType x){
-        root = insert(x, root);
-    }
-
-    private Node<AnyType> insert(AnyType x, Node<AnyType> node){
-        if(node == null){
-            return new Node<>(x);
-        }
-        int compareResult =x.compareTo(node.element);
-        if(compareResult > 0){
-            node.right = insert(x, node.right);
-        }else if(compareResult <0){
-            node.left = insert(x, node.left);
-        }else{
-
-        }
-        return balance(node);
-    }
-
-    private Node<AnyType> balance(Node<AnyType> node){
-        if(node == null){
-            return null;
-        }
-
-        if(hight(node.left) - hight(node.right) > ALLOW_IMBLANCE){
-            if(hight(node.left.left) >= hight(node.left.right)){
-                node = rotateWithLeftChild(node);
-            }else{
-                node = doubleWithLeftChild(node);
+    private int findPos(AnyType x){
+        int hashValue = myHash(x);
+        int offset = 1;
+        while(array[hashValue] != null && !array[hashValue].element.equals(x)){
+            hashValue += offset;
+            offset += 2;
+            if(hashValue >= array.length){
+                hashValue -= array.length;
             }
         }
+        return hashValue;
+    }
 
-        if(hight(node.right) - hight(node.left) > ALLOW_IMBLANCE){
-            if(hight(node.right.right) >= hight(node.right.left)){
-                node =rotateWithRightChild(node);
-            }else{
-                node = doubleWithRightChild(node);
-            }
+    private boolean isActive(int index){
+        return array[index] != null && array[index].isActive;
+    }
+
+    private int myHash(AnyType x){
+        int hashCode = x.hashCode();
+        hashCode %= array.length;
+        if(hashCode < 0){
+            hashCode += array.length;
         }
-
-        node.hight = Math.max(hight(node.left), hight(node.right)) + 1;
-        return node;
+        return hashCode;
     }
 
-    /**
-     * 单旋转左子树
-     * @param k2
-     * @return
-     */
-    private Node<AnyType> rotateWithLeftChild(Node<AnyType> k2){
-        Node<AnyType> k1 = k2.left;
-        k2.left = k1.right;
-        k1.right = k2;
-        k2.hight = Math.max(hight(k2.left),hight(k2.right)) + 1;
-        k1.hight = Math.max(hight(k1.left), hight(k2)) + 1;
-        return k1;
+    private void allocateTheArray(int size){
+        array = new HashEntity[nextPrime(size)];
     }
 
-    /**
-     * 单旋转右子树
-     * @param k2
-     * @return
-     */
-    private Node<AnyType> rotateWithRightChild(Node<AnyType> k2){
-        Node<AnyType> k1 = k2.right;
-        k2.right = k1.left;
-        k1.left = k2;
-        k2.hight = Math.max(hight(k2.left), hight(k2.right)) + 1;
-        k1.hight = Math.max(hight(k1.right), hight(k2)) + 1;
-        return k1;
-    }
-
-    /**
-     * 双旋转左子树
-     * @param k3
-     * @return
-     */
-    private Node<AnyType> doubleWithLeftChild(Node<AnyType> k3){
-        k3.left = rotateWithRightChild(k3.left);
-        return rotateWithLeftChild(k3);
-    }
-
-    /**
-     * 双旋转右子树
-     * @param k3
-     * @return
-     */
-    private Node<AnyType> doubleWithRightChild(Node<AnyType> k3){
-        k3.right = rotateWithLeftChild(k3.right);
-        return rotateWithRightChild(k3);
-    }
-
-    private int hight(Node<AnyType> node){
-        return node == null ? -1 : node.hight;
-    }
-
-    private static class Node<AnyType>{
-        AnyType element;
-        Node<AnyType> left;
-        Node<AnyType> right;
-        int hight;
-
-        Node(AnyType element){
-            this(element, null, null);
+    private void makeEnpty(){
+        currentSize = 0;
+        occupied = 0;
+        for(int i = 0; i < array.length; i++){
+            array[i] = null;
         }
+    }
 
-        Node(AnyType element, Node<AnyType> left, Node<AnyType> right){
+    private static class HashEntity<AnyType>{
+        private AnyType element;
+        private boolean isActive;
+
+        HashEntity(AnyType element, boolean isActive){
             this.element = element;
-            this.left = left;
-            this.right = right;
-            hight = 0;
+            this.isActive = isActive;
+        }
+
+        HashEntity(AnyType element){
+            this(element, true);
         }
     }
 
+
+    private int nextPrime(int n){
+
+        if(n % 2 == 0){
+            n++;
+        }
+        for(; !isPrime(n); n += 2);
+        return n;
+
+    }
+
+    private boolean isPrime(int n){
+
+        if(n == 2 || n == 3){
+            return true;
+        }
+        if(n == 1 || n % 2 == 0){
+            return false;
+        }
+
+        for(int i = 3; i * i <= n; i+=2){
+            if(n % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
 
     public static void main(String[] args) {
-        TestDemo<Integer> avlTree = new TestDemo<>();
-        final int NUMS = 4000;
-        final int GAP = 37;
+        TestDemo<String> H = new TestDemo<>( );
 
-        for(int i=GAP; i!=0; i = (i + GAP)%NUMS){
-            avlTree.insert(i);
-        }
+        final int NUMS = 2000000;
+        final int GAP  =   37;
 
-        avlTree.remove(2);
-        avlTree.printTree();
-        avlTree.checkBalance();
-        System.out.println("通过直接获取root节点的高度变量获取树的高度：" + avlTree.hight(avlTree.root));
-        System.out.println("通过后序遍历获取整个树的高度：" + avlTree.heightForEpilogue());
+        for( int i = GAP; i != 0; i = ( i + GAP ) % NUMS )
+            H.insert( ""+i );
+
+        System.out.println(H.contains("8999"));
+
+        for( int i = 1; i < NUMS; i+= 2 )
+            H.remove( ""+i );
+
+        System.out.println(H.currentSize);
     }
+
 }
 
 
