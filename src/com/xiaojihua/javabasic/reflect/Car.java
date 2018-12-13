@@ -25,6 +25,10 @@ public class Car {
         this.maxSpeed = maxSpeed;
     }
 
+    protected void drive(){
+        System.out.println("drive private car the color is :"+ color);
+    }
+
     private String brand;
     private String color;
     private int maxSpeed;

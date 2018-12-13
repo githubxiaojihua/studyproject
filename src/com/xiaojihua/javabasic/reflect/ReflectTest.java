@@ -1,6 +1,7 @@
 package com.xiaojihua.javabasic.reflect;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
@@ -16,12 +17,16 @@ public class ReflectTest {
         Constructor cons = clazz.getDeclaredConstructor((Class[])null);
         Car car = (Car) cons.newInstance();
 
+        Field colorField = clazz.getDeclaredField("color");
+        colorField.setAccessible(true);
+        colorField.set(car,"黑色");
+
         Method setBrand = clazz.getMethod("setBrand",String.class);
         setBrand.invoke(car,"宝马");
 
-        Method setColor = clazz.getMethod("setColor",String.class);
+        /*Method setColor = clazz.getMethod("setColor",String.class);
         setColor.invoke(car,"红色");
-
+*/
         Method setMaxSpeed = clazz.getMethod("setMaxSpeed",int.class);
         setMaxSpeed.invoke(car,200);
 
