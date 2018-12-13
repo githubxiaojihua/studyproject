@@ -3,10 +3,8 @@ package com.xiaojihua.datastructure;
 /**
  * 堆的通用实现:二叉堆
  * 二叉堆，是完全二叉树，因此运行时间界为O(logN)
- * 编写方法的原则：
- * 1、要条理清晰
- * 2、分离可供其他方法使用的公用方法
- * 3、应充分利用其他方法
+ * 二叉堆底层使用数组实现，合并操作的时间复杂度为O(N)(通过insert)
+ * 二叉堆每次花费平均常数时间支持插入。
  * @param <AnyType>
  */
 public class C21BinaryHeap<AnyType extends Comparable<? super AnyType>> {
@@ -35,10 +33,10 @@ public class C21BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 
         currentSize = items.length;
         array = (AnyType[]) new Comparable[(2 + currentSize)*11/10];
-        for(int i=0; i<currentSize; i++){
-            array[i] = items[i];
+        int i = 1;
+        for(AnyType item : items){
+            array[i++] = item;
         }
-
         buildHeap();
     }
 
@@ -48,23 +46,24 @@ public class C21BinaryHeap<AnyType extends Comparable<? super AnyType>> {
      * 插入从第一个元素开始插入。第0个元素另有他用
      * @param x
      */
-    public void insert(AnyType x){
+    public void insert( AnyType x )
+    {
+        if( currentSize == array.length - 1 )
+            enLargeArray( array.length * 2 + 1 );
 
-        //判断当列表填满后，则扩展
-        if(currentSize == array.length - 1){
-            enLargeArray(2 * array.length + 1);
-        }
+        // Percolate up
         int hole = ++currentSize;
-        //上滤法插入X。hole必须是大于1，如果等于1则直接插入
-        for(; hole > 1 && x.compareTo(array[hole/2])<0; hole /= 2){
-            array[hole] = array[hole/2];
-        }
-        array[hole] = x;
+        for( array[ 0 ] = x; x.compareTo( array[ hole / 2 ] ) < 0; hole /= 2 )
+            array[ hole ] = array[ hole / 2 ];
+        array[ hole ] = x;
     }
+/*
 
-    /**
+    */
+/**
      * 删除（自写）
-     */
+     *//*
+
     public AnyType deleteMinByMySelf(){
         //暂存返回值
         AnyType minValue = array[1];
@@ -91,12 +90,14 @@ public class C21BinaryHeap<AnyType extends Comparable<? super AnyType>> {
     }
 
 
-    /**
+    */
+/**
      * 根据节点索引选取最小儿子
      * 区分处理有左右儿子以及只有做儿子的情况
      * @param hole
      * @return
-     */
+     *//*
+
     private int findMinChildren(int hole){
 
         AnyType leftChileren = null;
@@ -113,9 +114,10 @@ public class C21BinaryHeap<AnyType extends Comparable<? super AnyType>> {
             return 2 * hole;
         }
     }
+*/
 
     /**
-     * 根据给定的列表建立二叉堆
+     * 根据给定的列表建立二叉堆(也可用于合并时间复杂度为O(logN))
      */
     public void buildHeap(){
 
@@ -152,7 +154,7 @@ public class C21BinaryHeap<AnyType extends Comparable<? super AnyType>> {
         //并且在insert中currentSize--了
         for(;2 * hole <= currentSize; hole = child){
             child = 2 * hole;
-            if(array[child].compareTo(array[child+1]) > 0){
+            if(child != currentSize && array[child].compareTo(array[child+1]) > 0){
                 child++;
             }
             if(tmp.compareTo(array[child]) > 0){
@@ -203,24 +205,31 @@ public class C21BinaryHeap<AnyType extends Comparable<? super AnyType>> {
         }
     }
 
+    public void makeEmpty( )
+    {
+        currentSize = 0;
+    }
+
 
     public static void main(String[] args) {
-        int numItems = 10;
+        int numItems = 10000;
         C21BinaryHeap<Integer> h = new C21BinaryHeap<>( );
         int i = 37;
 
-        for( i = 1; i<11; i++ )
+        for( i = 37; i != 0; i = ( i + 37 ) % numItems )
             h.insert( i );
-        System.out.println(h.toString());
+        for( i = 1; i < numItems; i++ )
+            if( h.deleteMin( ) != i )
+                System.out.println( "Oops! " + i );
 
-        h.deleteMinByMySelf();
-        h.deleteMinByMySelf();
-        h.deleteMinByMySelf();
-        h.deleteMinByMySelf();
-        h.deleteMinByMySelf();
-        h.deleteMinByMySelf();
-        h.deleteMinByMySelf();
-        System.out.println(h.toString());
+//        h.deleteMinByMySelf();
+//        h.deleteMinByMySelf();
+//        h.deleteMinByMySelf();
+//        h.deleteMinByMySelf();
+//        h.deleteMinByMySelf();
+//        h.deleteMinByMySelf();
+//        h.deleteMinByMySelf();
+//        System.out.println(h.toString());
 
 
     }

@@ -2,9 +2,16 @@ package com.xiaojihua.datastructure;
 
 /**
  * 二项队列的实现
+ * 二项队列支持合并、插入、deleteMin三种操作以每次最坏O(logN)的时间运行
+ * 二项队列并非是一颗堆序树，而是堆序树的集合也成为森林，而每一棵堆序树都是二项树，而且每一个高度上
+ * 最多允许有一颗二项树，高度为0的二项树是单节点，高度为k的二项树Bk，通过将一颗二项树Bk-1
+ * 付接到另一棵二项树Bk-1的根上组成。
+ * 高度为k的二项树有2^k个节点，而在深度为d处的节点数为C(下标k,上标d)。
+ *
+ * 可以通过二项队列表示任意大小的优先队列。
  * @param <AnyType>
  */
-public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
+public class C23BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 
     private static final int DEFAULT_TREES = 1;
     private int currentSize;//优先队列中的元素素量
@@ -13,7 +20,7 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
     /**
      * 无参构造
      */
-    public BinomialQueue(){
+    public C23BinomialQueue(){
         theTrees = new Node[DEFAULT_TREES];
         makeEmpty();
     }
@@ -22,7 +29,7 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
      * 有参构造：使用一个元素初始化二项队列
      * @param item
      */
-    public BinomialQueue(AnyType item){
+    public C23BinomialQueue(AnyType item){
         currentSize = 1;
         theTrees = new Node[1];
         theTrees[0] = new Node<>(item);
@@ -30,9 +37,10 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * 合并操作
+     * 最多有logN棵树。每次合并花费常数时间。因此时间复杂度为O(logN)
      * @param rhs
      */
-    public void merge(BinomialQueue<AnyType> rhs){
+    public void merge(C23BinomialQueue<AnyType> rhs){
 
         if(this == rhs){//忽略别名
             return;
@@ -42,7 +50,7 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
             expandTheTrees(Math.max(theTrees.length, rhs.theTrees.length) + 1);
         }
         Node<AnyType> curr = null;
-        //由于二巷队列最多有logN棵树，因此如下循环
+        //由于二项队列最多有logN棵树，因此如下循环
         for(int i=0,j=1; j<=currentSize; j *= 2, i++){
             Node<AnyType> t1 = theTrees[i];
             Node<AnyType> t2 = i<rhs.theTrees.length?rhs.theTrees[i]:null;
@@ -96,11 +104,12 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
      * @param x
      */
     public void insert(AnyType x){
-        merge(new BinomialQueue<>(x));
+        merge(new C23BinomialQueue<>(x));
     }
 
     /**
      * 查询最小值
+     * 由于最多有logN棵不同的树，因此此方法的时间为O(logN)
      * @return
      */
     public AnyType findMin(){
@@ -127,12 +136,15 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 
         Node<AnyType> deleteTree = theTrees[minIndex].leftChild;//最小根所在的二项树的第一个孩子
 
-        //H''
-        BinomialQueue<AnyType> deleteTrees = new BinomialQueue<>();
-        deleteTrees.expandTheTrees(minIndex);//根据最小根所在的索引初始化新优先队列，H''的高度恰好应该是索引值-1
+        //H''(删除最小值所在二项树所形成的的二项队列)
+        C23BinomialQueue<AnyType> deleteTrees = new C23BinomialQueue<>();
+        //根据最小根所在的索引初始化新优先队列，H''的高度恰好应该是索引值-1，
+        //根据二项式的性质，此二项式根节点的孩子正好是此树的高度也就是minIndex
+        deleteTrees.expandTheTrees(minIndex);
         deleteTrees.currentSize = (1<<minIndex) - 1;//计算容量，容量= 2^minIndex -1
 
         //从优先队列的后边开始初始化，因为从combin方法来看，第一个孩子一定是最高的
+        //要合并前在构造H''的时候还是需要将二项树的顺序按照高度递增。因为其他二项树也是这样的
         for(int i=minIndex-1; i>=0; i--){
             deleteTrees.theTrees[i] = deleteTree;
             deleteTree = deleteTree.nextSibling;
@@ -259,8 +271,8 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 
     public static void main(String[] args) {
         int numItems = 10000;
-        BinomialQueue<Integer> h  = new BinomialQueue<>( );
-        BinomialQueue<Integer> h1 = new BinomialQueue<>( );
+        C23BinomialQueue<Integer> h  = new C23BinomialQueue<>( );
+        C23BinomialQueue<Integer> h1 = new C23BinomialQueue<>( );
         int i = 37;
 
         System.out.println( "Starting check." );
