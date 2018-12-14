@@ -14,9 +14,9 @@ public class JavaIo {
         // 创建文件
         //createFile();
         // 字节流
-        //charactorStream();
+        charactorStream();
         // 字符流
-        zifuStream();
+        //zifuStream();
 
     }
 
