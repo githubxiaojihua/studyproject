@@ -242,6 +242,8 @@ public class C23BinomialQueue<AnyType extends Comparable<? super AnyType>> {
      * 整个二项队列的元素数量是2的二项队列数组长度次方-1。
      * 可以想象一下在二项队列上再抽象一个根元素，将二项队列的各个二项树链接起来，组成一颗大的二项树，
      * 那么这颗二项树的元素树为2^theTrees.length个元素，那么二项队列的元素为此值-1.
+     *
+     * -号的优先级比<<要高，因此要将前面用括号括起来
      * @return
      */
     private int capacity(){

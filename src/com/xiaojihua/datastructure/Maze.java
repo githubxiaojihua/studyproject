@@ -53,7 +53,7 @@ public class Maze extends JFrame {
         //出口 竖墙
         g.drawLine((n+d)*rSize, (m-1+d)*rSize+1,(n+d)*rSize,  (m+d)*rSize);
         //不相交集定义
-        DisjSets dSets=new DisjSets(m*n);
+        C25DisjSets dSets=new C25DisjSets(m*n);
         Random r=new Random();
         //出口0入口m*n-1没有连通
         while(dSets.find(0)!=dSets.find(m*n-1)){

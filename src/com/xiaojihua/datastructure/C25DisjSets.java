@@ -11,7 +11,7 @@ package com.xiaojihua.datastructure;
  * 不相交集类的应用是画迷宫
  * 具体的应用类是Maze.java
  */
-public class DisjSets {
+public class C25DisjSets {
 
     private int[] a;//用于存储树，数组的每个成员a[i]表示元素i的父亲。如果i是根则s[i] = -1
 
@@ -20,7 +20,7 @@ public class DisjSets {
      * 数组每个元素初始化为-1代表，各集合是相互独立的。
      * @param numElements
      */
-    public DisjSets(int numElements){
+    public C25DisjSets(int numElements){
         a = new int[numElements];
         for(int i = 0; i < numElements; i++){
             a[i] = -1;
@@ -28,7 +28,7 @@ public class DisjSets {
     }
 
     /**
-     * 按高度求并（还有按大小求并，这里没有实现）
+     * 按高度求并（还有按大小求并，这里没有实现），按照高度和大小求并使得所有树的深度最多为O(logN)
      * 每个根存储的高度为实际高度-1，因为初始值为-1.
      * 当合并两个等价类的时候，将高度小的树合并到高度大的树，即改变较小树的跟的父链接为大树的根。
      * 然后大树的根所存储的高度-1。
@@ -68,7 +68,7 @@ public class DisjSets {
         int NumElements = 128;
         int NumInSameSet = 16;
 
-        DisjSets ds = new DisjSets( NumElements );
+        C25DisjSets ds = new C25DisjSets( NumElements );
         int set1, set2;
 
         //对等价类进行合并，最终合并成了8个等价类，分别是0,16,32,48,64,80,96,112

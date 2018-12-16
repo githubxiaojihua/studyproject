@@ -2,10 +2,7 @@ package com.xiaojihua.datastructure;
 
 import org.omg.CORBA.Any;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * 各类排序
@@ -13,7 +10,7 @@ import java.util.List;
  * 1、通过交换相邻元素进行排序的任何算法平均都需要Ω(N²)时间
  * 2、对于N个互异项的随机排列进行堆排序所用的比较的平均次数为2NlogN-O(NlogN)
  */
-public class Sort {
+public class C24Sort {
 
     private static final int CUTOFF = 10;
 
@@ -78,16 +75,34 @@ public class Sort {
     }
 
     /**
-     * 希尔排序O(N^2)
+     * 希尔排序o(N^2)
      * 希尔排序使用一个增量序列来排序，h1,h2,h3,...ht，只要h1等于1任何增量排序都可以。
-     * h_k代表增量（即上面的h1,h2,h3....ht），ht代表增量序列的最大值。
+     * h_k代表增量（即上面的h1,h2,h3....ht序列中的某个值），ht代表增量序列的最大值。
      * 当使用增量h_k进行一趟排序后，保证对于每一个i(0-N-1)，都有a[i]<=a[i+h_k]，所有相隔h_k的元素都被排序。
      *
      * 具体做法是：
      * 对于增量h_k的一趟排序，对于h_k,h_k+1,h_k+2...,N-1中的每一个位置i，把其上的元素放到，i,i-h_k,i-2h_k...,h_k中的合适位置中。
      * 实际上就是各个相同间隔数组进行插入排序
+     * 实例：
+     * 对原始数组：81,94,11,96,12,35,17,95,28,58,41,75,15，进行h_k=5的一趟排序。
+     * 根据如上所说的具体做法：对于5,6,7,8,9,10,11,12中的每一个位置的值，放到，其值本身（设为x）,x-5，x-10...
+     * x-2h_k > 0中的合适位置中。比如5，那么应该将5对应的值35放到（5,0）两个位置中的合适位置
+     * ，对于6，应该将6对应的值17放到（6,1）位置中的合适位置，对于7应该将7对应的值95放到（7,2）合适的位置上
+     * 因此对于h_k=5的一趟排序如下：
+     * 35,94,11,96,12,81,17,95,28,58,41,75,15 --处理的值是原始数组5的位置35,
+     * 35,17,11,96,12,81,94,95,28,58,41,75,15 --处理的值是源氏数组6的位置17，
+     * 35,17,11,96,12,81,94,95,28,58,41,75,15 --处理的值是原始数组7的位置95，
+     * 35,17,11,28,12,81,94,95,96,58,41,75,15 --处理的值是原始数组8的位置28，
+     * 35,17,11,28,12,81,94,95,96,58,41,75,15 --处理的值是原始数组9的位置58，
+     * 35,17,11,28,12,41,94,95,96,58,81,75,15 --处理的值是原始数组10的位置41，
+     * 35,17,11,28,12,41,75,95,96,58,81,94,15 --处理的值是原始数组11的位置75，
+     * 35,17,11,28,12,41,75,15,96,58,81,94,95 --处理的值是原始数组12的位置15
+     * 加下来在处理下一个h_k的值，循环上步骤知道h_k=1
      *
      * 这里采用的ht为N/2，h_k为h_k+1/2
+     *
+     * 这个算法也说明了，for循环多的也不一定效率就比for循环少的差，当然如果for循环
+     * 如果嵌套的太多一般是比嵌套的少的要差。
      * @param a
      * @param <AnyType>
      */
@@ -157,6 +172,7 @@ public class Sort {
     /**
      * 归并排序，入口方法
      * 最坏O(NlogN)
+     * 归并排序是分治算法设计技巧的应用，并且是递归方法的典型应用
      * @param a 待排序的数组
      * @param <AnyType>
      */
@@ -263,7 +279,6 @@ public class Sort {
             }
 
             simpleQuitSort(smaller);
-            simpleQuitSort(same);
             simpleQuitSort(larger);
 
             a.clear();
@@ -275,6 +290,7 @@ public class Sort {
 
     /**
      * 快速排序 --入口方法
+     * 平均运行时间为O(NlogN)
      * @param a
      * @param <AnyType>
      */
@@ -323,7 +339,7 @@ public class Sort {
             int i = left, j = right - 1;
             for(; ;){
                 while(a[++i].compareTo(pivot) < 0){}
-                while(a[--j].compareTo(pivot) < 0){}
+                while(a[--j].compareTo(pivot) > 0){}
                 if(i < j){
                     swapReferences(a, i, j);
                 }else{
@@ -331,7 +347,7 @@ public class Sort {
                 }
             }
             swapReferences(a, i, right - 1);
-            quickSort(a, left, i + 1);
+            quickSort(a, left, i - 1);
             quickSort(a, i + 1, right);
         }else{
             insertionSort(a, left, right);
@@ -343,6 +359,8 @@ public class Sort {
         Integer[] a = {34,8,64,51,32,21};
         quickSort(a);
         System.out.println(Arrays.toString(a));
+       /* simpleQuitSort(Arrays.asList(a));
+        System.out.println(Arrays.toString(a));
 
         List<Integer> myList = new ArrayList<>();
         myList.add(34);
@@ -352,6 +370,22 @@ public class Sort {
         myList.add(32);
         myList.add(21);
         simpleQuitSort(myList);
-        System.out.println(myList);
+        System.out.println(myList);*/
+
+        /**
+         * 当使用simpleQuitSort方法来进行排序的时候，不能使用Arrays.asList(a)
+         * 来将a转换成List，这样会直接报错的，由于里面有调用clear()方法改变了,
+         * 而其内部调用了remove()。而通过Arrays.asList(a)转换得到的是Arrays$ArrayList，这个类
+         * 继承自abstracList(remove只抛出异常UnsupportedOperationException不做任何操作)
+         * 而Arrays$ArrayLis并没有覆盖这个方法，但是ArrayList却覆盖了。
+         * 因此如果直接传递ArraysList.asList(a)，程序会报UnsupportedOperationException
+         * 应该按照如下写法来传递。
+         * 而且这样只是修改了sortedArray中元素的顺序，不会影响a中的元素顺序，因为
+         * sortedArray是根据a元素新创建出来的一块儿新的区域。
+         *
+         */
+        List<Integer> sortedArray = new ArrayList(Arrays.asList(a));
+        simpleQuitSort(sortedArray);
+        System.out.println(sortedArray);
     }
 }
