@@ -1,8 +1,8 @@
 package com.xiaojihua.javabasic.chapter21.shareResource;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 知识点：
@@ -12,11 +12,17 @@ import java.util.concurrent.Executors;
  * 本实例中有两个线程main和ExecutorService创造的线程
  * 2、由于本例中i为private的，并通过public的两个方法进行访问。那么要达到原子性、可视性可以直接在
  * 方法上使用synchronized，不必使用volatile
+ * 3、可以使用原子类对方法进行改进从而去掉synchronized。比如打开注销掉的那几行
  */
-public class AtomicityTest implements Runnable {
+public class C05AtomicityTest implements Runnable {
     private int i = 0;
+    //private AtomicInteger i = new AtomicInteger(0);
     synchronized public int getValue(){ return i; }
+    //public int getValue(){ return i.get(); }
     synchronized public void evenIncreatement(){ i++; i++;}
+    /*public void evenIncreatement(){
+        i.addAndGet(2);
+    }*/
     @Override
     public void run() {
         while (true){
@@ -27,7 +33,7 @@ public class AtomicityTest implements Runnable {
     public static void main(String[] args) {
         //启动一个新的线程
         ExecutorService service = Executors.newCachedThreadPool();
-        AtomicityTest atomicityTest = new AtomicityTest();
+        C05AtomicityTest atomicityTest = new C05AtomicityTest();
         service.execute(atomicityTest);
         //main线程开始读取并检测
         while(true){

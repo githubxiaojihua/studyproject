@@ -144,7 +144,24 @@ public class C03MaxSubSum {
 
 	private static int max3( int a, int b, int c )
 	{
+
 		return a > b ? a > c ? a : c : b > c ? b : c;
+	}
+
+	private static int max33( int a, int b, int c){
+		return Math.max(c, Math.max(a,b));
+	}
+
+	private static int max34(int a, int b, int c){
+		if(a>b && a>c){
+			return a;
+		}else if(b>c && b>a){
+			return b;
+		}else if(c>b && c>a){
+			return c;
+		}else{
+			return -1;
+		}
 	}
 
 

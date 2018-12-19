@@ -21,7 +21,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 当然只有首先获得锁的任务才能继续访问synchronized方法，增加和减少锁的数量。
  * 6、使用Lock显式的声明锁、锁定、释放。
  */
-public class EvenGenerator extends IntGenerator {
+public class C03EvenGenerator extends C01IntGenerator {
     private int currentEvenValue = 0;
 
     /**
@@ -58,6 +58,6 @@ public class EvenGenerator extends IntGenerator {
 
     public static void main(String[] args) {
 
-        EvenChecker.test(new EvenGenerator());
+        C02EvenChecker.test(new C03EvenGenerator());
     }
 }

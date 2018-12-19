@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 2、可以显式解除锁定unluck
  * 3、匿名Thread的使用
  */
-public class AttemptLocking {
+public class C04AttemptLocking {
     private Lock lock = new ReentrantLock();
 
     public void untimed(){
@@ -43,7 +43,7 @@ public class AttemptLocking {
     }
 
     public static void main(String[] args) {
-       final AttemptLocking al = new AttemptLocking();
+       final C04AttemptLocking al = new C04AttemptLocking();
 
         al.untimed();;
         al.timed();

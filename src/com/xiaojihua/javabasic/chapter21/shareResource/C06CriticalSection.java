@@ -156,7 +156,7 @@ class PairChecker implements Runnable{
 }
 
 
-public class CriticalSection {
+public class C06CriticalSection {
     static void testApproaches(PairManager pm1, PairManager pm2){
         ExecutorService service = Executors.newCachedThreadPool();
         PairManipulator

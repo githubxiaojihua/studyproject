@@ -9,10 +9,10 @@ import java.util.concurrent.Executors;
  * 1、通过对IntGenerator的使用，是的本类与具体的IntGenerator解耦。
  * 2、通过实现Runnable接口，来使用不同的线程共同访问同一个IntGenerator对象，考察在多线程下共享资源的访问情况。
  */
-public class EvenChecker implements Runnable{
-    private IntGenerator intGenerator;//共享资源
+public class C02EvenChecker implements Runnable{
+    private C01IntGenerator intGenerator;//共享资源
     private final int id;//每个进程的id
-    EvenChecker(IntGenerator it, int id){
+    C02EvenChecker(C01IntGenerator it, int id){
         this.intGenerator = it;
         this.id = id;
     }
@@ -32,15 +32,15 @@ public class EvenChecker implements Runnable{
      * @param it
      * @param count
      */
-    public static void test(IntGenerator it, int count){
+    public static void test(C01IntGenerator it, int count){
         ExecutorService service = Executors.newCachedThreadPool();
         for(int i = 0; i < count; i++){
-            service.execute(new EvenChecker(it,i));
+            service.execute(new C02EvenChecker(it,i));
         }
         service.shutdown();
     }
 
-    public static void test(IntGenerator it){
+    public static void test(C01IntGenerator it){
         test(it,10);
     }
 }

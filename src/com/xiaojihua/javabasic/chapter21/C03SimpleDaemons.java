@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 知识点：
  * 1、后台线程。所谓的后台线程是指在程序运行期间在后台提供一种通用服务的线程，当所有非后台线程结束时，程序终止了，同时会杀死所有的后台线程。
+ * 2、后台线程也叫守护线程
  */
 public class C03SimpleDaemons implements Runnable {
     @Override

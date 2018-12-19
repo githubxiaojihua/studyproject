@@ -17,18 +17,18 @@ class Accessor implements Runnable{
     public void run() {
         //循环直到线程被中断
         while(!Thread.currentThread().isInterrupted()){
-            ThreadLocalVariableHolder.increment();
+            C07ThreadLocalVariableHolder.increment();
             System.out.println(this);
             Thread.yield();
         }
     }
     public String toString(){
-        return "#" + id + ":" + ThreadLocalVariableHolder.get();
+        return "#" + id + ":" + C07ThreadLocalVariableHolder.get();
     }
 }
 
-public class ThreadLocalVariableHolder {
-    //声明ThreadLocal变量并生成初始值
+public class C07ThreadLocalVariableHolder {
+    //声明ThreadLocal变量并生成初始值。ThreadLocal对象通常当作静态域存储
     private static ThreadLocal<Integer> value = new ThreadLocal<Integer>(){
         private Random rand = new Random(47);
         //指定初始值。这里加synchronized和不加是没有区别的
