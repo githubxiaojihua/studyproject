@@ -33,7 +33,7 @@ class Count{
         //synchronized去掉那么程序就会崩溃
         int temp = count;
         if(rand.nextBoolean()){
-            Thread.yield();
+            Thread.yield();//调用yield的时候并不释放锁
         }
         return (count = ++temp);
     }
