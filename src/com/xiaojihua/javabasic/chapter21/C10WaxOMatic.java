@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * 2、wait\notifty\notifyall必须放在snychronized中。因为这几项操作
  * 都牵扯到释放锁和获得锁。因此加载同步对象上是对的。wait会将获得当前对象
  * 锁的线程挂起，notify和notifyall会唤醒当前对象上被挂起的线程。
- * 3、wait释放锁，挂起程序，sleep不释放锁阻塞程序。
+ * 3、wait释放锁，挂起程序，sleep和yield不释放锁阻塞程序。
  * 4、wait和notify，notifyall是object类的方法
  *
  * 本例模拟：
@@ -51,10 +51,11 @@ class Car1{
         //这里必须用while。原因是要检查所感兴趣的条件，并在条件不满足的时候回到wait中
         //比如刚被唤醒，某个其他任务又将waxOn==false
         //重点：当调用wait的时候程序就停在wait的地方，然后notifyall后会继续执行，也就是
-        //接着while循环判断，并不是执行完wait立即再进行while
+        //接着while循环判断，并不是执行完wait立即再进行while，并且在不停的循环
         while(waxOn == false){
             //System.out.println("test");
-            wait();
+            wait();//使用此资源的线程再此处挂起，直到notyfy和notifyall。并且释放锁
+            //当在此wait的线程被唤醒的时候必须首先获得在wait时放弃的锁，如果锁不可用则不会被唤醒
         }
 
     }
@@ -136,8 +137,19 @@ public class C10WaxOMatic {
          * 抛光完成后，waxOn = false，并唤醒挂起的上蜡任务，然后再下一个while，挂起自己
          */
         service.execute(new WaxOff(car));
-        //service.execute(new WaxOn(car));
+        service.execute(new WaxOn(car));
         TimeUnit.SECONDS.sleep(5);
+        //调用shutdownNow会向所有线程发送Interrupt()
+        //当分别去掉上蜡任务和抛光任务的sleep后也能实现中断
+        /**
+         * 这里有个小的知识点：
+         * 1、当将上蜡任务和抛光任务中的sleep语句去掉后，输出将不一样，只会有一个异常输出
+         * 原因是，当存在sleep的时候，调用shutdownNow的时候，大多时间都在sleep，而且
+         * shutdownNow会向service中的所有线程发送interrup()方法，因此两个任务都会抛出
+         * InterruptedException异常进行中断。当都去掉后，因为同一时间只有一个任务在wait
+         * 而wait方法本身和抛出InterruptedException，因此当执行如下语句的时候，只有一个
+         * 异常输出，另外一个是通过判断Thread.interrupted()来终止的while循环。
+         */
         service.shutdownNow();
 
     }
