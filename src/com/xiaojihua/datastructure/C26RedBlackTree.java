@@ -212,7 +212,7 @@ public class C26RedBlackTree<AnyType extends Comparable<? super AnyType>> {
      * 1、当出现需要颜色翻转的时候调用。
      * 2、将叶子节点插入到适当位置后调用。（叶子节点在创建的时候是black的，因此颜色翻转在任何情况下都需要调用）
      */
-    private void handleReorient( AnyType item )
+    private void    handleReorient( AnyType item )
     {
         // 颜色翻转
         current.color = RED;
