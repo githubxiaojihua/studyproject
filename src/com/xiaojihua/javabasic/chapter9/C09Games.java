@@ -79,7 +79,7 @@ class ChessFactory implements GameFactory{
         return new Chess();
     }
 }
-public class Games {
+public class C09Games {
     /**
      * 使用GameFactory接口引用
      * @param gameFactory

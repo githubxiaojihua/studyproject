@@ -12,7 +12,7 @@ class Z extends D{
         return new E(){};
     }
 }
-public class MutiImplementation {
+public class C07MutiImplementation {
     static void takesD(D d){}
     static void takesE(E e){}
 

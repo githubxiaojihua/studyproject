@@ -9,10 +9,10 @@ package com.xiaojihua.javabasic.chapter7;
  * 使用组合SpaceShipControlls类的方法代替了从他继承。同时通过代理方法将SpaceShipControlls类的公共借口暴露。
  * 这种方式避免了继承的层级架构，更加灵活。
  */
-public class SpaceShipDelegation {
+public class C02SpaceShipDelegation {
     private String name;
     private SpaceShipControlls controlls = new SpaceShipControlls();//代理类
-    public SpaceShipDelegation(String name){
+    public C02SpaceShipDelegation(String name){
         this.name = name;
     }
     //代理方法
@@ -36,7 +36,7 @@ public class SpaceShipDelegation {
     }
 
     public static void main(String[] args) {
-        SpaceShipDelegation delegation = new SpaceShipDelegation("delegation");
+        C02SpaceShipDelegation delegation = new C02SpaceShipDelegation("delegation");
         delegation.foword(100);
     }
 

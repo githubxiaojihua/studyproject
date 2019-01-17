@@ -1,13 +1,11 @@
 package com.xiaojihua.javabasic.chapter10;
 
-import sun.security.krb5.internal.crypto.Des;
-
 /**
  * 知识点：匿名内部类的使用
  */
-public class Parcel {
-    public Contents contents(){
-        return new Contents() {
+public class C03Parcel {
+    public C01Contents contents(){
+        return new C01Contents() {
             private int i = 11;
             @Override
             public int value() {
@@ -16,8 +14,8 @@ public class Parcel {
         };
     }
 
-    public Destination destination(final String dest){
-        return new Destination() {
+    public C02Destination destination(final String dest){
+        return new C02Destination() {
             private String lable = dest;
             @Override
             public String readLable() {
@@ -27,9 +25,9 @@ public class Parcel {
     }
 
     public static void main(String[] args) {
-        Parcel parcel = new Parcel();
-        Contents contents = parcel.contents();
-        Destination destination = parcel.destination("aaa");
+        C03Parcel parcel = new C03Parcel();
+        C01Contents contents = parcel.contents();
+        C02Destination destination = parcel.destination("aaa");
         System.out.println(destination.readLable());
     }
 }

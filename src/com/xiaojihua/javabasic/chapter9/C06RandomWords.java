@@ -14,13 +14,13 @@ import java.util.Scanner;
  * 更多的类。
  * Scanner类是先将内容读取到CharBuffer中然后再根据分隔符默认是空格进行分割读取
  */
-public class RandomWords implements Readable {
+public class C06RandomWords implements Readable {
     private static Random random = new Random(47);
     private static final char[] capitals = "ABCDEFGHIGKLMNOPQRSTUVWXYZ".toCharArray();
     private static final char[] lowers = "abcdefghigklmnopqrstuvwxyz".toCharArray();
     private static final char[] vowels = "aeiou".toCharArray();
     private int count;
-    RandomWords(int count){ this.count = count; }
+    C06RandomWords(int count){ this.count = count; }
     @Override
     public int read(CharBuffer cb) throws IOException {
         if(count-- == 0){
@@ -32,11 +32,11 @@ public class RandomWords implements Readable {
             cb.append(vowels[random.nextInt(vowels.length)]);
         }
         cb.append(" ");//增加分隔符
-        return 10;
+        return 11;
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(new RandomWords(10));
+        Scanner scanner = new Scanner(new C06RandomWords(10));
         while (scanner.hasNext()){
             System.out.println(scanner.next());
         }

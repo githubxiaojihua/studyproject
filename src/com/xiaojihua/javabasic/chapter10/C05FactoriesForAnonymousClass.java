@@ -50,7 +50,7 @@ class Implementation2ForService implements ServiceForAnonymousClass{
 }
 
 
-public class FactoriesForAnonymousClass {
+public class C05FactoriesForAnonymousClass {
     public static void serviceConsumer(ServiceFactoryForAnonymousClass factory){
         ServiceForAnonymousClass service = factory.getService();
         service.service1();

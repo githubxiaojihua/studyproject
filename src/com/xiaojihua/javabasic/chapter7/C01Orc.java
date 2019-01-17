@@ -20,9 +20,9 @@ class Villain{
     }
 }
 
-public class Orc extends Villain {
+public class C01Orc extends Villain {
     private int octNumber;
-    public Orc(String name, int octNumber){
+    public C01Orc(String name, int octNumber){
         super(name);
         this.octNumber = octNumber;
     }
@@ -36,7 +36,7 @@ public class Orc extends Villain {
     }
 
     public static void main(String[] args) {
-        Orc orc = new Orc("Liburge", 20);
+        C01Orc orc = new C01Orc("Liburge", 20);
         print(orc);
         orc.change("bob",12);
         print(orc);

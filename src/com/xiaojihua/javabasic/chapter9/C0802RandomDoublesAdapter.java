@@ -13,9 +13,9 @@ import java.util.Scanner;
  * 对于适配器的理解：实际上它就是一个转换器，将一个类转化为另一个类。
  * 而有了接口机制，才有了适配器，接口为适配器提供了良好的基础。
  */
-public class RandomDoublesAdapter extends RandomDoubles implements Readable {
+public class C0802RandomDoublesAdapter extends C0801RandomDoubles implements Readable {
     private int count;
-    RandomDoublesAdapter(int count){
+    C0802RandomDoublesAdapter(int count){
         this.count = count;
     }
     @Override
@@ -29,7 +29,7 @@ public class RandomDoublesAdapter extends RandomDoubles implements Readable {
     }
 
     public static void main(String[] args) {
-            Scanner scanner = new Scanner(new RandomDoublesAdapter(10));
+            Scanner scanner = new Scanner(new C0802RandomDoublesAdapter(10));
             while(scanner.hasNextDouble()){
                 System.out.println(scanner.nextDouble());
             }

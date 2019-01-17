@@ -58,7 +58,7 @@ class Implementation2Factory implements ServiceFacotry{
         return new Implementation2();
     }
 }
-public class Factories {
+public class C04Factories {
     public static void serviceConsumer(ServiceFacotry factory){
         Service service = factory.getService();
         service.method1();

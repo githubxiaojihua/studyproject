@@ -11,7 +11,7 @@ package com.xiaojihua.javabasic.chapter5;
  * Peeler: peel
  * 每一个类都完成自己相关的功能，划分清楚。值得借鉴。
  */
-public class PassingThis {
+public class C02PassingThis {
     public static void main(String[] args) {
         new Person().eat(new Apple().getPeeled());
     }

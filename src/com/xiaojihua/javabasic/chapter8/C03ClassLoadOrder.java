@@ -55,13 +55,13 @@ class AnimalAction{
 class superClass{
     private static AnimalAction animalAction = new AnimalAction("0 superClass static");
 }
-public class ClassLoadOrder extends superClass {
+public class C03ClassLoadOrder extends superClass {
     private AnimalAction animalAction = new AnimalAction("2 in main class");
     private static AnimalAction animalActionStatic = new AnimalAction("1 in main class static");
 
     public static void main(String[] args) {
         System.out.println("这句话将出现在2之前");
-        new ClassLoadOrder();//没有这一句的话就不加载“2 in main class”
+        new C03ClassLoadOrder();//没有这一句的话就不加载“2 in main class”
         Dog dog = new Dog();
         System.out.println("9 in main method");
     }

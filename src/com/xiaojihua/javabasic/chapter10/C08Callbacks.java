@@ -19,6 +19,9 @@ import static com.xiaojihua.javabasic.util.Print.*;
  *
  * 回调：一个对象能够携带一些信息，这些信息允许它在某个时刻调用初始的对象。对应到本例就是：
  * Caller对象会携带一个Callee类的引用或者其基类的引用，然后在任意时刻和位置，可以使用此引用回调Callee类的方法。
+ *
+ * 闭包的一个典型应用是迭代器:
+ * @see C10Sequence
  */
 interface Incretable{
     void increment();
@@ -80,7 +83,7 @@ class Caller{
         incretable.increment();
     }
 }
-public class Callbacks {
+public class C08Callbacks {
     public static void main(String[] args) {
         Callee1 c1 = new Callee1();
         Callee2 c2 = new Callee2();

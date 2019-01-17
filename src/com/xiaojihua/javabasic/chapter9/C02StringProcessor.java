@@ -11,7 +11,7 @@ import java.util.Arrays;
  *             }
  *         };
  */
-public abstract class StringProcessor implements Processor {
+public abstract class C02StringProcessor implements Processor {
     public String name(){
         return getClass().getSimpleName();
     }
@@ -19,26 +19,26 @@ public abstract class StringProcessor implements Processor {
     public static String s = "if she weighs the same as a duck,she's made of wood";
 
     public static void main(String[] args) {
-        Apply.process(new Upcase1(), s);
-        Apply.process(new Downcase1(), s);
-        Apply.process(new Splitter1(), s);
+        C01Apply.process(new Upcase1(), s);
+        C01Apply.process(new Downcase1(), s);
+        C01Apply.process(new Splitter1(), s);
     }
 
 }
 
-class Upcase1 extends StringProcessor{
+class Upcase1 extends C02StringProcessor {
     public String process(Object s){
         return ((String) s).toUpperCase();
     }
 }
 
-class Downcase1 extends StringProcessor{
+class Downcase1 extends C02StringProcessor {
     public String process(Object s){
         return ((String) s).toLowerCase();
     }
 }
 
-class Splitter1 extends StringProcessor{
+class Splitter1 extends C02StringProcessor {
     public String process(Object s){
         return Arrays.toString(((String)s).split(" "));
     }

@@ -8,8 +8,8 @@ package com.xiaojihua.javabasic.chapter10;
  * 2、创建嵌套类对象不需要外部类对象，但是内部类需要
  * 3、内部类不能有static字段和方法，嵌套类可以
  */
-public class ParcelForStaticInnerClass {
-    private static class ParcelContents implements Contents{
+public class C09ParcelForStaticInnerClass {
+    private static class ParcelContents implements C01Contents {
         private int i = 11;
         @Override
         public int value() {
@@ -17,7 +17,7 @@ public class ParcelForStaticInnerClass {
         }
     }
 
-    private static class ParcelDestination implements Destination{
+    private static class ParcelDestination implements C02Destination {
         private String lable;
         ParcelDestination(String lable){
             this.lable = lable;
@@ -35,16 +35,16 @@ public class ParcelForStaticInnerClass {
         }
     }
 
-    public static Contents contens(){
+    public static C01Contents contens(){
         return new ParcelContents();
     }
 
-    public static Destination destination(String s){
+    public static C02Destination destination(String s){
         return new ParcelDestination(s);
     }
 
     public static void main(String[] args) {
-        Contents s = contens();
-        Destination d = destination("aaa");
+        C01Contents s = contens();
+        C02Destination d = destination("aaa");
     }
 }

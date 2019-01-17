@@ -7,7 +7,7 @@ package com.xiaojihua.javabasic.chapter5;
  * 并没有完成。
  * finalize作为垃圾回收前的最后一个可认为干预的编码，可以用于对这些不满足回收终结条件的对象进行终结条件的检验。
  */
-public class TerminationCondition {
+public class C01TerminationCondition {
     public static void main(String[] args) {
         Book novel = new Book(true, "book1");
         //正常的清理，将应该做的都做了

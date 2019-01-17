@@ -19,10 +19,10 @@ interface Selector<T>{
     void next();
 }
 
-public class Sequence<U> {
+public class C10Sequence<U> {
     private U[] items;
     private int i;
-    Sequence(int length){
+    C10Sequence(int length){
         items = (U[]) new Object[length];
     }
     public void add(U item){
@@ -47,7 +47,7 @@ public class Sequence<U> {
         int next = 0;
         @Override
         public boolean end() {
-            return next >= Sequence.this.items.length;//注意这个写法，内部类要引用外部类的对象可以使用 外部类.this 来实现
+            return next >= C10Sequence.this.items.length;//注意这个写法，内部类要引用外部类的对象可以使用 外部类.this 来实现，不写也行
         }
 
         @Override
@@ -64,7 +64,7 @@ public class Sequence<U> {
     }
 
     public static void main(String[] args) {
-        Sequence<Integer> sequence = new Sequence<>(10);
+        C10Sequence<Integer> sequence = new C10Sequence<>(10);
         for(int i = 0; i < 10; i++){
             sequence.add(i);
         }

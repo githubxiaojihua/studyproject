@@ -8,6 +8,7 @@ import java.util.Arrays;
  * 方法包含只包含不变的逻辑，而策略则包含变化的行为，这里所说的策略就是传入的参数对象，它包含
  * 要执行的代码，在本例中main方法中有三种不同的策略应用到了String对象S上。
  * 知识点2：协变返回类型。
+ * 知识点3：通过策略模式解耦代码
  */
 
 /**
@@ -49,7 +50,7 @@ class Splitter implements Processor{
 }
 
 
-public class Apply {
+public class C01Apply {
     //应用策略
     public static void process(Processor p, Object o){
         System.out.println(p.name());

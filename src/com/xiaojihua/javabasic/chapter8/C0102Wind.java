@@ -5,8 +5,8 @@ import static com.xiaojihua.javabasic.util.Print.*;
 /**
  * 继承和覆盖
  */
-public class Wind extends Instrument {
-    public void play(Note n){
+public class C0102Wind extends C0101Instrument {
+    public void play(C0103Note n){
         print("Wind.play()" + n);
     }
 }

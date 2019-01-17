@@ -8,24 +8,24 @@ package com.xiaojihua.javabasic.chapter9;
  * 适配器模式使用了代理技术。
  */
 class FilterAdapter implements Processor{
-    private Filter filter;
-    FilterAdapter(Filter filter){
+    private C03Filter filter;
+    FilterAdapter(C03Filter filter){
         this.filter = filter;
     }
     @Override
-    public WaveForm process(Object s){//代理filter的行为
-        return filter.process((WaveForm) s);
+    public C04WaveForm process(Object s){//代理filter的行为
+        return filter.process((C04WaveForm) s);
     }
     @Override
     public String name(){//代理filter的行为
         return filter.name();
     }
 }
-public class FilterProcessor {
+public class C05FilterProcessor {
     public static void main(String[] args) {
-        WaveForm waveForm = new WaveForm();
+        C04WaveForm waveForm = new C04WaveForm();
         //应用策略模式
-        Apply.process(new FilterAdapter(new LowPass()), waveForm);
-        Apply.process(new FilterAdapter(new HighPass()), waveForm);
+        C01Apply.process(new FilterAdapter(new LowPass()), waveForm);
+        C01Apply.process(new FilterAdapter(new HighPass()), waveForm);
     }
 }

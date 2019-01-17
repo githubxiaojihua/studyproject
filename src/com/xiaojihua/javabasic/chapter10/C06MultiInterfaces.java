@@ -32,7 +32,7 @@ class Y implements A{
 /**
  * 使用这两种实现方式
  */
-public class MultiInterfaces {
+public class C06MultiInterfaces {
     static void takesA(A a){}
     static void takesB(B b){}
 
