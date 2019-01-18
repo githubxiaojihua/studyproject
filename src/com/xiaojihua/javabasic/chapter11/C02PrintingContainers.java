@@ -12,7 +12,7 @@ import static com.xiaojihua.javabasic.util.Print.*;
  * 4、HashSet存储的数据无序但是查找速度快，TreeSet按照key值得比较结果保存元素，LinkedHashSet按照插入的顺序存储数据
  * 5、HashMap存储的数据无序但是查找速度快，TreeMap按照key值得比较结果保存元素，LinkedHashMap按照插入的顺序存储数据同时保留了HashMap的查询速度
  */
-public class PrintingContainers {
+public class C02PrintingContainers {
     public static Collection fill(Collection<String> collection){
         collection.add("rat");
         collection.add("cat");

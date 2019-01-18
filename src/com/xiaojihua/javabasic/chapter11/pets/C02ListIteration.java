@@ -9,10 +9,10 @@ import static com.xiaojihua.javabasic.util.Print.*;
  * ListIterator的用法：往前、往后迭代、set方法
  *
  */
-public class ListIteration {
+public class C02ListIteration {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
-        List<Pet> pets = Pets.arrayList(8);
-        ListIterator<Pet> listIterator = pets.listIterator();
+        List<C00Pet> pets = Pets.arrayList(8);
+        ListIterator<C00Pet> listIterator = pets.listIterator();
         print(pets);
         //往后索引
         while(listIterator.hasNext()){

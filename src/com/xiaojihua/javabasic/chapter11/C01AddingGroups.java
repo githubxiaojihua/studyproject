@@ -8,7 +8,7 @@ import java.util.Collections;
 /**
  * 知识点：向集合中一次性添加一组元素
  */
-public class AddingGroups {
+public class C01AddingGroups {
     public static void main(String[] args) {
         //Arraylist构造函数接收一个Collection对象
         //Arrays.asList将一个可变列表转换为Collection对象

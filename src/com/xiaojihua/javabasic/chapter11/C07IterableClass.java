@@ -6,7 +6,7 @@ import static com.xiaojihua.javabasic.util.Print.*;
 /**
  * 知识点：任何实现了Iterable接口的类都可以在foreach语句中使用
  */
-public class IterableClass implements Iterable<String> {
+public class C07IterableClass implements Iterable<String> {
     String[] words = "And this is how we know the Earth to be abdd".split(" ");
 
     /**
@@ -34,7 +34,7 @@ public class IterableClass implements Iterable<String> {
     }
 
     public static void main(String[] args) {
-        IterableClass iterableClass = new IterableClass();
+        C07IterableClass iterableClass = new C07IterableClass();
         //在foreach语句中使用
         for(String str : iterableClass){
             print(str);

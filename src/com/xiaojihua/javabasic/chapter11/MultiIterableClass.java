@@ -14,7 +14,7 @@ import static com.xiaojihua.javabasic.util.Print.*;
  *
  *
  */
-public class MultiIterableClass extends IterableClass {
+public class MultiIterableClass extends C07IterableClass {
 
     /**
      * 增加了反向遍历的Iterable

@@ -15,8 +15,8 @@ public class Pets {
     private static Random random = new Random(47);
     private static Class[] types = {Cymirc.class,Hamster.class,Manx.class,Mouse.class,Mutt.class,Pug.class,Rat.class};
 
-    public static List<Pet> arrayList(int num)  {
-        List<Pet> pets = new ArrayList<>();
+    public static List<C00Pet> arrayList(int num)  {
+        List<C00Pet> pets = new ArrayList<>();
         for(int i = 0; i < num ; i++){
             try {
                 pets.add(next());
@@ -29,7 +29,7 @@ public class Pets {
         return pets;
     }
 
-    public static Pet next() throws IllegalAccessException, InstantiationException {
-        return (Pet) types[random.nextInt(types.length)].newInstance();
+    public static C00Pet next() throws IllegalAccessException, InstantiationException {
+        return (C00Pet) types[random.nextInt(types.length)].newInstance();
     }
 }

@@ -12,7 +12,7 @@ import java.util.Random;
  */
 import static com.xiaojihua.javabasic.util.Print.*;
 
-public class QueueDemo {
+public class C03QueueDemo {
     public static void printQ( Queue queue){
         //peek返回队头元素，但是不删除
         while(queue.peek() != null){

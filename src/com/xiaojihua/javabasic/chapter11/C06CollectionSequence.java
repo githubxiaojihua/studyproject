@@ -1,11 +1,10 @@
 package com.xiaojihua.javabasic.chapter11;
 
-import com.xiaojihua.javabasic.chapter11.pets.Pet;
+import com.xiaojihua.javabasic.chapter11.pets.C00Pet;
 import com.xiaojihua.javabasic.chapter11.pets.Pets;
 
 import java.util.AbstractCollection;
 import java.util.Iterator;
-import java.util.List;
 
 /**
  * 知识点：AbstractCollection抽象类的使用
@@ -13,13 +12,13 @@ import java.util.List;
  *
  * 当一个类已经继承了一个类，但是还想实现Iterator相关功能，那么可以直接提供一个返回Iterator接口的方法，可以使用匿名内部类，比如下面的iterator()。
  */
-public class CollectionSequence extends AbstractCollection<Pet> {
+public class C06CollectionSequence extends AbstractCollection<C00Pet> {
     //list转换成array
-    private Pet[] pets = Pets.arrayList(9).toArray(new Pet[0]);
+    private C00Pet[] pets = Pets.arrayList(9).toArray(new C00Pet[0]);
 
     @Override
-    public Iterator<Pet> iterator() {
-        return new Iterator<Pet>() {
+    public Iterator<C00Pet> iterator() {
+        return new Iterator<C00Pet>() {
             private int index = 0;
             @Override
             public boolean hasNext() {
@@ -27,7 +26,7 @@ public class CollectionSequence extends AbstractCollection<Pet> {
             }
 
             @Override
-            public Pet next() {
+            public C00Pet next() {
                 return pets[index++];
             }
 
@@ -44,9 +43,9 @@ public class CollectionSequence extends AbstractCollection<Pet> {
     }
 
     public static void main(String[] args) {
-        CollectionSequence c = new CollectionSequence();
+        C06CollectionSequence c = new C06CollectionSequence();
         //调用两个display方法
-        InterfaceVsIterator.display(c);
-        InterfaceVsIterator.display(c.iterator());
+        C05InterfaceVsIterator.display(c);
+        C05InterfaceVsIterator.display(c.iterator());
     }
 }
