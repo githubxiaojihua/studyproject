@@ -22,6 +22,7 @@ public class C11TestRegularExpression {
 
         System.out.println("Input:" + args[0]);
 
+        //避免在循环中使用+链接字符串，这里显式使用StringBuilder
         StringBuilder outStr = new StringBuilder();
         for(String regex : args){
             System.out.println("Regular expression:" + regex);
@@ -32,7 +33,7 @@ public class C11TestRegularExpression {
              * Matcher对象的具体用法（部分）
              */
             while(matcher.find()){
-                outStr.setLength(0);
+                outStr.setLength(0);//清空
                 outStr.append("Match \"")
                         .append(matcher.group())
                         .append("\" at position ")
