@@ -28,7 +28,8 @@ public class C11TestRegularExpression {
             System.out.println("Regular expression:" + regex);
             Pattern pattern = Pattern.compile(regex);
             Matcher matcher = pattern.matcher(args[0]);
-            System.out.println(matcher.matches());
+            System.out.println(matcher.matches());//只有正则表达式和被匹配的字符串完全一样才为true
+            System.out.println(matcher.lookingAt());//当正则表达式与被匹配的字符串开始部分(不一定是全部)一样时为true
             /**
              * Matcher对象的具体用法（部分）
              */
