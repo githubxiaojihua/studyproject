@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04f5c448-9157-4f2a-8471-d6cc79a436b5" name="Default" comment="test">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C01RecursionPrint.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C02GenericMemoryCell.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C03MaxSubSum.class" afterDir="false" />
@@ -347,35 +345,7 @@
       <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/util/IpMac.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/util/Print.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/util/Range.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C01LoggingExceptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C02LoggingExceptionsInMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C03ExtralFeatures.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C04WhoCalled.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C05Rethrowing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C06OneOffSwitch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C07FinalAndReturn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C08DynamicFields.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C09ExceptionSilencer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C10StormInning.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C1101Cleanup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C11InputFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C12MainException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C13TurnOffChecking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C01Immutable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C02UsingStringBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C03InfiniteRecursion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C04StringOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C05SimpleFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C06Formatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C07Receipt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C08DataBaseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C09Hex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C10StringRegular.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C11TestRegularExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/util/C04BinaryFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/MapSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/C09MapSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/MultiIterableClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/C08MultiIterableClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="out/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -385,6 +355,12 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/studyproject$QueueDemo.ic" NAME="QueueDemo Coverage Results" MODIFIED="1543397267903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -437,7 +413,11 @@
       </file>
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="C02UsingStringBuilder.java" pinned="false" current-in-tab="false">
@@ -538,6 +518,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C11TestRegularExpression.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -589,6 +570,40 @@
               <item name="studyproject" type="462c0819:PsiDirectoryNode" />
               <item name="out" type="462c0819:PsiDirectoryNode" />
               <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
+              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -862,21 +877,7 @@
       <workItem from="1549066842067" duration="2621000" />
       <workItem from="1549450462276" duration="13447000" />
       <workItem from="1549527079067" duration="6202000" />
-      <workItem from="1549549840643" duration="427000" />
-    </task>
-    <task id="LOCAL-00009" summary="test">
-      <created>1535626611650</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1535626611650</updated>
-    </task>
-    <task id="LOCAL-00010" summary="test">
-      <created>1535675392314</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1535675392314</updated>
+      <workItem from="1549549840643" duration="1251000" />
     </task>
     <task id="LOCAL-00011" summary="test">
       <created>1535675470899</created>
@@ -1207,11 +1208,25 @@
       <option name="project" value="LOCAL" />
       <updated>1547805830985</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="test">
+      <created>1549550275118</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1549550275119</updated>
+    </task>
+    <task id="LOCAL-00059" summary="test">
+      <created>1549550458876</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1549550458876</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2930000" />
+    <option name="totallyTimeSpent" value="3754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -1226,8 +1241,8 @@
       <window_info anchor="bottom" id="Maven Projects" order="8" sideWeight="0.49892008" side_tool="true" weight="0.3293944" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4919571" weight="0.44460857" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49932975" weight="0.32348597" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.3293944" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49932975" weight="0.56129986" />
+      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.55539143" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2124665" />
@@ -1505,6 +1520,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1561,6 +1579,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1672,7 +1693,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
