@@ -8,7 +8,7 @@ import static com.xiaojihua.javabasic.util.Print.*;
 /**
  * 知识点：hashMap的基本操作
  */
-public class MapSimple {
+public class C09MapSimple {
     public static void main(String[] args) {
         Random rand = new Random(47);
         Map<Integer,Integer> m = new HashMap<Integer,Integer>();

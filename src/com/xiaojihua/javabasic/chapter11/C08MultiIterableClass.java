@@ -14,7 +14,7 @@ import static com.xiaojihua.javabasic.util.Print.*;
  *
  *
  */
-public class MultiIterableClass extends C07IterableClass {
+public class C08MultiIterableClass extends C07IterableClass {
 
     /**
      * 增加了反向遍历的Iterable
@@ -71,7 +71,7 @@ public class MultiIterableClass extends C07IterableClass {
     }
 
     public static void main(String[] args) {
-        MultiIterableClass m = new MultiIterableClass();
+        C08MultiIterableClass m = new C08MultiIterableClass();
         //反向遍历
         for(String s : m.reversed()){
             printnb(s + " ");

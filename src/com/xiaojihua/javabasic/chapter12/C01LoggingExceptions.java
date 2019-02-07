@@ -1,14 +1,14 @@
-package com.xiaojihua.javabasic;
+package com.xiaojihua.javabasic.chapter12;
 
-import java.io.*;
-import java.sql.SQLOutput;
-import java.util.*;
-import java.util.concurrent.ThreadPoolExecutor;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.logging.Logger;
 
-import static com.xiaojihua.javabasic.util.Print.*;
-
-public class Test{
+/**
+ * 知识点：
+ * 1、自定义异常以及Logger的使用
+ */
+public class C01LoggingExceptions {
     public static void main(String[] args) {
         try{
             throw new LoggingException();
@@ -30,6 +30,7 @@ class LoggingException extends Exception{
         StringWriter trace = new StringWriter();
         printStackTrace(new PrintWriter(trace));
         //通过调用logger的等级方法，往logger中写信息，这里调用了severe（严重）
+        //类似的还有info
         logger.severe(trace.toString());
 
     }
