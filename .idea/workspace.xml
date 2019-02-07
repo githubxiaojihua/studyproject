@@ -1,350 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04f5c448-9157-4f2a-8471-d6cc79a436b5" name="Default" comment="test">
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C01RecursionPrint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C02GenericMemoryCell.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C03MaxSubSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C04BanarySearch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C05Gcd.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C06MyArrayList$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C06MyArrayList$MyArrayListIterator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C06MyArrayList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C07MyLinkedList$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C07MyLinkedList$LinkedListIterator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C07MyLinkedList$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C07MyLinkedList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C08Postfixexpression.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C09TransferPrefixExpression.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C10MyQueue.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C11RecursionPrintFile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C12CbLockTree$TreeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C12CbLockTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C13CbLockTree2$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C13CbLockTree2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C14BinarySearchTree$BinaryNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C14BinarySearchTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C15AvlTree$AvlNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C15AvlTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C16WordLadder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C17HornerRule.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C18Prime.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C19SeparateChainingHashTable$Employee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C19SeparateChainingHashTable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C20QuadraticProbingHashTable$HashEntity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C20QuadraticProbingHashTable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C21BinaryHeap.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C22LeftistHeap$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C22LeftistHeap.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C23BinomialQueue$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C23BinomialQueue.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C24Sort.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C25DisjSets.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C26RedBlackTree$RedBlackNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C26RedBlackTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/C27BitMapImplementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/CaseInsensitiveCompare.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/Dgzbcz.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/Feibonaqi.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/Maze.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/Miyunsuan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/MyLinkedListSign$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/MyLinkedListSign$MyLinkedListSignIterator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/MyLinkedListSign$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/MyLinkedListSign.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/MyStack.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/NodeInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/NodeInfoTemp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/Point.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/Recursion1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/Size.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/TestArrayList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/TestDemo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/UnderflowException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/datastructure/Zhishu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/LoggingException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/A.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/B.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C01Contents.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C02Destination.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C03Parcel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C03Parcel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C03Parcel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C04Factories.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C05FactoriesForAnonymousClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C06MultiInterfaces.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C07MutiImplementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C08Callbacks.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C09ParcelForStaticInnerClass$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C09ParcelForStaticInnerClass$ParcelContents.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C09ParcelForStaticInnerClass$ParcelDestination$AnotherLevel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C09ParcelForStaticInnerClass$ParcelDestination.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C09ParcelForStaticInnerClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C10Sequence$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C10Sequence$SequenceSelector.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/C10Sequence.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Callee1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Callee2$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Callee2$Closure.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Callee2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Caller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/D.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/E.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Implementation1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Implementation1Factory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Implementation1ForService$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Implementation1ForService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Implementation2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Implementation2Factory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Implementation2ForService$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Implementation2ForService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Incretable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/MyIncretable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Selector.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Service.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/ServiceFacotry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/ServiceFactoryForAnonymousClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/ServiceForAnonymousClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/X.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Y$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Y.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Z$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/Z.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/innerClassUse/Controler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/innerClassUse/Event.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/innerClassUse/GreenHoseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/innerClassUse/GreenhouseControls$Bell.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/innerClassUse/GreenhouseControls$LightOff.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/innerClassUse/GreenhouseControls$LightOn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/innerClassUse/GreenhouseControls$Restart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/innerClassUse/GreenhouseControls$Terminate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/innerClassUse/GreenhouseControls$WaterOff.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/innerClassUse/GreenhouseControls$WaterOn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter10/innerClassUse/GreenhouseControls.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C01AddingGroups.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C02PrintingContainers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C03QueueDemo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C04PriorityQueueDemo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C05InterfaceVsIterator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C06CollectionSequence$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C06CollectionSequence.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C07IterableClass$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C07IterableClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C08MultiIterableClass$1$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C08MultiIterableClass$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C08MultiIterableClass$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C08MultiIterableClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/C09MapSimple.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/C00Pet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/C01ListFeatures.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/C02ListIteration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/C03ContainerIterator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/Cymirc.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/Hamster.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/Manx.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/Mouse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/Mutt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/Pets.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/Pug.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter11/pets/Rat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/BaseBallException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C01LoggingExceptions.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C02LoggingExceptionsInMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C03ExtralFeatures.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C04WhoCalled.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C05Rethrowing.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C06OneOffSwitch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C07FinalAndReturn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C08DynamicFields.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C09ExceptionSilencer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C10StormInning.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C1101Cleanup.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C11InputFile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C12MainException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/C13TurnOffChecking.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/DynamicException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/Exception1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/Exception2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/Foul.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/HoHumException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/Inning.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/LoggingException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/MyException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/PopFoul.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/RainedOut.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/SomeOthorException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/Strike.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/Strom.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/StromException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/Switch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/VeryImportantException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter12/WrapCheckingException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter13/C01Immutable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter13/C02UsingStringBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter13/C03InfiniteRecursion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter13/C04StringOperations.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter13/C05SimpleFormat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter13/C06Formatter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter13/C07Receipt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter13/C08DataBaseException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter13/C09Hex.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter13/C10StringRegular.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter13/C11TestRegularExpression.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/AddLiftOff.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Blocker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Butterer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C01LiftOff.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C02TaskWithResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C03SimpleDaemons.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C05ADaemon.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C06SimpleThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C07ThreadMethod$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C07ThreadMethod.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C08Joining.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C09CaptureUncaughtException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C10WaxOMatic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C10WaxOMaticByReentrantLock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C11NotifyVsNotifyAll$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C11NotifyVsNotifyAll.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C12Restaurant.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C13TestBlockingQueues.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/C14ToastOMatic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Car1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Car2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Chef.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Eater.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/ExceptionThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/HandlerThreadFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Jammer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Joiner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/LiftOffRunner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Meal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/MyUncaughtExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Sleeper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Task.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Task2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Toast$Status.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Toast.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/ToastQueue.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/Toaster.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/WaitPerson.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/WaxOff.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/WaxOff2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/WaxOn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/WaxOn1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/Accessor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/Block3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/Blocked2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/BlockedMutex.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C01IntGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C02EvenChecker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C03EvenGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C04AttemptLocking$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C04AttemptLocking.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C05AtomicityTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C06CriticalSection.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C07ThreadLocalVariableHolder$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C07ThreadLocalVariableHolder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C08OrnamentalGarden.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C0901CloseResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C0902NIOInterruption.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C0903Interrupting2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C0904InterruptingIdiom.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/C09Interrupting.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/Count.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/Entrence.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/IOBlocked.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/NIOBlocked.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/NeedsCleanup.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/Pair$PairValueNotEqualsException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/Pair.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/PairChecker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/PairManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/PairManager1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/PairManager2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/PairManipulator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/SleepBlock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/SynchronizedBlocked$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter21/shareResource/SynchronizedBlocked.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter3/OffsetTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter5/Apple.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter5/Book.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter5/C01TerminationCondition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter5/C02PassingThis.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter5/Peeler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter5/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter7/C01Orc.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter7/C02SpaceShipDelegation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter7/SpaceShipControlls.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter7/Villain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/Animal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/AnimalAction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/C0101Instrument.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/C0102Wind.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/C0103Note.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/C0104Music.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/C02CovariantReturn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/C03ClassLoadOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/Dog.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/Grain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/Mill.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/Wheat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/WheatMill.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter8/superClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/C01Apply.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/C02StringProcessor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/C03Filter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/C04WaveForm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/C05FilterProcessor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/C06RandomWords.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/C07Scanner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/C0801RandomDoubles.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/C0802RandomDoublesAdapter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/C09Games.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/Checkers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/CheckersFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/Chess.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/ChessFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/Downcase.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/Downcase1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/FilterAdapter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/Game.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/GameFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/HighPass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/LowPass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/Processor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/ReadStrategy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/Splitter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/Splitter1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/Upcase.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/chapter9/Upcase1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/enums/EnumClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/enums/HashMapAndTreeMap.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/enums/JavaIo$Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/enums/JavaIo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/enums/OzWitch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/enums/Shrubbery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/Fibonacci.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/Generate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/GenericityTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/LinkedStack$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/LinkedStack.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/RandomList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/coffee/Americano.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/coffee/Cappuccino.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/coffee/Coffee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/coffee/CoffeeGenerator$CoffeeIterator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/coffee/CoffeeGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/coffee/Latte.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/genericity/coffee/Mocha.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/java8test/Java8Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/reflect/Car.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/reflect/ReflectTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/util/C04BinaryFile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/util/IpMac.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/util/Print.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/studyproject/com/xiaojihua/javabasic/util/Range.class" afterDir="false" />
+    <list default="true" id="04f5c448-9157-4f2a-8471-d6cc79a436b5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="out/" />
@@ -414,8 +71,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="143">
+              <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -563,47 +220,7 @@
             <path>
               <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -877,14 +494,7 @@
       <workItem from="1549066842067" duration="2621000" />
       <workItem from="1549450462276" duration="13447000" />
       <workItem from="1549527079067" duration="6202000" />
-      <workItem from="1549549840643" duration="1251000" />
-    </task>
-    <task id="LOCAL-00011" summary="test">
-      <created>1535675470899</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1535675470899</updated>
+      <workItem from="1549549840643" duration="1695000" />
     </task>
     <task id="LOCAL-00012" summary="test">
       <created>1535984139139</created>
@@ -1222,11 +832,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549550458876</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="test">
+      <created>1549551109308</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1549551109308</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3754000" />
+    <option name="totallyTimeSpent" value="4198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -1242,10 +859,10 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4919571" weight="0.44460857" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49932975" weight="0.56129986" />
-      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.55539143" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.55539143" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2124665" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2124665" />
       <window_info anchor="bottom" id="Statistic" order="11" sideWeight="0.49932975" weight="0.3293944" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1694,8 +1311,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="143">
+          <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
         </state>
       </provider>
     </entry>
