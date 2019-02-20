@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04f5c448-9157-4f2a-8471-d6cc79a436b5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C12Finding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C13Groups.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C14StartEnd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="out/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -65,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="C14StartEnd.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="C14StartEnd.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C14StartEnd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
+            <state relative-caret-position="122">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#608#609#0" expanded="true" />
@@ -103,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+            <state relative-caret-position="223">
+              <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -148,11 +146,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C11TestRegularExpression.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C12Finding.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C13Groups.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C14StartEnd.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -192,32 +190,6 @@
             <path>
               <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
-              <item name="javabasic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
-              <item name="javabasic" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter13" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -539,7 +511,7 @@
       <workItem from="1549600746909" duration="2867000" />
       <workItem from="1549847023811" duration="601000" />
       <workItem from="1550556144888" duration="2846000" />
-      <workItem from="1550583588182" duration="4546000" />
+      <workItem from="1550583588182" duration="5960000" />
     </task>
     <task id="LOCAL-00012" summary="test">
       <created>1535984139139</created>
@@ -888,7 +860,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17835000" />
+    <option name="totallyTimeSpent" value="19249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -905,7 +877,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4919571" weight="0.44460857" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49932975" weight="0.56129986" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.5760709" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.46971935" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16957104" />
@@ -1256,13 +1228,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/test.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C10StringRegular.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
@@ -1302,13 +1267,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter13/C14StartEnd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
+        <state relative-caret-position="122">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#608#609#0" expanded="true" />
             <element signature="e#643#644#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
         </state>
       </provider>
     </entry>
