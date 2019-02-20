@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
  * 知识点：
  * 1、start,end的使用，start是匹配的group的部分在总的字符串中的起始位置，
  * end代表结束位置+1，索引从0开始
- * 2、matches和lookingAt的使用，无需
+ * 2、matches和lookingAt的使用，无需重置matcher对象
  */
 public class C14StartEnd {
     public static final String input = "As long as there is injustice, whenever a\n" +

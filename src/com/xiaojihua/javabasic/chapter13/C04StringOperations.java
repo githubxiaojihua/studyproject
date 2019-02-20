@@ -42,6 +42,7 @@ public class C04StringOperations {
          * 字符串常量池初始为空当某字符串对象调用intern时候，如果常量
          * 池中存在此字符串（equals)，那么将直接返回此常量的引用，否则
          * 就将此字符串增加到字符串常量池中
+         * 具体的intern方法使用可以参考笔记中的技术文章
          */
         System.out.println(s.intern());
         //新new的对象值为放入到字符串池中
