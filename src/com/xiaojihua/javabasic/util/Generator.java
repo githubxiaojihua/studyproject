@@ -1,4 +1,9 @@
 package com.xiaojihua.javabasic.util;
 
-public interface Generator {
+/**
+ * 生成器通用接口
+ * @param <T>
+ */
+public interface Generator<T> {
+    T next();
 }

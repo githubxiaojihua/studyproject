@@ -53,6 +53,11 @@ public class C10PetCount {
         System.out.println(counter);
     }
 
+    /**
+     * 可以将下面的creator换成C11LiterralCreator，他是模版模式的第二种实现
+     * C09ForNameCreator是第一种
+     * @param args
+     */
     public static void main(String[] args){
         petCounter(new C09ForNameCreator());
     }

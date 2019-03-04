@@ -15,12 +15,12 @@ import java.util.List;
 public class C11LiteralCreator extends C08PetCreator {
 
     //返回一个不可修改的list
-    private static final List<Class<? extends C02Pet>> allTypes =
+    public static final List<Class<? extends C02Pet>> allTypes =
             Collections.unmodifiableList(Arrays.asList(C02Pet.class,
                     C03Dogs.class,C04Mutt.class,C05Pug.class,C06Cat.class,C07Manx.class));
 
     //返回子types
-    private static List<Class<? extends C02Pet>> types = allTypes.subList(allTypes.indexOf(C04Mutt.class),allTypes.size());
+    public static List<Class<? extends C02Pet>> types = allTypes.subList(allTypes.indexOf(C04Mutt.class),allTypes.size());
 
 
     @Override
