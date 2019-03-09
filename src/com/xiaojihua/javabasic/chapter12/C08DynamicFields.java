@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
  * 3、此类的方法设置比较好，可以参考。做到了代码重用。
  */
 public class C08DynamicFields {
-    //定义二维数组存储键值对，二维数组0代表key，String类型，二维数组1代表value,任何类型
+    //定义二维数组存储键值对，第二维数组0代表key，String类型，二维数组1代表value,任何类型
     private Object[][] fields;
 
     /**
