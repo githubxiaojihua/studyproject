@@ -1,11 +1,11 @@
-package com.xiaojihua.javabasic.genericity;
+package com.xiaojihua.javabasic.chapter15;
 
 /**
  * 使用内部链式存储机制来实现栈
  * 使用了末端哨兵来控制栈何时为空
  * @param <T>
  */
-public class LinkedStack<T> {
+public class C08LinkedStack<T> {
 
     /**
      * 这是嵌套类，
@@ -52,7 +52,7 @@ public class LinkedStack<T> {
     }
 
     public static void main(String[] args) {
-        LinkedStack<String> linkedStack = new LinkedStack<>();
+        C08LinkedStack<String> linkedStack = new C08LinkedStack<>();
         for(String s : "Phasers or stun!".split(" ")){
             linkedStack.push(s);
         }

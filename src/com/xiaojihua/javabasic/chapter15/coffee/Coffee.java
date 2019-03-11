@@ -1,4 +1,4 @@
-package com.xiaojihua.javabasic.genericity.coffee;
+package com.xiaojihua.javabasic.chapter15.coffee;
 
 public class Coffee {
     private static long count = 0;

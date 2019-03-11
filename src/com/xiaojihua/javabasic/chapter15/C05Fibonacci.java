@@ -1,11 +1,11 @@
-package com.xiaojihua.javabasic.genericity;
+package com.xiaojihua.javabasic.chapter15;
 
 /**
  * 泛型的应用之一：生成器
  * 通过生成器的next方法，产生fibonacci数列的前n项值。
  *
  */
-public class Fibonacci implements Generate<Integer> {
+public class C05Fibonacci implements C04Generate<Integer> {
 
     int count = 0;
 
@@ -27,7 +27,7 @@ public class Fibonacci implements Generate<Integer> {
     }
 
     public static void main(String[] args) {
-        Fibonacci fibonacci = new Fibonacci();
+        C05Fibonacci fibonacci = new C05Fibonacci();
         for(int i = 0; i < 18; i++){
             System.out.println(fibonacci.next());
         }
