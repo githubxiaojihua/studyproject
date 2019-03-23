@@ -20,7 +20,7 @@ public class C01ConveriantArray {
         try{
             fruits[3] = new Fruit();//ArrayStoreException
         }catch(Exception e){
-            System.out.println(e);
+            System.out.println(e);//如果不是trycatch的话，出现错误后程序就会终止，下面的语句不会执行了
         }
 
         try{
