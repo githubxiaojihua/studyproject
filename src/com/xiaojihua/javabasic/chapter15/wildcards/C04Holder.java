@@ -15,6 +15,7 @@ public class C04Holder<T> {
     public C04Holder(T t){
         this.t = t;
     }
+    public C04Holder(){}
 
     public void setT(T t){
         this.t = t;

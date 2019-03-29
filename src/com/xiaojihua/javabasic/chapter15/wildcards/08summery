@@ -1,0 +1,9 @@
+Thus, the benefit of using exact types instead of wildcard types is that
+you can do more with the generic parameters. But using wildcards allows
+you to accept a broader range of parameterized types as arguments.
+You must decide which trade-off is more appropriate for your needs on
+a case-by-case basis.
+
+使用确切类型（T）相对与通配符的好处是可以对T做更多的操作比如set和get也就是对于
+数据的读写。但是使用通配符允许将类型参数的可接受范围进行扩大（extends、super）
+因此需要根据业务的需要进行实际的选择。
