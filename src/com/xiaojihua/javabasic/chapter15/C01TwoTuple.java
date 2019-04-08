@@ -20,7 +20,7 @@ public class C01TwoTuple<A, B> {
     public final A first;
     public final B second;
 
-    C01TwoTuple(A first, B second){
+    public C01TwoTuple(A first, B second){
         this.first = first;
         this.second = second;
     }

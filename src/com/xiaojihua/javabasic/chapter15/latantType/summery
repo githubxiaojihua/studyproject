@@ -1,0 +1,8 @@
+latent type（潜在类型）是C++泛型有的机制，它的主要作用是使代码不关心使用的类型
+只关心有没有特定的方法。比如：
+public void methods(Antype anytype){
+    anytype.a();
+    anytype.b()
+}
+不关心Anytype具体是什么类型，只关心他有没有a和b方法，这样代码的通用性更强。
+java中是没有潜在类型机制的，只能通过其他间接手段来实现。
