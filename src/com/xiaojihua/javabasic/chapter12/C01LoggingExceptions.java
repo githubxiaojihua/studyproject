@@ -13,15 +13,14 @@ public class C01LoggingExceptions {
         try{
             throw new LoggingException();
         }catch(LoggingException e){
-            //err和out是两个标准输出，使用Logger的是使用err
-            //可以将err换成out来观察他们的输出，格式不一样。
             System.err.println("Caught:" + e);
         }
     }
 }
 
 class LoggingException extends Exception{
-    //声明Logger对象，该对象输出到System.err
+    //声明Logger对象，通过工厂方法返回一个logger，根据名字可能返回一个已经存在的Logger
+    //名字一般为类的全限定名称
     private static Logger logger = Logger.getLogger("LoggingException");
     public LoggingException(){
         //通过调用printStackTrace的重载方法，并且配合PrintWriter将
@@ -30,7 +29,7 @@ class LoggingException extends Exception{
         StringWriter trace = new StringWriter();
         printStackTrace(new PrintWriter(trace));
         //通过调用logger的等级方法，往logger中写信息，这里调用了severe（严重）
-        //类似的还有info
+        //类似的还有info，这些方法都是直接输出到输出流中（console\file\OS logs等等）
         logger.severe(trace.toString());
 
     }

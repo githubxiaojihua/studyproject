@@ -109,6 +109,7 @@ class CollectionAdapter<T> implements Addable<T>{
  * 泛型的辅助方法。以一种更优雅的方式来使用泛型，而不比显示的在使用处声明
  * 泛型。
  * 比如59行，相关泛型的类型是全程自动传递的，不比跟58行一样明确声明。
+ * 这种方式一般用在简化泛型类的实例化中。
  */
 class AdapterHelper{
     public static <T> Addable<T> getCa(Collection<T> collection){
