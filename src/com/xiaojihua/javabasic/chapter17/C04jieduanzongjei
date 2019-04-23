@@ -1,0 +1,6 @@
+You can create any generated data set for Maps or Collections using these tools,
+and then initialize a Map or Collection using the constructor or the
+Map.putAll( )
+or
+Collection.addAll( )
+methods

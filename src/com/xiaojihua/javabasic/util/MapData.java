@@ -2,6 +2,11 @@ package com.xiaojihua.javabasic.util;
 
 import java.util.LinkedHashMap;
 
+/**
+ * Map容器的填充工具类
+ * @param <K>
+ * @param <V>
+ */
 public class MapData<K,V> extends LinkedHashMap<K,V> {
     /**
      * 根据Pair生成器填充本类
@@ -11,7 +16,7 @@ public class MapData<K,V> extends LinkedHashMap<K,V> {
     public MapData(Generator<Pair<K,V>> generate, int quantity){
         for(int i=0; i < quantity; i++){
             Pair<K,V> pair = generate.next();
-            put(pair.getKey(),pair.getValue());
+            put(pair.key,pair.value);
         }
     }
 
@@ -61,7 +66,7 @@ public class MapData<K,V> extends LinkedHashMap<K,V> {
         }
     }
 
-    //通用的使用方法
+    //通用的使用方法，优雅的使用访法
     public static <K,V> MapData map(Generator<Pair<K,V>> pair, int quantity){
         return new MapData(pair,quantity);
     }
