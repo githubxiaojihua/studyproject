@@ -1,6 +1,5 @@
 package com.xiaojihua.javabasic.chapter17;
 
-import com.sun.xml.internal.ws.server.provider.ProviderInvokerTube;
 
 import java.util.ArrayList;
 import java.util.Collection;
