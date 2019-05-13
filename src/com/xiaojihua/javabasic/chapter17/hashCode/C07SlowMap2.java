@@ -43,6 +43,9 @@ public class C07SlowMap2<K,V> extends AbstractMap<K,V> {
         return new EntrySet();
     }
 
+    /**
+     * Entry只存储一个inde，用于指向底层list的索引
+             */
     private class MapEntry implements Map.Entry<K,V>{
         public int index;
         public MapEntry(int index){
@@ -59,6 +62,11 @@ public class C07SlowMap2<K,V> extends AbstractMap<K,V> {
             return keys.get(index);
         }
 
+        /**
+         * setValue基本没有实现的必要
+         * @param value
+         * @return
+         */
         @Override
         public V setValue(V value){
             V oldValue = values.get(index);
@@ -73,6 +81,9 @@ public class C07SlowMap2<K,V> extends AbstractMap<K,V> {
 
     }
 
+    /**
+     * EntrySet主要实现iterator方法和size方法
+     */
     public class EntrySet extends AbstractSet<Map.Entry<K,V>>{
 
         @Override
@@ -101,6 +112,13 @@ public class C07SlowMap2<K,V> extends AbstractMap<K,V> {
                     return mapEntry;
                 }
 
+                /**
+                 * 如果要调用外部slowMap的revomve或者是clear方法来删除底层Map
+                 * 的数据的话，默认都会调用此EntrySet的iterator的remove方法，
+                 * 因此必须自定义实现，来修改底层的map数据
+                 * 默认情况下remove实际上在abstractMap中已经有实现，但是为了实现
+                 * 我们的目的，必须进行重写。来修改最终的List。默认实现无法做到。
+                 */
                 @Override
                 public void remove(){
                     if(!modified){
