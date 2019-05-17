@@ -10,7 +10,8 @@ public class Test{
 
     private static final int  MAXIMUM_CAPACITY = 1 << 30;
     public static void main(String[] args){
-        System.out.println(Float.floatToIntBits(1.5f));
+        HashMap<Integer,Integer> map = new HashMap<>();
+        map.get(1000);
     }
 
 
