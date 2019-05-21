@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04f5c448-9157-4f2a-8471-d6cc79a436b5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C16CollectionsUtilities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C17ListSortSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java" afterDir="false" />
     </list>
     <ignored path="out/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,56 +36,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="C06MapPerformance.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/performanceframework/C06MapPerformance.java">
+      <file leaf-file-name="C27BitMapImplementation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/datastructure/C27BitMapImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="158">
+              <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Map.java">
+      <file leaf-file-name="C18ReadOnly.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4686">
-              <caret line="239" column="6" selection-start-line="239" selection-start-column="6" selection-end-line="239" selection-end-column="6" />
+            <state relative-caret-position="168">
+              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/HashMap.java">
+      <file leaf-file-name="C19Synchronization.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3498">
-              <caret line="191" column="23" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="23" />
-              <folding>
-                <element signature="e#19327#19328#0" expanded="true" />
-                <element signature="e#19410#19411#0" expanded="true" />
-                <element signature="e#24329#24330#0" expanded="true" />
-                <element signature="e#24394#24395#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="242">
+              <caret line="11" column="90" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="C11QueueBehavor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C11QueueBehavor.java">
+      <file leaf-file-name="Collection.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Collection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="C16CollectionsUtilities.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C16CollectionsUtilities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="218">
+              <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -94,53 +75,17 @@
       <file leaf-file-name="C17ListSortSearch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C17ListSortSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="44">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="C18ReadOnly.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java">
+      <file leaf-file-name="C16CollectionsUtilities.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C16CollectionsUtilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vector.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Vector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6600">
-              <caret line="340" column="26" selection-start-line="340" selection-start-column="26" selection-end-line="340" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#54993#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="C26RedBlackTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/datastructure/C26RedBlackTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Collections.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Collections.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105314">
-              <caret line="5236" column="35" selection-start-line="5236" selection-start-column="35" selection-end-line="5236" selection-end-column="35" />
+            <state relative-caret-position="-484">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -157,9 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sort</find>
-      <find>optional</find>
-      <find>HashSet</find>
       <find>fore</find>
       <find>class对象</find>
       <find>set(</find>
@@ -187,6 +129,9 @@
       <find>CASE_</find>
       <find>floatToIntBits</find>
       <find>equals(</find>
+      <find>byte</find>
+      <find>二进制</find>
+      <find>binary</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -198,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C01FillList.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C03MapData.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/util/MapData.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C04jieduanzongjei" />
@@ -249,6 +193,7 @@
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C16CollectionsUtilities.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C17ListSortSearch.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java" />
+        <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java" />
       </list>
     </option>
   </component>
@@ -281,6 +226,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,21 +262,10 @@
               <item name="javabasic" type="462c0819:PsiDirectoryNode" />
               <item name="chapter17" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
-              <item name="javabasic" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -360,18 +297,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.C18ReadOnly">
-    <configuration name="C06MapPerformance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.javabasic.chapter17.performanceframework.C06MapPerformance" />
-      <module name="studyproject" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xiaojihua.javabasic.chapter17.performanceframework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="Application.C19Synchronization">
     <configuration name="C16CollectionsUtilities" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xiaojihua.javabasic.chapter17.C16CollectionsUtilities" />
       <module name="studyproject" />
@@ -405,13 +331,24 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.javabasic.Test" />
+    <configuration name="C19Synchronization" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.javabasic.chapter17.C19Synchronization" />
       <module name="studyproject" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xiaojihua.javabasic.*" />
+          <option name="PATTERN" value="com.xiaojihua.javabasic.chapter17.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="C27BitMapImplementation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.datastructure.C27BitMapImplementation" />
+      <module name="studyproject" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaojihua.datastructure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -458,19 +395,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Test" />
-      <item itemvalue="Application.C06MapPerformance" />
       <item itemvalue="Application.C16CollectionsUtilities" />
       <item itemvalue="Application.C17ListSortSearch" />
       <item itemvalue="Application.C18ReadOnly" />
+      <item itemvalue="Application.C27BitMapImplementation" />
+      <item itemvalue="Application.C19Synchronization" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.C19Synchronization" />
+        <item itemvalue="Application.C27BitMapImplementation" />
         <item itemvalue="Application.C18ReadOnly" />
         <item itemvalue="Application.C17ListSortSearch" />
         <item itemvalue="Application.C16CollectionsUtilities" />
-        <item itemvalue="Application.C06MapPerformance" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -737,7 +674,8 @@
       <workItem from="1557803130534" duration="3176000" />
       <workItem from="1557997165798" duration="12750000" />
       <workItem from="1558314095821" duration="9910000" />
-      <workItem from="1558350164535" duration="637000" />
+      <workItem from="1558350164535" duration="698000" />
+      <workItem from="1558417128883" duration="5530000" />
     </task>
     <task id="LOCAL-00012" summary="test">
       <created>1535984139139</created>
@@ -1086,7 +1024,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="662202000" />
+    <option name="totallyTimeSpent" value="667793000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1110,14 +1048,15 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5080429" side_tool="true" weight="0.44509518" />
       <window_info anchor="bottom" id="Maven Projects" order="7" sideWeight="0.49892008" side_tool="true" weight="0.3293944" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4919571" visible="true" weight="0.28696924" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4919571" weight="0.28696924" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932975" weight="0.56129986" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.46266472" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21715818" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21983914" />
       <window_info anchor="bottom" id="Statistic" order="10" sideWeight="0.49932975" weight="0.3293944" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32791728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -1130,7 +1069,6 @@
       <window_info anchor="right" id="Coverage" order="7" sideWeight="0.5010799" side_tool="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32791728" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1185,385 +1123,360 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/util/C13CounttingMapData.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C01Apply.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        <state relative-caret-position="218">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter16/C08CounttingGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C02StringProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="286">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/AbstractList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1102">
-          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/util/CollectionData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/util/ConvertTo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter16/C10Generated.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter21/shareResource/C06CriticalSection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter14/pets/C02Pet.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C03Filter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter14/pets/C10PetCount.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C04WaveForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter14/pets/C08PetCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C05FilterProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="346">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter14/pets/C09ForNameCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C06RandomWords.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="54" selection-end-line="46" />
+        <state relative-caret-position="-154">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter14/pets/C11LiteralCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C07Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        <state relative-caret-position="22">
+          <caret line="12" selection-start-line="12" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C14SortedMapDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C09Games.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-96">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="1144">
+          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C15LinkedHashMapDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C0801RandomDoubles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        <state relative-caret-position="88">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/hashCode/C05MapEntry.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C0802RandomDoublesAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        <state relative-caret-position="58">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/hashCode/C06SlowMap.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/innerClassUse/Controler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        <state relative-caret-position="168">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/hashCode/C07SlowMap2.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/innerClassUse/Event.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        <state relative-caret-position="154">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/hashCode/C08SimpleHashMap.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/innerClassUse/GreenHoseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="110">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter15/C26CheckedList.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/innerClassUse/GreenhouseControls.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        <state relative-caret-position="-822">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Object.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/C01Contents.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="162" column="37" lean-forward="true" selection-start-line="162" selection-start-column="37" selection-end-line="162" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#25830#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Arrays.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/C02Destination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="1311" column="21" selection-start-line="1311" selection-start-column="21" selection-end-line="1311" selection-end-column="21" />
+        <state relative-caret-position="44">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/datastructure/C02GenericMemoryCell.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/C03Parcel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/C04Factories.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/C05FactoriesForAnonymousClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/C06MultiInterfaces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/C07MutiImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/C08Callbacks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter16/C13CompareType.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/C09ParcelForStaticInnerClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="80" column="19" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
+        <state relative-caret-position="22">
+          <caret line="10" selection-start-line="10" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/performanceframework/C01Test.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/C10Sequence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/performanceframework/C02TestParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/performanceframework/C04ListPerformance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3374">
-          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/performanceframework/C03Tester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
-          <folding>
-            <element signature="e#3147#3148#0" expanded="true" />
-            <element signature="e#3208#3209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter16/C14StringSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter16/C15ArraySearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24904">
-          <caret line="1189" selection-start-line="1189" selection-end-line="1189" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/disignPattern/flyWeight/C01FlyweightExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="-616">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C05Countries.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/pets/C00Pet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4928">
-          <caret line="249" column="4" selection-start-line="249" selection-start-column="4" selection-end-line="249" selection-end-column="4" />
+        <state relative-caret-position="-360">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/datastructure/C11RecursionPrintFile.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/pets/C01ListFeatures.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        <state relative-caret-position="154">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/hashCode/C09CountingString.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/pets/C02ListIteration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        <state relative-caret-position="-176">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/pets/C03ContainerIterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="13" selection-end-column="22" />
+        <state relative-caret-position="-22">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Hashtable.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/pets/Pets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3960">
-          <caret line="210" column="11" selection-start-line="210" selection-start-column="11" selection-end-line="210" selection-end-column="11" />
+        <state>
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/performanceframework/C05SetPerformance.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/C01AddingGroups.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        <state relative-caret-position="154">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Set.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/C02PrintingContainers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/C03QueueDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/C04PriorityQueueDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
-          <caret line="368" column="12" selection-start-line="368" selection-start-column="12" selection-end-line="368" selection-end-column="12" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/AbstractSet.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/C05InterfaceVsIterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
+        <state relative-caret-position="-426">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/AbstractCollection.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/C07IterableClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="315" column="19" selection-start-line="315" selection-start-column="19" selection-end-line="315" selection-end-column="19" />
+        <state relative-caret-position="-140">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/IdentityHashMap.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/C06CollectionSequence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="652" column="13" lean-forward="true" selection-start-line="652" selection-start-column="13" selection-end-line="652" selection-end-column="13" />
+        <state relative-caret-position="22">
+          <caret line="14" selection-start-line="14" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3498">
-          <caret line="191" column="23" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="23" />
-          <folding>
-            <element signature="e#19327#19328#0" expanded="true" />
-            <element signature="e#19410#19411#0" expanded="true" />
-            <element signature="e#24329#24330#0" expanded="true" />
-            <element signature="e#24394#24395#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C11QueueBehavor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/C08MultiIterableClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <caret line="57" column="42" lean-forward="true" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Map.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter11/C09MapSimple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4686">
-          <caret line="239" column="6" selection-start-line="239" selection-start-column="6" selection-end-line="239" selection-end-column="6" />
+        <state relative-caret-position="344">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/performanceframework/C06MapPerformance.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C01LoggingExceptions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="-74">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/datastructure/C26RedBlackTree.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C02LoggingExceptionsInMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="102">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Collections.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C03ExtralFeatures.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105314">
-          <caret line="5236" column="35" selection-start-line="5236" selection-start-column="35" selection-end-line="5236" selection-end-column="35" />
+        <state relative-caret-position="-272">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Vector.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C04WhoCalled.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6600">
-          <caret line="340" column="26" selection-start-line="340" selection-start-column="26" selection-end-line="340" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#54993#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-8">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C16CollectionsUtilities.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter12/C05Rethrowing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-954">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/util/C04BinaryFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/util/Range.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/datastructure/C27BitMapImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C17ListSortSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C16CollectionsUtilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-484">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="90" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
         </state>
       </provider>
     </entry>
