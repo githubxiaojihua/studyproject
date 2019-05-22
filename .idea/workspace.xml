@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/ArrayList.java" line="164" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="04f5c448-9157-4f2a-8471-d6cc79a436b5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C20FailFast.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C21References.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java" afterDir="false" />
     </list>
     <ignored path="out/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,29 +40,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="C27BitMapImplementation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/datastructure/C27BitMapImplementation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="C18ReadOnly.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="308">
               <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="C19Synchronization.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="C19Synchronization.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="90" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
+            <state relative-caret-position="176">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C20FailFast.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C20FailFast.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C21References.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C21References.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#706#730#0" expanded="true" />
+                <element signature="e#1052#1076#0" expanded="true" />
+                <element signature="e#1388#1397#0" expanded="true" />
+                <element signature="e#1438#1447#0" expanded="true" />
+                <element signature="e#1507#1534#0" expanded="true" />
+                <element signature="e#216#217#0" expanded="true" />
+                <element signature="e#242#243#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#299#300#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SoftReference.java" pinned="false" current-in-tab="true">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/SoftReference.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReferenceQueue.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/ReferenceQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="103" column="34" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Object.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="554" column="19" selection-start-line="554" selection-start-column="19" selection-end-line="554" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#25830#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C05Countries.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C05Countries.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4270">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -66,26 +135,8 @@
       <file leaf-file-name="Collection.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Collection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="2596">
               <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="C17ListSortSearch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C17ListSortSearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="C16CollectionsUtilities.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C16CollectionsUtilities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-484">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -102,7 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fore</find>
       <find>class对象</find>
       <find>set(</find>
       <find>put(</find>
@@ -132,6 +182,7 @@
       <find>byte</find>
       <find>二进制</find>
       <find>binary</find>
+      <find>err</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -143,8 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C03MapData.java" />
-        <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/util/MapData.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C04jieduanzongjei" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/java8test/lambda/C02MethodReferance.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/java8test/lambda/C03FunctionalInterface.java" />
@@ -194,6 +243,8 @@
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C17ListSortSearch.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java" />
         <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java" />
+        <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C20FailFast.java" />
+        <option value="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C21References.java" />
       </list>
     </option>
   </component>
@@ -212,7 +263,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-25" />
     <option name="y" value="10" />
     <option name="width" value="1750" />
@@ -227,8 +278,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,12 +309,40 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
               <item name="javabasic" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter16" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
+              <item name="javabasic" type="462c0819:PsiDirectoryNode" />
               <item name="chapter17" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
+              <item name="javabasic" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter17" type="462c0819:PsiDirectoryNode" />
+              <item name="hashCode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
+              <item name="javabasic" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter17" type="462c0819:PsiDirectoryNode" />
+              <item name="performanceframework" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -297,29 +374,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.C19Synchronization">
-    <configuration name="C16CollectionsUtilities" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.javabasic.chapter17.C16CollectionsUtilities" />
-      <module name="studyproject" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xiaojihua.javabasic.chapter17.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="C17ListSortSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.javabasic.chapter17.C17ListSortSearch" />
-      <module name="studyproject" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xiaojihua.javabasic.chapter17.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="Application.C21References">
     <configuration name="C18ReadOnly" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xiaojihua.javabasic.chapter17.C18ReadOnly" />
       <module name="studyproject" />
@@ -333,6 +388,28 @@
     </configuration>
     <configuration name="C19Synchronization" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xiaojihua.javabasic.chapter17.C19Synchronization" />
+      <module name="studyproject" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaojihua.javabasic.chapter17.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="C20FailFast" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.javabasic.chapter17.C20FailFast" />
+      <module name="studyproject" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaojihua.javabasic.chapter17.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="C21References" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.javabasic.chapter17.C21References" />
       <module name="studyproject" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -395,19 +472,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.C16CollectionsUtilities" />
-      <item itemvalue="Application.C17ListSortSearch" />
       <item itemvalue="Application.C18ReadOnly" />
       <item itemvalue="Application.C27BitMapImplementation" />
       <item itemvalue="Application.C19Synchronization" />
+      <item itemvalue="Application.C20FailFast" />
+      <item itemvalue="Application.C21References" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.C21References" />
+        <item itemvalue="Application.C20FailFast" />
         <item itemvalue="Application.C19Synchronization" />
         <item itemvalue="Application.C27BitMapImplementation" />
         <item itemvalue="Application.C18ReadOnly" />
-        <item itemvalue="Application.C17ListSortSearch" />
-        <item itemvalue="Application.C16CollectionsUtilities" />
       </list>
     </recent_temporary>
   </component>
@@ -675,7 +752,8 @@
       <workItem from="1557997165798" duration="12750000" />
       <workItem from="1558314095821" duration="9910000" />
       <workItem from="1558350164535" duration="698000" />
-      <workItem from="1558417128883" duration="5530000" />
+      <workItem from="1558417128883" duration="5568000" />
+      <workItem from="1558500167793" duration="7206000" />
     </task>
     <task id="LOCAL-00012" summary="test">
       <created>1535984139139</created>
@@ -1024,7 +1102,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="667793000" />
+    <option name="totallyTimeSpent" value="675037000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1036,8 +1114,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.49932975" weight="0.32791728" />
@@ -1048,15 +1125,14 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5080429" side_tool="true" weight="0.44509518" />
       <window_info anchor="bottom" id="Maven Projects" order="7" sideWeight="0.49892008" side_tool="true" weight="0.3293944" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4919571" weight="0.28696924" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4919571" visible="true" weight="0.35285506" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932975" weight="0.56129986" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.46266472" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21983914" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22252011" />
       <window_info anchor="bottom" id="Statistic" order="10" sideWeight="0.49932975" weight="0.3293944" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32791728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -1069,6 +1145,7 @@
       <window_info anchor="right" id="Coverage" order="7" sideWeight="0.5010799" side_tool="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32791728" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1119,80 +1196,10 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C01Apply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C02StringProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C03Filter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C04WaveForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C05FilterProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C06RandomWords.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C07Scanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="12" selection-start-line="12" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C09Games.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C0801RandomDoubles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter9/C0802RandomDoublesAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter10/innerClassUse/Controler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1440,43 +1447,149 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/datastructure/C27BitMapImplementation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="37" />
+        <state relative-caret-position="418">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C17ListSortSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="176">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C16CollectionsUtilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-484">
+        <state relative-caret-position="176">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C18ReadOnly.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="308">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Collection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="2596">
           <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="90" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
+        <state relative-caret-position="176">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C05Countries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4270">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="1192" column="14" selection-start-line="1192" selection-start-column="11" selection-end-line="1192" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="633" column="33" selection-start-line="633" selection-start-column="33" selection-end-line="633" selection-end-column="33" />
+          <folding>
+            <element signature="e#26222#26223#0" expanded="true" />
+            <element signature="e#26265#26266#0" expanded="true" />
+            <element signature="e#26470#26471#0" expanded="true" />
+            <element signature="e#26528#26529#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="858" column="32" selection-start-line="858" selection-start-column="32" selection-end-line="858" selection-end-column="32" />
+          <folding>
+            <element signature="e#6283#6284#0" expanded="true" />
+            <element signature="e#6351#6352#0" expanded="true" />
+            <element signature="e#31007#31008#0" expanded="true" />
+            <element signature="e#31039#31040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C20FailFast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="554" column="19" selection-start-line="554" selection-start-column="19" selection-end-line="554" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#25830#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/ReferenceQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="103" column="34" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C21References.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#706#730#0" expanded="true" />
+            <element signature="e#1052#1076#0" expanded="true" />
+            <element signature="e#1388#1397#0" expanded="true" />
+            <element signature="e#1438#1447#0" expanded="true" />
+            <element signature="e#1507#1534#0" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/Reference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4688">
+          <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="4" />
+          <folding>
+            <element signature="e#10903#10904#0" expanded="true" />
+            <element signature="e#10939#10940#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/SoftReference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
         </state>
       </provider>
     </entry>
