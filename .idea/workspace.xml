@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04f5c448-9157-4f2a-8471-d6cc79a436b5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C20FailFast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C21References.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C19Synchronization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C21References.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C21References.java" afterDir="false" />
     </list>
     <ignored path="out/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,7 +59,7 @@
       <file leaf-file-name="C20FailFast.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C20FailFast.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="286">
               <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -70,34 +68,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="C21References.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="C21References.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C21References.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="105">
+              <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#706#730#0" expanded="true" />
-                <element signature="e#1052#1076#0" expanded="true" />
-                <element signature="e#1388#1397#0" expanded="true" />
-                <element signature="e#1438#1447#0" expanded="true" />
-                <element signature="e#1507#1534#0" expanded="true" />
-                <element signature="e#216#217#0" expanded="true" />
-                <element signature="e#242#243#0" expanded="true" />
-                <element signature="e#272#273#0" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#381#382#0" expanded="true" />
+                <element signature="e#905#929#0" expanded="true" />
+                <element signature="e#1262#1271#0" expanded="true" />
+                <element signature="e#1362#1371#0" expanded="true" />
+                <element signature="e#1478#1505#0" expanded="true" />
+                <element signature="e#1906#1907#0" expanded="true" />
+                <element signature="e#1932#1933#0" expanded="true" />
+                <element signature="e#1962#1963#0" expanded="true" />
+                <element signature="e#1990#1991#0" expanded="true" />
+                <element signature="e#2033#2034#0" expanded="true" />
+                <element signature="e#2090#2091#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SoftReference.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SoftReference.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/SoftReference.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+            <state relative-caret-position="298">
+              <caret line="98" column="10" lean-forward="true" selection-start-line="98" selection-start-column="10" selection-end-line="98" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reference.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/Reference.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+              <folding>
+                <element signature="e#9332#9333#0" expanded="true" />
+                <element signature="e#9368#9369#0" expanded="true" />
+                <element signature="e#10903#10904#0" expanded="true" />
+                <element signature="e#10939#10940#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,7 +117,7 @@
       <file leaf-file-name="ReferenceQueue.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/ReferenceQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="1716">
               <caret line="103" column="34" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
             </state>
           </provider>
@@ -114,7 +126,7 @@
       <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Object.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
+            <state relative-caret-position="11594">
               <caret line="554" column="19" selection-start-line="554" selection-start-column="19" selection-end-line="554" selection-end-column="19" />
               <folding>
                 <element signature="e#0#25830#0" expanded="true" />
@@ -126,7 +138,7 @@
       <file leaf-file-name="C05Countries.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C05Countries.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4270">
+            <state relative-caret-position="264">
               <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
             </state>
           </provider>
@@ -153,7 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>class对象</find>
       <find>set(</find>
       <find>put(</find>
       <find>get(</find>
@@ -183,6 +194,7 @@
       <find>二进制</find>
       <find>binary</find>
       <find>err</find>
+      <find>pending-Reference</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -263,7 +275,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-25" />
     <option name="y" value="10" />
     <option name="width" value="1750" />
@@ -277,7 +289,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,6 +354,7 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -753,7 +765,8 @@
       <workItem from="1558314095821" duration="9910000" />
       <workItem from="1558350164535" duration="698000" />
       <workItem from="1558417128883" duration="5568000" />
-      <workItem from="1558500167793" duration="7206000" />
+      <workItem from="1558500167793" duration="7249000" />
+      <workItem from="1558581254617" duration="10495000" />
     </task>
     <task id="LOCAL-00012" summary="test">
       <created>1535984139139</created>
@@ -1102,7 +1115,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="675037000" />
+    <option name="totallyTimeSpent" value="685575000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1114,7 +1127,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.49932975" weight="0.32791728" />
@@ -1125,12 +1138,12 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5080429" side_tool="true" weight="0.44509518" />
       <window_info anchor="bottom" id="Maven Projects" order="7" sideWeight="0.49892008" side_tool="true" weight="0.3293944" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4919571" visible="true" weight="0.35285506" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4919571" weight="0.34846267" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49932975" weight="0.56129986" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.46266472" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.4612006" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22252011" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22520107" />
       <window_info anchor="bottom" id="Statistic" order="10" sideWeight="0.49932975" weight="0.3293944" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1489,7 +1502,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C05Countries.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4270">
+        <state relative-caret-position="264">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
@@ -1505,12 +1518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="633" column="33" selection-start-line="633" selection-start-column="33" selection-end-line="633" selection-end-column="33" />
-          <folding>
-            <element signature="e#26222#26223#0" expanded="true" />
-            <element signature="e#26265#26266#0" expanded="true" />
-            <element signature="e#26470#26471#0" expanded="true" />
-            <element signature="e#26528#26529#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1527,19 +1534,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C20FailFast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
+        <state relative-caret-position="11594">
           <caret line="554" column="19" selection-start-line="554" selection-start-column="19" selection-end-line="554" selection-end-column="19" />
           <folding>
             <element signature="e#0#25830#0" expanded="true" />
@@ -1549,47 +1546,58 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/ReferenceQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="1716">
           <caret line="103" column="34" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C21References.java">
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C20FailFast.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="286">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#706#730#0" expanded="true" />
-            <element signature="e#1052#1076#0" expanded="true" />
-            <element signature="e#1388#1397#0" expanded="true" />
-            <element signature="e#1438#1447#0" expanded="true" />
-            <element signature="e#1507#1534#0" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#381#382#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/Reference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4688">
-          <caret line="301" column="4" selection-start-line="301" selection-start-column="4" selection-end-line="301" selection-end-column="4" />
-          <folding>
-            <element signature="e#10903#10904#0" expanded="true" />
-            <element signature="e#10939#10940#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/SoftReference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+        <state relative-caret-position="298">
+          <caret line="98" column="10" lean-forward="true" selection-start-line="98" selection-start-column="10" selection-end-line="98" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ref/Reference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+          <folding>
+            <element signature="e#9332#9333#0" expanded="true" />
+            <element signature="e#9368#9369#0" expanded="true" />
+            <element signature="e#10903#10904#0" expanded="true" />
+            <element signature="e#10939#10940#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xiaojihua/javabasic/chapter17/C21References.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#905#929#0" expanded="true" />
+            <element signature="e#1262#1271#0" expanded="true" />
+            <element signature="e#1362#1371#0" expanded="true" />
+            <element signature="e#1478#1505#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1932#1933#0" expanded="true" />
+            <element signature="e#1962#1963#0" expanded="true" />
+            <element signature="e#1990#1991#0" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2090#2091#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
