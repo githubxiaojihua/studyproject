@@ -2,6 +2,14 @@ package com.xiaojihua.javabasic.chapter17;
 
 import java.util.WeakHashMap;
 
+/**
+ * 知识点：
+ * 1、WeakHashMap允许在持有key的同时允许GC进行回收key，
+ * 如果key是强可到达的，比如本例使用了额外的数组存储key为3的倍数的key对象
+ * 那么这些key对象将不会被GC回收。比如本例中之后会回收非3倍数的key对象，调用
+ * 其finallize方法。
+ * GC回收对象有个顺序：made finalizable, finalized, and then reclaimed.
+ */
 public class C22CanonicalMapping {
     public static void main(String[] args){
         WeakHashMap<Key,Value> weakHashMap = new WeakHashMap<>();
@@ -15,8 +23,10 @@ public class C22CanonicalMapping {
             }
             weakHashMap.put(key,value);
         }
-
+        System.out.println(weakHashMap.get(new Key(Integer.toString(4))));
         System.gc();
+        weakHashMap.put(new Key(Integer.toString(4)),new Value(Integer.toString(4)));
+        System.out.println(weakHashMap.get(new Key(Integer.toString(4))));
 
     }
 }
