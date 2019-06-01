@@ -52,8 +52,10 @@ import java.util.LinkedList;
  *    <b>已经清理</b>的WeakReference对象入队到，声明时候指定的队列中。WeakReference通常用于实现规范化映射，比如
  *    WeakHashMap.
  *
- *    （3）PhantomReference。PhantomReference 对象在GC判定其保存的引用所指向的对象可以被回收时候，进行
- *    入队，此类引用对象是先入队，然后再由GC清除。
+ *    （3）PhantomReference。PhantomReference 对象在GC判定其保存的引用所指向的对象可以被回收时候，
+ *    当时或者晚些时候进行入队，PhantomReference对象不能通过get取回其引用，在get的时候总是返回null
+ *    此类引用对象并不像softreference和weakreference那样在入队的时候就已经由GC进行清理了。只有当所有
+ *    对于类的PhantomRefrence引用对象本身被清理后才会被清理
  */
 public class C21References {
     private static int size = 10;
@@ -105,7 +107,7 @@ public class C21References {
             pa.add(new PhantomReference<VeryBig>(
                     new VeryBig("Phantom " + i), rq));
             System.out.println("Just created: " + pa.getLast());
-            //当进行声明的时候就会入队，GC后队列就清空了
+            //gc动作发生的时候入队
             checkQueue();
         }
 
