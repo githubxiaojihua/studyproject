@@ -9,11 +9,11 @@ import static com.xiaojihua.javabasic.util.Print.*;
 
 public class Test{
 
-    private static final int  MAXIMUM_CAPACITY = 1 << 30;
     public static void main(String[] args) throws Exception{
-        File file = new File(".\\studyproject.iml");
-        System.out.println(file.getAbsolutePath());
-        System.out.println(file.getCanonicalPath());
+        String str = "I am 晓峰";
+        byte[] bytes = str.getBytes("iso8859-1");
+        String str1 = new String(bytes);
+        System.out.println(str1);
     }
 
 
