@@ -13,6 +13,7 @@ import static com.xiaojihua.javabasic.util.Print.*;
 public class Test{
 
     public static void main(String[] args) throws Exception{
+
         String name  = "I am 君山";
         byte[] bytes = name.getBytes("utf16");
         String newName = new String(bytes,"utf16");
@@ -30,6 +31,7 @@ public class Test{
         for(byte b : byteBuffer.array()){
             System.out.print(String.format("%02X ", b));
         }*/
+
     }
 
 
