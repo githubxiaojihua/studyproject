@@ -8,13 +8,13 @@ import java.io.*;
  */
 public class C07BasicFileOutput {
     //文件可以不存在，将自动创建
-    private static  String outFile = "G:\\xjhdevelopment\\text.out";
+    private static  String outFile = "G:\\text.out";
     public static void main(String[] args) throws IOException{
         /*
             依次嵌套使用StringReader\BufferedReader
          */
         BufferedReader reader = new BufferedReader(new StringReader(C04BufferedInputFile.read("" +
-                "G:\\study\\studyproject\\src\\com\\xiaojihua\\javabasic\\chapter18IO\\C07BasicFileOutput.java")));
+                "H:\\code_80968\\studyproject\\src\\com\\xiaojihua\\javabasic\\chapter18IO\\C07BasicFileOutput.java")));
         //嵌套使用FileWriter\BufferedWriter\PrintWriter来进行输出
         PrintWriter print = new PrintWriter(new BufferedWriter(new FileWriter(outFile)));
         /*
@@ -27,6 +27,7 @@ public class C07BasicFileOutput {
         while((s = reader.readLine()) != null){
             count++;
             //不使用LineNumberReader来记录行号，LineNumberReader一般不使用。
+            //每一次输出均追加到文件的最后
             print.println(count + ":" + s);
         }
         reader.close();
