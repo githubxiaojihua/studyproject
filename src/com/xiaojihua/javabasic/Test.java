@@ -14,23 +14,11 @@ public class Test{
 
     public static void main(String[] args) throws Exception{
 
-        String name  = "I am 君山";
-        byte[] bytes = name.getBytes("utf16");
-        String newName = new String(bytes,"utf16");
-        System.out.println(newName);
-
-        /*for(byte c : name.getBytes("utf-8")){
-            System.out.print(String.format("%02X ", c));
-        }
-        System.out.println();
-        char[] chars = name.toCharArray();
-        ByteBuffer byteBuffer = ByteBuffer.allocate(chars.length*2);
-        for(char c : chars){
-          byteBuffer.putChar(c);
-        }
-        for(byte b : byteBuffer.array()){
-            System.out.print(String.format("%02X ", b));
-        }*/
+       File file = new File("Test.java");
+       System.out.println(file.getPath());
+       System.out.println(file.getAbsolutePath());
+       System.out.println(file.getCanonicalPath());
+       System.out.println(file.getParent());
 
     }
 
