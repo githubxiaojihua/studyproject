@@ -4,7 +4,7 @@ import java.io.*;
 
 /**
  * 知识点：
- * 标准IO，重定向标准IO流
+ * 标准IO，重定向标准IO流，主要作用可以将将命令行程序的输出输出到指定位置，方便阅读。
  * 因为标准IO流都是基于字节流的，因此需要操作InputStream、OutputStream
  */
 public class C13Redirecting {
