@@ -19,7 +19,7 @@ public class CollectionData<T> extends ArrayList<T> {
 
     /**
      * 优雅的使用方式
-     * @see com.xiaojihua.javabasic.chapter15.latantType.C03Fill2
+     * @see com.xiaojihua.javabasic.chapter15generic.latantType.C03Fill2
      * 中的AdapterHelper.getCa方法
      * @param gen
      * @param size

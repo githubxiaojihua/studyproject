@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * 参考https://github.com/floor07/DataStructuresAndAlgorithm-Demo/blob/master/src/main/java/chapter8/Maze.java
+ * 参考https://github.com/floor07/DataStructuresAndAlgorithm-Demo/blob/master/src/main/java/chapter8polymorphism/Maze.java
  * 还需进一步学习
  */
 public class Maze extends JFrame {
