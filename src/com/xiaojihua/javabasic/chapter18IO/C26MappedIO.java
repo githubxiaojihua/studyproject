@@ -6,21 +6,34 @@ import java.nio.IntBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
+/**
+ * 知识点：
+ * 比较普通io和nio的memeory-mapping file之间的性能比较。
+ *
+ * 使用了<b>模版方法</b>的设计模式
+ */
 public class C26MappedIO {
     private static final int NUMOFINT = 4000000;
     private static final int NUMOFUNBUFFERINT = 200000;
     private static final String path = "F:\\data.txt";
 
+    /**
+     * 抽象类、模版类
+     */
     public static  abstract class Test{
         private String name;
         Test(String name){
             this.name = name;
         }
 
+        /**
+         * 测试方法
+         */
         public void doText(){
             try{
                 long start = System.nanoTime();
-                test();
+                test();//模版方法，具体由子类实现
+                //计算测试的运行时间
                 System.out.format(name + ":%.2f\n" ,(System.nanoTime() - start)/1.0e9);
             }catch(IOException e){
                 throw new RuntimeException(e);
@@ -31,6 +44,9 @@ public class C26MappedIO {
         abstract void test() throws IOException;
     }
 
+    /**
+     * 初始化不同的Test类进行测试
+     */
     public static Test[] tests = new Test[]{new Test("Stream Write:") {
         @Override
         void test() throws IOException {
