@@ -14,11 +14,7 @@ public class Test{
 
     public static void main(String[] args) throws Exception{
 
-       File file = new File("Test.java");
-       System.out.println(file.getPath());
-       System.out.println(file.getAbsolutePath());
-       System.out.println(file.getCanonicalPath());
-       System.out.println(file.getParent());
+       System.out.println(System.getProperty("file.encoding"));
 
 
     }

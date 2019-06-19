@@ -7,7 +7,7 @@ import java.io.*;
  *
  */
 public class C07BasicFileOutput {
-    //文件可以不存在，将自动创建
+    //文件可以不存在，将自动创建，但是如果路径不存在的话是不能自动创建的，需要File.mkdirs();
     private static  String outFile = "G:\\text.out";
     public static void main(String[] args) throws IOException{
         /*
