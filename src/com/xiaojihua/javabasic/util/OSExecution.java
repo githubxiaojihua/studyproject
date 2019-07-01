@@ -60,6 +60,6 @@ public class OSExecution {
     }
 
     public static void main(String[] args){
-        command("javap out\\production\\studyproject\\com\\xiaojihua\\javabasic\\util\\OSExecution");
+        command("javap target\\classes\\com\\xiaojihua\\javabasic\\util\\OSExecution");
     }
 }
