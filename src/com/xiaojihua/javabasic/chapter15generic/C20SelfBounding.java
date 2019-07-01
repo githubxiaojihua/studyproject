@@ -5,6 +5,7 @@ package com.xiaojihua.javabasic.chapter15generic;
  * 1、自限定类型的使用。自限定类型就是类型参数被作为他自己的绑定参数。
  * T extends SelfBouned<T>这种形式，自限定类型要求使用
  * 的类都满足这种继承关系。在
+ *
  * @see C19CRGwithBasicHolder 类中的SubType类继承自BasicHold<SubType>
  * 但是BasicHold的类型参数却不做强制要求，可以是任何类型。但是通过自限定
  * 类型就能强制BasicHold的类型参数只能是BasicHold的导出类。
