@@ -27,7 +27,7 @@ public enum C01Input {
         return value;
     }
 
-    private static Random random = new Random(47);
+    static Random random = new Random(47);
 
     public static C01Input randomSelection(){
         return values()[random.nextInt(values().length -1 )];

@@ -11,30 +11,22 @@ import java.util.logging.Logger;
 
 import static com.xiaojihua.javabasic.util.Print.*;
 
-public class Test implements A<String>{
+public class Test{
 
     public static void main(String[] args) throws Exception{
-        for(Type t : Test.class.getGenericInterfaces()){
-            System.out.println(t);
-        }
 
-       System.out.println(Test.class.getGenericSuperclass());
-
-        for(Class<?> c : Test.class.getInterfaces()){
-            System.out.println(c.getName());
-        }
     }
 
-    public String ab(){
-        return "ddd";
-    }
+    public void test(A a){}
+    public void test(B b){}
+
+
 
 
 }
 
-interface A <B>{
-    B ab();
-}
+class A{}
+class B extends A{}
 
 
 
