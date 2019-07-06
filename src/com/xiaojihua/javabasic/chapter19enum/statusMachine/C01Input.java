@@ -2,6 +2,10 @@ package com.xiaojihua.javabasic.chapter19enum.statusMachine;
 
 import java.util.Random;
 
+/**
+ * 知识点：
+ * 状态及的输入项目，输入项目有钱、商品和操作
+ */
 public enum C01Input {
     NICKEL(5), DIME(10), QUARTER(25), DOLLAR(100),
     TOOTHPASTE(200), CHIPS(75), SODA(100), SOAP(50),
@@ -29,6 +33,10 @@ public enum C01Input {
 
     static Random random = new Random(47);
 
+    /**
+     * 提供随机选择
+     * @return
+     */
     public static C01Input randomSelection(){
         return values()[random.nextInt(values().length -1 )];
     }

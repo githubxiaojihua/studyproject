@@ -15,18 +15,32 @@ public class Test{
 
     public static void main(String[] args) throws Exception{
 
+        Test test = new Test();
+        test.test(randomGen(),randomGen());
     }
 
-    public void test(A a){}
-    public void test(B b){}
+    public void test(Father f1, Father f2){
+        System.out.println(f1 + " " + f2);
+    }
+
+    public static Father randomGen(){
+        Random random = new Random(47);
+        switch(random.nextInt(2)){
+            default:
+            case 0: return new Son1();
+            case 1: return new Son2();
+        }
+    }
+
 
 
 
 
 }
 
-class A{}
-class B extends A{}
+class Father{}
+class Son1 extends Father{}
+class Son2 extends Father{}
 
 
 
