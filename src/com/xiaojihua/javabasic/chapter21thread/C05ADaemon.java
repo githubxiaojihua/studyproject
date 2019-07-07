@@ -20,9 +20,10 @@ public class C05ADaemon implements Runnable {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Thread t = new Thread(new C05ADaemon());
         t.setDaemon(true);//如果注销这一句的话就会执行finally
         t.start();
+        TimeUnit.MILLISECONDS.sleep(1000);
     }
 }
