@@ -8,9 +8,6 @@
     <artifactId>studyproject</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>jdbcexample</module>
-    </modules>
     <name>javabasicandarithmetic</name>
 
     <dependencies>
