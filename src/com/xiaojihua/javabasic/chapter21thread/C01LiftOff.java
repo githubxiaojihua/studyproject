@@ -37,7 +37,11 @@ public class C01LiftOff implements Runnable {
                 System.out.print(status());
                 //Thread.yield();
                 //Thread.sleep(100);// 老写法
-                TimeUnit.MICROSECONDS.sleep(100);//新写法
+                /**
+                 * 当使用sleep的时候会抛出InterruptedException，由于在
+                 * 线程中的报错不会传递到main因此只能在抛出的地方进行本地处理
+                 */
+                TimeUnit.MILLISECONDS.sleep(100);//新写法
             }
         }catch (InterruptedException e){
             e.printStackTrace();
@@ -70,12 +74,26 @@ public class C01LiftOff implements Runnable {
         //ExecutorService(具有线程生命周期管理的Executor，比如shutdown)
         //单个Executor可以被用来创建和管理系统中的所有任务。
         //应该优先选择Executor方式
+        //为提交给它的每一个任务创建一个线程，然后重复利用这些线程
         ExecutorService service = Executors.newCachedThreadPool();
+        /*
+            一次性创建指定数量的线程数。
+            在生产环境中应该使用这个，因为不会造成线程过多。
+         */
         // ExecutorService service = Executors.newFixedThreadPool(5);//限制进程池中的进程数量
+        /*
+            比较适合一个长时间存活的任务，比如：一个监听socket输入的任务。
+            也比较适合一个短任务，比如：更新一个日志。
+            当多于一个任务提交（execute）到此Executor时，任务的执行是串行的，是按照
+            任务提交的顺序来执行的。也可以通过synchronized相应的资源来达到
+            相同的目的
+         */
         //ExecutorService service = Executors.newSingleThreadExecutor();//进程数量为1的进程池。
         for(int i = 0; i < 5; i++){
             service.execute(new C01LiftOff());
         }
+
+        //shutdown只是阻止新的任务被提交到Executor，但是已经提交给Executor的任务会继续执行完成
         service.shutdown();
 
     }
