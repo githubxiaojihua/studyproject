@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 知识点：
  * 1、后台线程不会执行finally。
+ * 经过试验在jdk8中是可以执行finally的。
  */
 public class C05ADaemon implements Runnable {
     @Override

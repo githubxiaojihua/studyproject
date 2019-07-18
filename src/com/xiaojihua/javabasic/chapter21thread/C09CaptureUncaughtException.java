@@ -6,9 +6,11 @@ import java.util.concurrent.ThreadFactory;
 
 /**
  * 知识点：
- * 1、从线程中抛出的异常无法进行常规捕获（比如使用try catch)。这些异常一般会直接抛出到控制台，即使使用trycatch
+ * 1、从线程中抛出的异常无法进行常规捕获（比如使用try catch)。
+ * 这些异常一般会直接抛出到控制台，即使使用trycatch
  * 包围也捕获不到。但是可以使用Executor的相关方法来捕获。
- * 2、Thread.UncaughtExceptionHandler的使用：允许在每一个Thread上附着一个异常处理器，专门用于捕获线程抛出的未被捕获的异常
+ * 2、Thread.UncaughtExceptionHandler的使用：允许在每一个Thread上附着一个异常处理器，
+ * 专门用于捕获线程抛出的未被捕获的异常
  * 3、ThreadFactory的使用，创建具有不同属性特点的Thread
  */
 class ExceptionThread implements Runnable{
