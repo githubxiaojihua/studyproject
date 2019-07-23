@@ -11,7 +11,8 @@ import java.util.concurrent.Executors;
  * 本实例中有两个线程main和ExecutorService创造的线程
  * 2、由于本例中i为private的，并通过public的两个方法进行访问。那么要达到原子性、可视性可以直接在
  * 方法上使用synchronized，不必使用volatile
- * 3、可以使用原子类对方法进行改进从而去掉synchronized。比如打开注销掉的那几行
+ * 3、可以使用原子类对方法进行改进从而去掉synchronized。比如打开注销掉的那几行。
+ * 4、当任务本身交给多个线程的时候也会发生线程安全问题
  */
 public class C05AtomicityTest implements Runnable {
     private int i = 0;

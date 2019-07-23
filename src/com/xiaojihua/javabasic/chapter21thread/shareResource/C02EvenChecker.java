@@ -35,6 +35,9 @@ public class C02EvenChecker implements Runnable{
     public static void test(C01IntGenerator it, int count){
         ExecutorService service = Executors.newCachedThreadPool();
         for(int i = 0; i < count; i++){
+            //这里一定要注意it作为共享资源的传入，才行，如果改成下面这句那么是不行的
+            //service.execute(new C02EvenChecker(new C01IntGenerator(),i));
+            //因为这样的话每个线程都会有自己独立的C01IntGenerator不能造成资源共享的局面
             service.execute(new C02EvenChecker(it,i));
         }
         service.shutdown();
