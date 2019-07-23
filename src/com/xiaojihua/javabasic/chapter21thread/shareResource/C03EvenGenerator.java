@@ -47,6 +47,10 @@ public class C03EvenGenerator extends C01IntGenerator {
     private Lock lock = new ReentrantLock();//声明
     public int nextByLock(){
         lock.lock();//锁定
+        /*
+            当显示使用锁的时候，必须使用try finally
+            来unlock()
+         */
         try{
             ++currentEvenValue;
             ++currentEvenValue;
