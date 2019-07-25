@@ -14,6 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 
 /**
+ * 注意仔细阅读这个类，从这个类的身上可以学习到很多知识
  * Pair为非线程安全的类，因为当x==y的时候status才算是正常，否则就throw Exception。
  * 而自增操作并非线程安全的，并且本类中的方法未加synchronized方法。
  * 因此在多线程环境中，很容易造成status的不正常。
@@ -55,7 +56,8 @@ class Pair{
  * 设计模式：模版模式
  * 将通用功能在抽象类中实现，将变化的代码通过抽象方法在子类中实现
  *
- * 通过使用本类将原本线程不安全的Pair类进行了线程安全的包装
+ * <b>通过使用本类将原本线程不安全的Pair类进行了线程安全的包装</b>
+ * 包含一个Pair类并且控制对其访问，保证其线程安全性。
  */
 abstract class PairManager{
     //使用原子类保证本Integer的原子性
@@ -63,9 +65,10 @@ abstract class PairManager{
     //原子类包括：AtomicInteger,AtomicLong,AtomicReference
     AtomicInteger checkCount = new AtomicInteger(0);
     protected Pair p = new Pair();
-    //提供线程安全的List对象
+    //提供线程安全的List对象，在此List上的操作都是线程安全的
     private List<Pair> storge = Collections.synchronizedList(new ArrayList<Pair>());
 
+    //仅仅提供一个public方法，保证Pair访问的线程安全性
     synchronized public Pair getPair(){
         return new Pair(p.getX(),p.getY());
     }
@@ -119,14 +122,29 @@ class PairManager2 extends PairManager{
         synchronized (this){
             p.incrementX();
             p.incrementY();
+            /*
+                为什么将getPair()放到synchronized块中？
+                因为getPair()方法本身是synchronized的，为了保证在访问中的
+                加锁一致性，因此放到一起，这样在进入此块时候
+                getPair()上的synchronized加锁也能同时生效，
+                否则就不是一次加锁操作，而是synchronized块加锁后解锁
+                然后getPair加锁再解锁，
+                没有加锁的一致性，就无法保证程序的正确性，一系列的操作必须
+                属于同一个加锁操作，否则锁的获得就是相互独立的两个过程。
+             */
             temp = getPair();
 
         }
         //store使用了线程安全的list因此可以将此语句放到synchonized块中。
+        //store不再上面的块中是因为，temp已经确定了，不会再发生改变了，
+        //何时加入到队列不会影响程序执行的正确性。因此走另一个加锁的步骤是没问题的。
         store(temp);
     }
 }
 
+/**
+ * 创建任务1，用于访问PairManager中的Synchronized方法
+ */
 class PairManipulator implements Runnable{
     private PairManager pm;
     PairManipulator(PairManager pm){
@@ -142,6 +160,10 @@ class PairManipulator implements Runnable{
     }
 }
 
+/**
+ * 创建任务二:与任务一共享PairManager，用于测试在访问synchronized资源的时候
+ * 那种synchronized方式效率更高
+ */
 class PairChecker implements Runnable{
     private PairManager pm;
     PairChecker(PairManager pm){

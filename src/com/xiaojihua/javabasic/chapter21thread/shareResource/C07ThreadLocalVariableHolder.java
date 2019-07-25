@@ -9,6 +9,10 @@ import java.util.concurrent.TimeUnit;
  * 知识点：
  * 使用threadLocal进行共享资源的控制。每个线程都有一个自己的副本.
  * threadlocal就是线程的本地存储。
+ * 内部使用map实现，key为线程，value为设置的值
+ * 一个ThreadLocal只能保存一个数据。
+ *
+ * 由于已经为每一个线程单独开辟了一块独立的空间，因此不需要进行synchronized控制了。
  */
 class Accessor implements Runnable{
     private final int id;
@@ -39,6 +43,7 @@ public class C07ThreadLocalVariableHolder {
 
     /**
      * 通过value.set设置新值。只能通过set设置
+     * set设置与本线程管理的变量，并且返回就的变量值
      */
     public static void increment(){
         value.set(value.get() + 1);
