@@ -16,6 +16,12 @@ import java.util.concurrent.TimeUnit;
  * 4、中断Executor中的单一程序
  * 5、能够中断sleepblock，但是不能中断IOBlock,SynchronizedBlock
  *
+ * 通过Thread.interrupt()可以终止一个处于阻塞的任务，interrupt方法会设置线程的interrupted status
+ * 为true，当一个线程的interrupted status被设置为true的时候，当线程处于阻塞状态或者尝试执行一个阻塞操作
+ * 的时候会抛出InterruptedException。当异常抛出后或者调用Thread.interrupted()方法后线程的
+ * interrupted status会重置为false。通过Thread.interrupted()方法可以作为离开线程run()方案中的循环
+ * 的第二种方法，另外一种是抛出异常。
+ * interrupt()能够中断sleepblock，但是不能中断IOBlock,SynchronizedBlock
  */
 
 /**
@@ -30,6 +36,7 @@ class SleepBlock implements Runnable{
             TimeUnit.SECONDS.sleep(100);
         } catch (InterruptedException e) {
             System.out.println("InterruptedException");
+            //throw new RuntimeException(e);
         }
         System.out.println("Exiting SleepBlock.run()");
     }
