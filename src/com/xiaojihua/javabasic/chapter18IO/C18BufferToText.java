@@ -12,7 +12,7 @@ import java.nio.charset.Charset;
  * nio
  * ByteBuffer操作的是字节，从字节到字符，必须在字符转换成字节的时候进行编码，然后在
  * 字节变为字符的时候进行解码。java中提供了java.nio.charset.Charset类来进行编码和
- * 解码。关于编码和解码的相关知识参考笔记中的技术文章。
+ * 解码。关于编码和解码的相关知识参考笔记中的技术文章--java基础--字符集和编码。
  *
  * 1、Charset类的使用
  */
