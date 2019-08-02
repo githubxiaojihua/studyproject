@@ -96,11 +96,11 @@ public class C13TestBlockingQueues {
     }
 
     public static void main(String[] args) {
-        test("LinkedBlockingQueue", new LinkedBlockingQueue<>());
+        /*test("LinkedBlockingQueue", new LinkedBlockingQueue<>());
         test("ArrayBlockingQueue", new ArrayBlockingQueue<>(3));
-        test("SynchronousQueue", new SynchronousQueue<>());
-        /*Thread t = new Thread(new AddLiftOff(new LinkedBlockingQueue<>()));
-        t.start();*/
+        test("SynchronousQueue", new SynchronousQueue<>());*/
+        Thread t = new Thread(new AddLiftOff(new LinkedBlockingQueue<>()));
+        t.start();
     }
 }
 
