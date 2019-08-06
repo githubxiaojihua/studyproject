@@ -3,10 +3,24 @@ package com.xiaojihua.javabasic.chapter21thread.deadLock;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 知识点：
+ * 模拟死锁的哲学家实例，哲学家思考问题，思考完问题后吃饭，然后再思考问题。。。
+ * 哲学家吃饭的时候需要同时获得左手边和右手边两个筷子才能吃饭，先获取，否则就等待，直到
+ * 左右筷子均可使用。
+ *
+ * 这个实例一般筷子的数量和哲学家的数量是一样的
+ */
 public class C02Philosopher implements Runnable {
     private C01Chopstick leftChopstic, rightChopstic;
     private Random random = new Random(47);
-    private final int id;
+    private final int id;//哲学家ID.
+    /*
+        科学家吃饭和思考的时间参数，参数越少发生死锁的概率越高，当
+        这个值够大，而且哲学家的数量够多的时候，死锁的发生概率可能
+        相当低。
+        另外如果思考的时间远大于吃饭的时间和可以降低死锁发生的概率
+     */
     private final int factor;
 
     public C02Philosopher(C01Chopstick chopstick1,C01Chopstick chopstick2,int id, int factor){
@@ -16,14 +30,22 @@ public class C02Philosopher implements Runnable {
         this.factor = factor;
     }
 
+    /**
+     * 模拟时间间隔
+     * @throws InterruptedException
+     */
     private void pase() throws InterruptedException{
         if(factor == 0){
             return;
         }
+        //
         TimeUnit.MILLISECONDS.sleep(random.nextInt(factor * 250));
 
     }
 
+    /**
+     * 哲学家开始思考和吃饭
+     */
     @Override
     public void run(){
         //这里try catch了才能在main方法中调用shutdownnow方法后退出，否则
@@ -48,14 +70,17 @@ public class C02Philosopher implements Runnable {
             while(!Thread.interrupted()){
                 System.out.println(this + "start thinking");
                 pase();
-                System.out.println(this + "grbbing left");
-                leftChopstic.tack();
                 System.out.println(this + "grbbing right");
                 rightChopstic.tack();
+                System.out.println(this + "grbbing left");
+                leftChopstic.tack();
                 System.out.println(this + "start eat");
                 pase();
-                leftChopstic.dropDown();
+
                 rightChopstic.dropDown();
+                leftChopstic.dropDown();
+
+
             }
         }catch(InterruptedException e){
             System.out.println(this + " exiting via interrupted");
