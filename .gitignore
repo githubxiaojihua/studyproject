@@ -25,4 +25,5 @@ workspace.xml
 studyproject.iml
 out
 target
+*.iml
 
