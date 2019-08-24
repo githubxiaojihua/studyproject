@@ -19,6 +19,18 @@ import java.util.concurrent.TimeUnit;
  * 2、抛光它。
  * 抛光工作必须在涂蜡任务完成以前是不能开始的
  * 涂蜡任务在上另一层蜡的时候必须在抛光任务完成后开始
+ *
+ * 补充：
+ * 线程之间的合作是通过在原有互斥(synchronized，lock)的基础上增加握手机制（
+ * wait\notify\notifyall)来实现的。
+ * wait方法的调用有两种方式，一种是普通的直接调用，另一种是接受一个超时时间，
+ * 超时时间到后自动唤醒。
+ *wait\notifty\notifyall必须放在snychronized中，但是sleep可以放在非synchronized中
+ *
+ * 唤醒某个对象x上wait的线程：
+ * synchronized(x){
+ *     x.notifyAall();
+ * }
  */
 class Car1{
     private boolean waxOn = false;//是否已经上蜡
@@ -42,7 +54,7 @@ class Car1{
     }
 
     /**
-     * 抛光，必须等到上蜡完成即waxOn = true
+     * 检查是否上拉完成，再进行抛光，必须等到上蜡完成即waxOn = true
      * @throws InterruptedException
      */
     synchronized public void waitForWaxint() throws InterruptedException {
@@ -59,10 +71,19 @@ class Car1{
     }
 
     /**
-     * 涂另一层蜡，必须等待抛光完成即waxOn = false
+     * 上蜡后等待抛光。涂另一层蜡，必须等待抛光完成即waxOn = false
      * @throws InterruptedException
      */
     synchronized public void waitForBuffing() throws InterruptedException {
+        /*
+            这里一般使用while循环包裹wait原因是，当线程醒来后，可能相关的标志
+            已经被其他线程又更改了（因为可能notityALL可能唤醒多个等待的线程），
+            这种情况下应该立即检查一下相关标志
+            如果不满足条件应该立即再次wait()。
+            而关键字synchronized能够保证在进行这些操作的时候线程之间是互斥的
+            从而保证了各个线程的相互协调，不会造成状态的混乱。
+            这是一个常用的语法。
+         */
         while(waxOn == true)
             wait();
     }
@@ -147,6 +168,8 @@ public class C10WaxOMatic {
          * InterruptedException异常进行中断。当都去掉后，因为同一时间只有一个任务在wait
          * 而wait方法本身和抛出InterruptedException，因此当执行如下语句的时候，只有一个
          * 异常输出，另外一个是通过判断Thread.interrupted()来终止的while循环。
+         * wait()方法也是抛出InterruptedException因此也可以通过interrupt()方法来实现
+         * 中断。
          */
         service.shutdownNow();
 

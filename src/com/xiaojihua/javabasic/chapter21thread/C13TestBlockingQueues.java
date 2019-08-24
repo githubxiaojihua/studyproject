@@ -96,8 +96,12 @@ public class C13TestBlockingQueues {
     }
 
     public static void main(String[] args) {
+        //不限容量的BlockingQueue
         test("LinkedBlockingQueue", new LinkedBlockingQueue<>());
+        //有容量的BlockingQueue底层是基于Array实现的，当往已满或者空的队列进行put或者take的
+        //时候会导致阻塞。
         test("ArrayBlockingQueue", new ArrayBlockingQueue<>(3));
+        //仅只有一个容量的BlockingQueue，生产--消费--生产--消费其他的时候在阻塞
         test("SynchronousQueue", new SynchronousQueue<>());
         /*Thread t = new Thread(new AddLiftOff(new LinkedBlockingQueue<>()));
         t.start();*/

@@ -64,6 +64,7 @@ public class C07ThreadLocalVariableHolder {
         //shutdownNow是主动尝试停止当前正在执行的线程，并且停止等待处理的进程，并返回等待处理的进程
         //shutdown是有序停止正在执行的线程,停止动作依赖于线程本身，如果线程自己不停止的话
         //shutdown是不主动关闭的。并且不再接受新的线程请求
+        //shutdownNow会对Executor中管理的线程调用Thread.Interrupt()方法，中断正在执行的线程
         service.shutdownNow();
         //service.shutdown();
     }

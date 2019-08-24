@@ -22,7 +22,9 @@ import java.util.concurrent.TimeUnit;
  */
 
 /**
- * 阻塞的对象
+ * 阻塞的对象，共享的资源
+ * 对象中的三个方法必须加锁，否则，线程调用notify或者notifyall\wait
+ * 会报错
  */
 class Blocker{
     /**
@@ -32,6 +34,9 @@ class Blocker{
         try{
             while(!Thread.interrupted()){
                 //这里不需要使用while判断条件状态，因为没有条件。
+                //按照以前的知识点，使用wait的时候应该在外层包裹一层while
+                //对wait条件进行判断，防止多个线程同时在等待同一把锁的解除
+                //而导致的唤醒后，wait条件又满足了，但是无法wait的情况
                 wait();
                 System.out.println(Thread.currentThread() + " ");
             }

@@ -7,8 +7,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * 知识点：
  * 1、synchronized并非只用在对于共享资源的竞争上，也用在线程之间的合作上，比如像本例
- * WaitPerson和Chef本身就是一个线程任务，方法上加上synchronized是因为要使用wait和
- * notifyall
+ * WaitPerson和Chef本身就是一个线程任务，方法上加上synchronized是因为有另外的线程要使用wait和
+ * notifyall，使用这两个方法需要获得相对应的锁。
  * 2、通过一个生产者消费者模型来，阐述两个线程之间的合作
  * 3、wait和notify都在线程任务中，以前的例子都是在其他类中。
  * 4、体现了面向对象的思维模式。比如本模型：有Meal(菜品类)、WaitPerson（服务员类)、Chef(厨师类)、
@@ -100,9 +100,15 @@ class Chef implements Runnable{
                 //当下单大于10的时候停止所有进程
                 /**
                  * 这里有个小知识点：
-                 * 当发送shutdownNow的时候，如果TimeUnit.MILLISECONDS.sleep(100)
-                 * 这一行不注销的话chef会通过报异常来中断，如果注销的话，会执行到while
-                 * 循环的最后一句，然后在while循环的顶部退出，然后退出run，进而退出线程
+                 * 当执行下面的c12Restaurant.service.shutdownNow();语句的时候
+                 * 如果TimeUnit.MILLISECONDS.sleep(100)
+                 * 这一行不注销的话，当程序执行到sleep()方法的时候，chef会通过报异常来中断，
+                 * 如果注销的话，会执行到while循环的最后一句，然后在while循环的顶部退出，
+                 * 然后退出run，进而退出线程.
+                 * 因为interrupt操作只有在阻塞中（可以被中断的阻塞），以及尝试进入
+                 * 可中断阻塞的时候才会报InterruptedException。
+                 *
+                 * order up!这一句会打印出来
                  */
                 if(++count == 10){
                     System.out.println("Out of food , closing");
