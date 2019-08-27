@@ -23,7 +23,7 @@ public enum C12Meal2 {
         每个实例就已经被初始化了。
      */
     private C12Meal2(Class<? extends Food> clazz){
-        System.out.println("Controctor");
+        //System.out.println("Controctor");
         values = clazz.getEnumConstants();
 
     }
