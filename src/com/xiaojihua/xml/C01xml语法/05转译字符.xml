@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 转译字符 
+	< --- &lt;
+	> --- &gt;
+	" --- &quot;
+	' --- &apos;
+	& --- &amp
+
+-->
+
+<abc>
+	5 &gt; 4
+	3 &lt; 2
+</abc>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	当内容中出现大量的需要转译的字符
+		XML提供了CDATA区
+ -->
+<abc>
+	<![CDATA[
+		String s = "abc";
+		int count = 0;
+		for(int i = 0;i < s.length() ; i++){
+			char c = s.charAt(i);
+			if(c >= 'a' && c <= 'z'){
+			count++;]]>
+			]]&gt;
+		<![CDATA[
+			}
+		}
+		System.out.println("count = " + count);
+		
+	]]>
+</abc>
