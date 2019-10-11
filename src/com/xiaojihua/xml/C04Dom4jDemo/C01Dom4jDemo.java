@@ -43,14 +43,18 @@ public class C01Dom4jDemo {
         /**
          * 通过File参数读取xml文件，其中的路径需要注意。
          * 如果放在根目录下直接写文件名就行
+         * 说明File是从工程根（studyproject文件夹）目录下加载的
          */
         Document document = reader.read(new File("src/com/xiaojihua/xml/C04Dom4jDemo/beans.xml"));
         /**
          * 通过流来获取
          * /com/xiaojihua/xml/C04Dom4jDemo/beans.xml------绝对路径
          * beans.xml------相对路径
+         * 说明class是从本类所处位置加载的
          */
         //Document document = reader.read(C01Dom4jDemo.class.getResourceAsStream("/com/xiaojihua/xml/C04Dom4jDemo/beans.xml"));
+        //clssLoader的相对路径，说明classLoader是从项目根（classPath）目录下加载的
+        //Document document = reader.read(C01Dom4jDemo.class.getClassLoader().getResourceAsStream("com/xiaojihua/xml/C04Dom4jDemo/beans.xml"));
         //3、获取根标签
         Element rootEle = document.getRootElement();
         System.out.println(rootEle.getName());
