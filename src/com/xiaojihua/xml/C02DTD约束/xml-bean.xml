@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  根据 bean.dtd约束文件,编写自己的XML文件
+		1.在自己要编写的XML中引入DTD约束文件
+		<!DOCTYPE beans SYSTEM "bean.dtd">
+				  跟标签    
+	
+ -->
+ <!DOCTYPE beans SYSTEM "bean.dtd">
+ <beans>
+ 	<bean id="user" className="dog" type="abc">
+ 		<property name="张三" value="abcd">
+ 			普通内容
+ 		</property>
+ 		<property  name="张" value="abc">
+ 			普通内容
+ 		</property>
+ 	</bean>
+ 	<bean id="heima002" className="pig">
+ 		
+ 	</bean>
+ 	<import resource="aaaa">
+ 		普通内容
+ 	</import>
+ 	<import resource="bbb"></import>
+ </beans>
+ 

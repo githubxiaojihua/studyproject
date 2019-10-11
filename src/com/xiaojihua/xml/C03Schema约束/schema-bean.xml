@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	根据框架提供的.xsd文件,写出自己的XML文件
+	1.引入schema约束文档
+	(bean | import)*:bean和import可以出现任意多次,并且顺序随意
+	(bean|import*):要么写一个bean,要么写import任意个
+	(bean*|import*):要么写任意个bean,要么写任意个import
+	(bean*,import*):先写任意个bean后写任意个import
+ -->
+<beans xmlns="http://www.itcast.cn/bean"
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:schemaLocation="http://www.itcast.cn/bean bean-schema.xsd"
+	>
+	<bean className="" id="">
+		<property value=""/>
+	</bean>
+	<bean className="" id="">
+		<property value=""/>
+	</bean>
+	<import resource=""/>
+</beans>

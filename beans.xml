@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="001" className="cn.itcast.demo.User">
+		<property name="username" value="jack"></property>
+		<property name="password" value="123"></property>
+	</bean>
+
+	<bean id="002" className="cn.itcast.demo.Admin">
+		<property name="username" value="admin"></property>
+		<property name="password" value="123321"></property>
+	</bean>
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans SYSTEM "bean.dtd">
+<beans>
+	<bean className="dog" id="heima001">
+		<property name="" value="">
+			普通内容
+		</property>
+	</bean>
+	<bean className="pig" id="heima002">
+		<property name="" value="">
+			普通内容
+		</property>
+	</bean>
+	<import resource="abcd">
+		普通内容
+	</import>
+	<import resource="">
+		普通内容
+	</import>
+
+</beans>

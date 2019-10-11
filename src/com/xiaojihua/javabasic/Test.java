@@ -15,8 +15,8 @@ public class Test{
 
     public static void main(String[] args) throws Exception{
 
-        Test test = new Test();
-        test.test(randomGen(),randomGen());
+            java.sql.Date sqlDate = new java.sql.Date(new Date().getTime());
+            System.out.println(sqlDate);
     }
 
     public void test(Father f1, Father f2){
