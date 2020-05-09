@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="126.29615384615389" y="91.0">com.xiaojihua.gof23.p02factory.P02factoryMethod.C01CarFactory</node>
+    <node x="200.50000000000003" y="172.0">com.xiaojihua.gof23.p02factory.P02factoryMethod.C02AudiFactory</node>
+    <node x="10.500000000000028" y="91.0">com.xiaojihua.gof23.p02factory.C03Byd</node>
+    <node x="279.625" y="91.0">com.xiaojihua.gof23.p02factory.C02Audi</node>
+    <node x="45.50000000000003" y="172.0">com.xiaojihua.gof23.p02factory.P02factoryMethod.C03BydFactory</node>
+    <node x="104.2224358974359" y="0.0">com.xiaojihua.gof23.p02factory.C01Car</node>
+    <node x="86.54615384615389" y="309.0">com.xiaojihua.gof23.p02factory.C99TestClient</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.xiaojihua.gof23.p02factory.C99TestClient" target="com.xiaojihua.gof23.p02factory.C02Audi">
+      <point x="51.19999999999999" y="-15.5" />
+      <point x="164.74615384615387" y="233.0" />
+      <point x="352.375" y="233.0" />
+      <point x="24.25" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.C99TestClient" target="com.xiaojihua.gof23.p02factory.P02factoryMethod.C03BydFactory">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.C99TestClient" target="com.xiaojihua.gof23.p02factory.C01Car">
+      <point x="-51.19999999999999" y="-15.5" />
+      <point x="62.346153846153896" y="233.0" />
+      <point x="0.0" y="233.0" />
+      <point x="0.0" y="51.0" />
+      <point x="111.63910256410256" y="51.0" />
+      <point x="-37.08333333333334" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.P02factoryMethod.C02AudiFactory" target="com.xiaojihua.gof23.p02factory.C01Car">
+      <point x="0.0" y="-15.5" />
+      <point x="270.5" y="147.0" />
+      <point x="268.9166666666667" y="147.0" />
+      <point x="268.9166666666667" y="61.0" />
+      <point x="170.9724358974359" y="61.0" />
+      <point x="22.25" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.P02factoryMethod.C02AudiFactory" target="com.xiaojihua.gof23.p02factory.P02factoryMethod.C01CarFactory">
+      <point x="-46.66666666666666" y="-15.5" />
+      <point x="223.83333333333337" y="147.0" />
+      <point x="225.29615384615389" y="147.0" />
+      <point x="33.0" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.P02factoryMethod.C03BydFactory" target="com.xiaojihua.gof23.p02factory.C01Car">
+      <point x="0.0" y="-15.5" />
+      <point x="113.00000000000003" y="71.0" />
+      <point x="141.30576923076924" y="71.0" />
+      <point x="-7.416666666666657" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.P02factoryMethod.C01CarFactory" target="com.xiaojihua.gof23.p02factory.C01Car">
+      <point x="0.0" y="-15.5" />
+      <point x="192.29615384615389" y="71.0" />
+      <point x="156.1391025641026" y="71.0" />
+      <point x="7.416666666666686" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.C03Byd" target="com.xiaojihua.gof23.p02factory.C01Car">
+      <point x="0.0" y="-15.5" />
+      <point x="56.50000000000003" y="61.0" />
+      <point x="126.4724358974359" y="61.0" />
+      <point x="-22.25" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.P02factoryMethod.C03BydFactory" target="com.xiaojihua.gof23.p02factory.C03Byd">
+      <point x="-45.0" y="-15.5" />
+      <point x="68.00000000000003" y="147.0" />
+      <point x="79.50000000000003" y="147.0" />
+      <point x="23.0" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.C02Audi" target="com.xiaojihua.gof23.p02factory.C01Car">
+      <point x="0.0" y="-15.5" />
+      <point x="328.125" y="51.0" />
+      <point x="185.80576923076927" y="51.0" />
+      <point x="37.08333333333337" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.P02factoryMethod.C02AudiFactory" target="com.xiaojihua.gof23.p02factory.C02Audi">
+      <point x="46.66666666666666" y="-15.5" />
+      <point x="317.1666666666667" y="147.0" />
+      <point x="303.875" y="147.0" />
+      <point x="-24.25" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.P02factoryMethod.C03BydFactory" target="com.xiaojihua.gof23.p02factory.P02factoryMethod.C01CarFactory">
+      <point x="45.0" y="-15.5" />
+      <point x="158.00000000000003" y="147.0" />
+      <point x="159.29615384615389" y="147.0" />
+      <point x="-33.0" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.C99TestClient" target="com.xiaojihua.gof23.p02factory.C03Byd">
+      <point x="-25.599999999999994" y="-15.5" />
+      <point x="87.94615384615389" y="223.0" />
+      <point x="33.50000000000003" y="223.0" />
+      <point x="-23.0" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p02factory.C99TestClient" target="com.xiaojihua.gof23.p02factory.P02factoryMethod.C02AudiFactory">
+      <point x="25.600000000000023" y="-15.5" />
+      <point x="139.1461538461539" y="223.0" />
+      <point x="270.5" y="223.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="9.5" y="57.0" />
+  <SelectedNodes>
+    <node>com.xiaojihua.gof23.p02factory.C99TestClient</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -3,7 +3,7 @@ package com.xiaojihua.gof23.p01singleton;
 /**
  * 验证单例
  */
-public class C05Client {
+public class C06Client {
 
     public static void main(String[] args){
         C01Singleton01 s1 = C01Singleton01.getInstance();
