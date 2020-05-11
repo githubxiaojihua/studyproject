@@ -10,6 +10,8 @@ package com.xiaojihua.gof23.p03builder;
  *
  * 而且可以配合工厂模式或者单例模式等其他模式来创建子组件，本例中子组件的创建没有使用设计模式
  * 但是是可以使用的比如工厂模式创建子组件
+ *
+ * //StringBuilder, 以后学习XML解析中，JDOM库中的类：DomBuilder,SaxBuilder
  */
 public class C09Client {
     public static void main(String[] args){
