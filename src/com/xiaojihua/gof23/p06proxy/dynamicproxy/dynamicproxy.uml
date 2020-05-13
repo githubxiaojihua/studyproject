@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="81.0">com.xiaojihua.gof23.p06proxy.dynamicproxy.C02RealStar</node>
+    <node x="12.500000000000028" y="0.0">com.xiaojihua.gof23.p06proxy.dynamicproxy.C01Star</node>
+    <node x="0.0" y="157.0">com.xiaojihua.gof23.p06proxy.dynamicproxy.C03StarHandler</node>
+    <node x="184.0" y="157.0">com.xiaojihua.gof23.p06proxy.dynamicproxy.C04Client</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.xiaojihua.gof23.p06proxy.dynamicproxy.C02RealStar" target="com.xiaojihua.gof23.p06proxy.dynamicproxy.C01Star">
+      <point x="2.8421709430404007E-14" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
