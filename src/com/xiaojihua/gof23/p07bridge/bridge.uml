@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="10.5" y="91.0">com.xiaojihua.gof23.p07bridge.Lenovo</node>
+    <node x="305.06481481481484" y="172.0">com.xiaojihua.gof23.p07bridge.Laptop2</node>
+    <node x="211.5" y="91.0">com.xiaojihua.gof23.p07bridge.C02Computer</node>
+    <node x="143.9384920634921" y="172.0">com.xiaojihua.gof23.p07bridge.Desktop2</node>
+    <node x="360.5" y="91.0">com.xiaojihua.gof23.p07bridge.Shenzhou</node>
+    <node x="121.50000000000001" y="91.0">com.xiaojihua.gof23.p07bridge.Dell</node>
+    <node x="192.7099867724868" y="0.0">com.xiaojihua.gof23.p07bridge.C03Brand</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.xiaojihua.gof23.p07bridge.C02Computer" target="com.xiaojihua.gof23.p07bridge.C03Brand">
+      <point x="-32.25" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p07bridge.Laptop2" target="com.xiaojihua.gof23.p07bridge.C03Brand">
+      <point x="32.000000000000014" y="-15.5" />
+      <point x="385.06481481481484" y="152.0" />
+      <point x="475.0" y="152.0" />
+      <point x="475.0" y="51.0" />
+      <point x="289.28141534391534" y="51.0" />
+      <point x="44.571428571428555" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p07bridge.Lenovo" target="com.xiaojihua.gof23.p07bridge.C03Brand">
+      <point x="0.0" y="-15.5" />
+      <point x="56.0" y="61.0" />
+      <point x="214.99570105820106" y="61.0" />
+      <point x="-29.714285714285722" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p07bridge.Laptop2" target="com.xiaojihua.gof23.p07bridge.C02Computer">
+      <point x="0.0" y="-15.5" />
+      <point x="353.06481481481484" y="142.0" />
+      <point x="324.375" y="142.0" />
+      <point x="48.375" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p07bridge.Desktop2" target="com.xiaojihua.gof23.p07bridge.C02Computer">
+      <point x="0.0" y="-15.5" />
+      <point x="195.9384920634921" y="142.0" />
+      <point x="227.625" y="142.0" />
+      <point x="-48.375" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p07bridge.Shenzhou" target="com.xiaojihua.gof23.p07bridge.C03Brand">
+      <point x="0.0" y="-15.5" />
+      <point x="412.5" y="61.0" />
+      <point x="274.4242724867725" y="61.0" />
+      <point x="29.714285714285722" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p07bridge.Desktop2" target="com.xiaojihua.gof23.p07bridge.C03Brand">
+      <point x="-34.66666666666663" y="-15.5" />
+      <point x="161.27182539682548" y="152.0" />
+      <point x="0.0" y="152.0" />
+      <point x="0.0" y="51.0" />
+      <point x="200.13855820105823" y="51.0" />
+      <point x="-44.571428571428555" y="15.5" />
+    </edge>
+    <edge source="com.xiaojihua.gof23.p07bridge.Dell" target="com.xiaojihua.gof23.p07bridge.C03Brand">
+      <point x="0.0" y="-15.5" />
+      <point x="156.5" y="71.0" />
+      <point x="229.85284391534393" y="71.0" />
+      <point x="-14.857142857142861" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="237.5" y="101.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
