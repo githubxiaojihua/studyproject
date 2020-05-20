@@ -170,6 +170,17 @@ public class C10WaxOMatic {
          * 异常输出，另外一个是通过判断Thread.interrupted()来终止的while循环。
          * wait()方法也是抛出InterruptedException因此也可以通过interrupt()方法来实现
          * 中断。
+         *
+         * 总结:
+         * 当两个线程都有sleep语句时，如果调用线程的interrupt()方法会导致sleep中的线程抛出
+         * InterruptedException，也可能导致在wait的线程抛出InterruptedException异常。因此
+         * 出现两个异常。
+         * 而如果没有sleep，那么同一时间只有一个线程在wait因此调用interrupt时，wait的进程会抛出
+         * 异常。
+         *
+         * 线程中的while循环有两种情况可以被终止，一种是没有sleep也没有wait的时候调用interrupt
+         * 会将线程的interrupted标志置为true，因此while条件在判断的时候就满足了退出条件。
+         * 另一种是在sleep或者wait那么调用interrupt方法的时候会直接抛出异常，从而终止while循环。
          */
         service.shutdownNow();
 
