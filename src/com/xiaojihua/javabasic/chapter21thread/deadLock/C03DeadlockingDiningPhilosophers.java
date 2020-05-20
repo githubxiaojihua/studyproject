@@ -41,14 +41,14 @@ public class C03DeadlockingDiningPhilosophers {
                 我们可以让最后一个哲学家先拿起左边的筷子来破坏掉循环等待的条件，从而避免死锁。
              */
             //避免死锁
-            if(i < size -1){
+            /*if(i < size -1){
                 service.execute(new C02Philosopher(chopsticks[i],chopsticks[i+1],i,factor));
             }else{
                 service.execute(new C02Philosopher(chopsticks[0],chopsticks[i],i,factor));
-            }
+            }*/
 
             //有死锁的风险。之所以说有死锁风险是因为，并不是一定会发生。
-            //service.execute(new C02Philosopher(chopsticks[i],chopsticks[(i+1)%size],i,factor));
+            service.execute(new C02Philosopher(chopsticks[i],chopsticks[(i+1)%size],i,factor));
         }
 
         System.out.println("exist by print something");
