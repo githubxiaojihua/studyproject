@@ -10,7 +10,7 @@ import java.util.Map;
  *
  * 简单的命令行模式应用，命令行模式有一个命令接口，和多个命令的实现类。
  * 更标准的命令行模式看
- * @see com.xiaojihua.javabasic.disignPattern.command.C01TextFileOperation 相关
+ * @see com.xiaojihua.gof23.p15command.command.C01TextFileOperation 相关
  */
 public class C14EnumMaps {
     public static void main(String[] args){

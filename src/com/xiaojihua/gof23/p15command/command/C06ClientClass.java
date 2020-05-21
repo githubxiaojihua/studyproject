@@ -1,4 +1,4 @@
-package com.xiaojihua.javabasic.disignPattern.command;
+package com.xiaojihua.gof23.p15command.command;
 
 /**
  * 知识点：

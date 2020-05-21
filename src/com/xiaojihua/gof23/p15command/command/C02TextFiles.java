@@ -1,4 +1,4 @@
-package com.xiaojihua.javabasic.disignPattern.command;
+package com.xiaojihua.gof23.p15command.command;
 
 public class C02TextFiles {
     private String name;

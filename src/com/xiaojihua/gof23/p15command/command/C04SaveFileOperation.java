@@ -1,4 +1,4 @@
-package com.xiaojihua.javabasic.disignPattern.command;
+package com.xiaojihua.gof23.p15command.command;
 
 public class C04SaveFileOperation implements C01TextFileOperation {
     private C02TextFiles textFiles;

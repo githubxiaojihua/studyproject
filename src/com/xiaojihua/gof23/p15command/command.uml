@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="15.5" y="0.0">com.xiaojihua.gof23.p15command.C02Command</node>
+    <node x="0.0" y="157.0">com.xiaojihua.gof23.p15command.C01Receiver</node>
+    <node x="158.0" y="233.0">com.xiaojihua.gof23.p15command.C04Client</node>
+    <node x="0.0" y="233.0">com.xiaojihua.gof23.p15command.C03Invoker</node>
+    <node x="0.0" y="81.0">com.xiaojihua.gof23.p15command.ConcreteCommand</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.xiaojihua.gof23.p15command.ConcreteCommand" target="com.xiaojihua.gof23.p15command.C02Command">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
