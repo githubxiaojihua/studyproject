@@ -1,0 +1,6 @@
+模版模式的使用，也叫方法回调或者钩子函数
+
+使用时机：
+当实现一个算法的时候整体步骤很固定，但是某些部分易变，易变的部分可以抽象出来，供子类实现
+
+比如：junit,servlet中的doGet/doPost方法，hibernate中的模版程序，spring jdbcteplement等
