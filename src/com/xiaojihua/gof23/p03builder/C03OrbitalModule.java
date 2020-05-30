@@ -2,6 +2,7 @@ package com.xiaojihua.gof23.p03builder;
 
 /**
  * 子组件
+ * 轨道舱模块
  */
 public class C03OrbitalModule {
     private String name;

@@ -2,6 +2,7 @@ package com.xiaojihua.gof23.p03builder;
 
 /**
  * 子组件
+ * 逃生舱模块
  */
 public class C04EscapeTower {
     private String name;

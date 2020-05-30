@@ -2,6 +2,7 @@ package com.xiaojihua.gof23.p03builder;
 
 /**
  * 复杂对象，用于构建
+ * 宇宙飞船
  */
 public class C01AirShip {
     private C02Engine engine;

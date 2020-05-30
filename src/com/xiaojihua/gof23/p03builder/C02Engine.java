@@ -2,6 +2,7 @@ package com.xiaojihua.gof23.p03builder;
 
 /**
  * 子组件
+ * 引擎
  */
 public class C02Engine {
     private String name;
