@@ -73,6 +73,8 @@ class Entrence implements Runnable{
         while(!cancel){
             //增加Entrence内部的number的值
             //其实这里加不加synchronized无关紧要，因为访问当前实例number的只有一个线程
+            //number作为类的成员变量存储在堆栈中，而堆栈是所有线程共享的，因此number实际上
+            //是非线程安全的，但是本例中每个Entrence都只有一个线程访问因此可以不加synchronized
             synchronized (this){
                 ++number;
             }
