@@ -31,7 +31,7 @@ public class C04BufferedInputFile {
     }
 
     public static void main(String[] args) throws IOException{
-        System.out.println(System.getProperties());
+        System.out.println(System.getProperties().getProperty("file.encoding"));
         System.out.println(read("I:\\222.txt"));
     }
 }
