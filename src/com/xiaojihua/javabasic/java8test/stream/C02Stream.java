@@ -1,7 +1,10 @@
-package com.xiaojihua.javabasic.java8test;
+package com.xiaojihua.javabasic.java8test.stream;
+
+import junit.framework.TestCase;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static com.xiaojihua.javabasic.util.Print.*;
 
@@ -90,6 +93,8 @@ public class C02Stream {
         //并行流
         count = strings.parallelStream().filter(string -> string.isEmpty()).count();
         print("空字符串的数量：" + count);
+
+
 
 
     }
