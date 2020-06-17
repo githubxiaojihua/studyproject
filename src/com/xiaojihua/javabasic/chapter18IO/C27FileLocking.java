@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class C27FileLocking {
     public static void main(String[] args) throws Exception {
-        FileOutputStream outputStream = new FileOutputStream("H:\\data.txt");
+        FileOutputStream outputStream = new FileOutputStream("i:\\data.txt");
         FileLock lock = outputStream.getChannel().tryLock();
         if(lock != null){
            System.out.println("File locked");

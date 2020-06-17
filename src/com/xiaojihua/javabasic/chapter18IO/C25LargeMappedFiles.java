@@ -11,6 +11,9 @@ import java.nio.channels.FileChannel;
  * 通过MappedByteBuffer类进行操作，MappedByteBuffer继承自ByteBuffer
  *
  * 本例通过读写一个大文件（128m）来进行演示
+ *
+ * 使用mappedByteBuffer写入信息的时候，无需跟以前一样使用channal.write(buffer),
+ * 直接调用mappedByteBuffer的put方法就实现了往指定区域写信息的目的。
  */
 public class C25LargeMappedFiles {
     private static final int SIZE = 0x8FFFFFF;//128m

@@ -5,6 +5,7 @@ import static com.xiaojihua.javabasic.util.Print.*;
 
 /**
  * 知识点：
+ * ByteBuffer的使用，没有与channal相结合
  * 使用ByteBuffer设置和读取primitives
  * ByteBuffer的limit方法是返回第一个不可读写的位置。
  *
