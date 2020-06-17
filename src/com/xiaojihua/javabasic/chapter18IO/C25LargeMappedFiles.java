@@ -14,7 +14,7 @@ import java.nio.channels.FileChannel;
  */
 public class C25LargeMappedFiles {
     private static final int SIZE = 0x8FFFFFF;//128m
-    private static final String FILE = "F:\\data.txt";
+    private static final String FILE = "I:\\data.txt";
     public static void main(String[] args) throws IOException {
         /*
             通过RandomAcessFile来进行读写操作，然后通过map来进行映射指定区域
@@ -26,7 +26,7 @@ public class C25LargeMappedFiles {
             mapBuffer.put((byte) 'X');
         }
         System.out.println("Finished write");
-        //从文件进行读取
+        //从文件进行读取，从中间开始读6个字节并转成字符
         for(int i=SIZE/2; i<SIZE/2+6; i++){
             System.out.println((char)mapBuffer.get(i));
         }

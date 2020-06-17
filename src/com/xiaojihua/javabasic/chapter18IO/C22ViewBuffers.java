@@ -23,7 +23,7 @@ public class C22ViewBuffers {
         }
         print();
 
-        //转成Short，直接将两个byte做为一个short，因此有4个位置
+        //转成Short，直接将两个byte做为一个short，因此有4个位置，short为数值类型，因此打印的是数字
         ShortBuffer shortBuffer = ((ByteBuffer)buffer.rewind()).asShortBuffer();
         print("ShortBuffer:");
         while(shortBuffer.hasRemaining()){
@@ -32,7 +32,7 @@ public class C22ViewBuffers {
         print();
 
         //rewind返回的是Buffer类
-        //转成char，也是发直接将两个byte做为一个char，因此有4个位置
+        //转成char，也是发直接将两个byte做为一个char，因此有4个位置，char是字符类型，因此打印的是字符
         CharBuffer charBuffer = ((ByteBuffer)buffer.rewind()).asCharBuffer();
         print("CharBuffer:");
         while(charBuffer.hasRemaining()){

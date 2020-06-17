@@ -40,7 +40,7 @@ public class C24UsingBuffer {
         System.out.println(charBuffer.rewind());
         System.out.println(charBuffer.limit());
         System.out.println(charBuffer.position());
-        System.out.println(charBuffer.get(12));
+        //System.out.println(charBuffer.get(12));
 
         scramble(charBuffer);
         System.out.println(charBuffer.rewind());
