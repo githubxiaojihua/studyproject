@@ -40,6 +40,7 @@ public class C36SerialCtl implements Serializable {
      */
     private void writeObject(ObjectOutputStream outputStream) throws IOException {
         //调用默认的序列化方法，忽略transient字段
+        //将向stream中写入非static和非transient字段
         outputStream.defaultWriteObject();
         //自定义序列化 transient字段
         outputStream.writeObject(b);
@@ -52,6 +53,8 @@ public class C36SerialCtl implements Serializable {
      * @throws ClassNotFoundException
      */
     private void readObject(ObjectInputStream inputStream) throws IOException,ClassNotFoundException{
+        //注意这里要注意下面这两句的调用顺序，如果将第一句注掉，那么将导致，aa字段为null
+        //b的值反而成了aa的值了，因为只读了第一个写出的对象。
         //调用默认的反序列化方法
         inputStream.defaultReadObject();
         //读入序列化的transient字段

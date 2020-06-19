@@ -43,9 +43,14 @@ public class C30ZipCompress {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             //添加待压缩文件，准备开始压缩文件，并将stream定位到相应entry的开始位置
             zipOut.putNextEntry(new ZipEntry(file));
-            int i;
-            while((i = reader.read()) != -1){
-                buffedOut.write(i);
+            //避免乱码。reader.readLine使用系统默认的编码方式从字节转成字符，因为在new reader的时候
+            //使用的是FileReader默认使用的就是系统编码方式。
+            //然后使用s.getBytes将字符转成字节写出，达到了编码和解码的统一。
+            //这里原来用的是reader.read()返回的是int类型，然后buffedOut.write进行写入，这样会造成
+            //乱码。
+            String s;
+            while((s = reader.readLine()) != null){
+                buffedOut.write(s.getBytes());
             }
             reader.close();//别忘记
             buffedOut.flush();//buffered一般都要flush.
@@ -82,6 +87,7 @@ public class C30ZipCompress {
                 一个字节来存储一个char
              */
             while((i = reader.read()) != -1){
+                //输出是数字
                 printnb(i);
             }
             print();

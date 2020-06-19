@@ -13,7 +13,8 @@ import java.io.*;
  * 的构造函数不是public的。
  * 使用Externalizable接口进行可控制的序列化，在进行反序列化的时候会进行
  * 对象的初始化，包括字段的初始化，然后再调用默认构造函数（如果没有默认构造
- * 函数就会报错）。
+ * 函数就会报错）。单纯使用Serializable接口反序列化的时候是不会调用默认构造
+ * 函数的。
  */
 public class C33Blips {
     public static void main(String[] args) throws Exception{

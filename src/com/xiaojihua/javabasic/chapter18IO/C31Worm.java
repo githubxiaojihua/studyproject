@@ -3,7 +3,12 @@ package com.xiaojihua.javabasic.chapter18IO;
 import java.io.*;
 import java.util.Random;
 
+/**
+ * 对象的序列化和反序列化，内部引用对象也要进行序列化
+ * 否则会报错NotSerializableException
+ */
 public class C31Worm implements Serializable {
+    private static final long serialVersionUID=21L;
     private static Random random = new Random(47);
     private char c;
     private Data[] data;
@@ -73,6 +78,7 @@ public class C31Worm implements Serializable {
 }
 
 class Data implements Serializable{
+    private static final long serialVersionUID=21L;
     private int i;
     public Data(int i){
         this.i = i;
