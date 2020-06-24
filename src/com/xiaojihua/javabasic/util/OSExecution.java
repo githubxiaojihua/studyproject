@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 /**
  * 知识点：
- * 从java内部执行操作系统程序。比如本例执行javap
+ * 从java内部执行操作系统程序（命令）。比如本例执行javap
  */
 public class OSExecution {
     public static void command(String command){

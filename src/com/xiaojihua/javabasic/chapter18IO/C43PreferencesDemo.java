@@ -5,7 +5,7 @@ import java.util.prefs.Preferences;
 /**
  * 知识点：
  * Preferences的使用。
- * Preferences用于自动保存行提取用户的偏好设置与程序的配置信息。其存储的位置取决
+ * Preferences用于自动保存和提取用户的偏好设置与程序的配置信息。其存储的位置取决
  * 于OS，例如在windows中是存储在注册表中（HKEY_CURRENT_USER-SOFTWARE-JavaSoft-Prefs-com....）。
  * 存储的结构是节点树的结构。
  * Preferences只能用于存储基本数据类型与String（不超过8k)

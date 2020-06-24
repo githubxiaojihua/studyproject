@@ -1,0 +1,5 @@
+以上使用的socket都是用的TCP协议，一种可靠的传输协议。也可以使用UDP协议，以后再完善。
+
+使用selector来对各个客户端进行非阻塞的监控。在JKD1.4以后，可以创建一个通道(channal)，然后向通道注册一个selector，这样selector
+就会对这个通道进行非阻塞监控。使用selector将多个channal（即套接字）进行复用。
+selector.select()方法在channals的相关事件发生前防人之前阻塞，另外还有一个非阻塞的版本可以用。
