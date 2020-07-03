@@ -51,7 +51,7 @@ public class C21BinaryHeap<AnyType extends Comparable<? super AnyType>> {
         if( currentSize == array.length - 1 )
             enLargeArray( array.length * 2 + 1 );
 
-        // Percolate up
+        // Percolate up 上滤
         int hole = ++currentSize;
         for( array[ 0 ] = x; x.compareTo( array[ hole / 2 ] ) < 0; hole /= 2 )
             array[ hole ] = array[ hole / 2 ];
