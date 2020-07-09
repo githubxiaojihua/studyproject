@@ -266,7 +266,7 @@ public class C16WordLadder {
         Map<String,String> previousWord = new HashMap<>();
         q.offer(first);
         while(!q.isEmpty()){
-            String current = q.remove();
+            String current = q.remove();//返回队头，不存在的话抛出NoSuchElementException，因此不用处理NPE
             //使用Optional避免NPE
             Optional<List<String>> opt = Optional.ofNullable(adjacentWords.get(current));
             opt.ifPresent(list -> {
