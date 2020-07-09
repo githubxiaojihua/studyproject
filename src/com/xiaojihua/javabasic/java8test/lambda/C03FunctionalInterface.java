@@ -9,7 +9,7 @@ import static com.xiaojihua.javabasic.util.Print.*;
  * 知识点：
  * 1、函数型接口，就是一个有且仅有一个抽象方法，但是可以有多个非抽象方法的接口
  * 2、Predicate <T> 接口是一个函数式接口，它接受一个输入参数 T，返回一个布尔值结果，
- * 该接口用于测试对象是 true 或 false。
+ * 该接口用于测试对象是 true 或 false。而可以使用lamda表达式来作为它的一个实现。
  */
 public class C03FunctionalInterface {
     public static void main(String[] args){

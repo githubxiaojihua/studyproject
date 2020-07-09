@@ -76,6 +76,7 @@ public class OptionalTest {
     }
 
     /**
+     * *************重要******************
      * 当从方法的返回值获取到Optional对象的时候我们可以对其中的值进行判断
      * 是否存在
      * ifPresent接收一个函数接口，如果Optional中存在相关对象则执行函数接口的实现
@@ -112,6 +113,7 @@ public class OptionalTest {
     }
 
     /**
+     * *************重要******************
      * orElseGet提供了一个生成器，参数是一个Supplier函数接口
      * 可以用于产生默认值，这与orElse有本质区别
      */
@@ -125,6 +127,7 @@ public class OptionalTest {
 
 
     /**
+     * *************重要******************
      * 测试orElse和orElseGet两个方法的区别和用法
      */
     @Test
@@ -275,7 +278,7 @@ public class OptionalTest {
         Optional<String> optPass = Optional.ofNullable(password);
         boolean correctPass = optPass.filter(p->p.equals("password")).isPresent();
         TestCase.assertFalse(correctPass);
-
+        //map接收一个函数接口，使用方法引用来实现
         correctPass = optPass.map(String::trim).filter(p->p.equals("password")).isPresent();
         TestCase.assertTrue(correctPass);
     }

@@ -1,5 +1,6 @@
 package com.xiaojihua.datastructure;
 
+import javax.swing.text.html.Option;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -7,8 +8,10 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * map的使用
+ * 1、各类map的使用
  * 要求：找出可以通过单个字母替换可以变为至少15个其他单词的单词
+ * 2、图论算法的使用（广度优先的无权最短路径算法实现）
+ * 要求：基于上一步生成的map来实现单字母替换链路，即从一个单词每次只替换一个字母变成另一个单词。
  */
 public class C16WordLadder {
 
@@ -19,14 +22,14 @@ public class C16WordLadder {
         Map<String,List<String>> adjMap = null;
         long start, end;
         try {
-            bufferedReader = new BufferedReader(new FileReader("G:\\test\\text.txt"));
+            bufferedReader = new BufferedReader(new FileReader("G:\\test\\text1.txt"));
             wordList = readWord(bufferedReader);
 
             start = System.currentTimeMillis();
             adjMap = computeAdjacentWordsSlow(wordList);// 普通遍历
             end = System.currentTimeMillis();
             System.out.println("普通遍历耗费时间：" + (end - start));
-            printHighChangeables(adjMap,2);
+            printHighChangeables(adjMap,1);
 
             start = System.currentTimeMillis();
             adjMap = computeAdjacentWordsMedium(wordList);// 避免了不同长度之间的比较
@@ -39,6 +42,12 @@ public class C16WordLadder {
             end = System.currentTimeMillis();
             System.out.println("两次分组后的时间：" + (end - start));
             printHighChangeables(adjMap,2);
+
+            System.out.println("======图论算法广度优先遍历==============================");
+            findChain(adjMap, "zero", "five").ifPresent(list ->{
+                System.out.println(list);
+            });
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -238,7 +247,58 @@ public class C16WordLadder {
         return wordList;
     }
 
+    //=================图论的相关算法=========================================================
 
+    /**
+     * 基于广度优先遍历的无权最短路径算法实现，同时运用了Optional的一些特性来处理NPE
+     * 1、定义一个List<String>作为返回值。
+     * 2、定义一个队列来进行广度优先遍历
+     * 3、定义一个map来存放广度优先遍历的计算结果，即路径记录 p(w)
+     * 4、根据frist进行广度优先算法计算
+     * 5、根据adjacentWords和second进行结果输出。
+     * @param adjacentWords
+     * @param first
+     * @param second
+     * @return 返回一个Optional来让调用者处理NPE
+     */
+    public static Optional<List<String>> findChain(Map<String,List<String>> adjacentWords,String first,String second){
+        Queue<String> q = new LinkedList<>();
+        Map<String,String> previousWord = new HashMap<>();
+        q.offer(first);
+        while(!q.isEmpty()){
+            String current = q.remove();
+            //使用Optional避免NPE
+            Optional<List<String>> opt = Optional.ofNullable(adjacentWords.get(current));
+            opt.ifPresent(list -> {
+                for(String adj : list){
+                    if(previousWord.get(adj) == null){
+                        previousWord.put(adj,current);
+                        q.offer(adj);
+                    }
+                }
+            });
+
+        }
+        previousWord.put(first,null);
+        return getChainFromPreviousMap(previousWord, second);
+    }
+
+    /**
+     * 返回具体的路径
+     * @param previousWord
+     * @param second
+     * @return 返回一个Optional来让调用者处理NPE
+     */
+    private static Optional<List<String>> getChainFromPreviousMap(Map<String,String> previousWord,String second){
+        LinkedList<String> result = new LinkedList<>();
+        Optional<Map<String, String>> optMap = Optional.ofNullable(previousWord);
+        optMap.ifPresent(map -> {
+            for(String str = second; str != null; str = map.get(str)){
+                result.addLast(str);
+            }
+        });
+        return Optional.ofNullable(result);
+    }
 
 
 }
