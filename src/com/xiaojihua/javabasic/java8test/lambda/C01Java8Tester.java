@@ -5,6 +5,9 @@ import static com.xiaojihua.javabasic.util.Print.*;
 /**
  * 知识点：
  * 1、lambda表达式允许将函数作为方法参数进行传递。
+ * 上面这一句的意思是：像第70行这样的调用 jT.operate(6,4,(a,b)->a+b));
+ * 其中第三个参数为lambda表达式，实际上就是一个函数接口的实现，作为一个参数进行传递。
+ *
  * 他的一般形势有：
  * (parameters) -> expression或者
  * (parameters) ->{ statements; }
