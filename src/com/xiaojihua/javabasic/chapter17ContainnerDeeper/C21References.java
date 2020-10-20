@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 /**
  * 知识点：
- * 对于java.lang.ref有一篇非常好的文章：
+ * 对于java.lang.ref有一篇非常好的文章：(先看这篇文章，再看下面)
  * https://objectcomputing.com/resources/publications/sett/june-2000-collaborating-with-the-java-memory-manager
  * 里面介绍了很详细包括什么是规范式映射（标准的一对一的映射关系）
  * think in java 中 canonicalized mappings（规范映射）：In such a mapping,
