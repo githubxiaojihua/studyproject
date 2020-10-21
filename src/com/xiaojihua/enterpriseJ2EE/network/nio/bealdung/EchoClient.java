@@ -6,7 +6,8 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 
 /**
- * 客户端，未使用selector相关nio知识。
+ * 客户端，未使用selector相关nio selector知识。
+ * 只使用了SocketChannel
  *
  */
 public class EchoClient {

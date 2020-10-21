@@ -20,28 +20,34 @@ public class EchoServer {
     public static void main(String[] args) throws IOException {
         //1.构建Selector
         Selector selector = Selector.open();
-        //2.构建ServerSocketChannel
+        //2.构建ServerSocketChannel，不再从sockect获取阻塞IO流，而是获到一个channel
+        //这里可以将socket与channel看作一个对象
+        //ServerSocketChannel只是一个listening sockets主要是用来处理ACCEPT操作
         ServerSocketChannel serverSocket = ServerSocketChannel.open();
-        //3.绑定端口
+        //3.向serverSocket绑定端口
         serverSocket.bind(new InetSocketAddress("localhost", 5454));
         //4.设置为非阻塞模式
         serverSocket.configureBlocking(false);
         //5.注册channel，并对accept事件感兴趣。
         serverSocket.register(selector, SelectionKey.OP_ACCEPT);
-        //6.通过ByteBuffer来对channel进行读写。
+        //6.通过ByteBuffer来对channel进行读写。这是NIO的新特性
         ByteBuffer buffer = ByteBuffer.allocate(256);
-        //7.开始监控
+        //7.开始监控，通过一个无限循环来模拟服务器的不间断监控，也就是不断的调用select()
+        //来对channels进行监控，监控到了就进行处理，处理完了再监控
         while (true) {
             //8.在有任何channel事件触发前阻塞。（注意阻塞是当前线程停止，并让出CPU）
+            //执行select操作来监控ready channels(有相关事件触发的channel)
             selector.select();
-            //9.获得监听到的SelectionKey(具体内容看总结中的SelectionKey组成部分)
+            //9.获得监听到的有相关事件触发的channels的SelectionKey集合(具体内容看总结中的SelectionKey组成部分)
             Set<SelectionKey> selectedKeys = selector.selectedKeys();
             //10.遍历selectedKeys
             Iterator<SelectionKey> iter = selectedKeys.iterator();
             while (iter.hasNext()) {
                 //11.获得SelectionKey对象，并判断是哪一类事件。
                 SelectionKey key = iter.next();
-                //12.accept事件，创建socketchannel，并注册read事件到selector
+                //12.accept事件触发，说明服务器接收了客户端的连接（真下的连接需要使用serverSocket.accept()建立），
+                //则创建一个socketchannel（一个connecting sockets，可以进行read和write），
+                // 并注册read事件到selector
                 if (key.isAcceptable()) {
                     register(selector, serverSocket);
                 }
@@ -65,7 +71,9 @@ public class EchoServer {
     private static void answerWithEcho(ByteBuffer buffer, SelectionKey key)
             throws IOException {
 
+        //通过SelectionKey来获取channel
         SocketChannel client = (SocketChannel) key.channel();
+        //读取数据
         client.read(buffer);
         //判断收到的是还是终止命令，如是则关闭channel.
         if (new String(buffer.array()).trim().equals(POISON_PILL)) {
@@ -73,6 +81,7 @@ public class EchoServer {
             System.out.println("Not accepting client messages anymore");
         }
         //将收到的信息写出到channel。客户端
+        //在将数据写入buffer后，并且在读之前需要调用flip具体含义看mybase相关IO笔记中的重点
         buffer.flip();
         client.write(buffer);
         buffer.clear();
@@ -88,7 +97,7 @@ public class EchoServer {
      */
     private static void register(Selector selector, ServerSocketChannel serverSocket)
             throws IOException {
-        //接收来自客户端的连接，并创建服务端socketChannel
+        //接收来自客户端的连接，并获取服务端socketChannel
         SocketChannel client = serverSocket.accept();
         //向selector中注册channel，感兴趣的事件为read
         client.configureBlocking(false);

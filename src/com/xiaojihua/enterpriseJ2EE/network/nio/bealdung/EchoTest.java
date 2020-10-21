@@ -15,7 +15,8 @@ public class EchoTest {
 
     @Before
     public void setup() throws IOException, InterruptedException {
- //       server = EchoServer.start();
+        //这里没有使用server的start方法，而是直接运行其main
+        //server = EchoServer.start();
         client = EchoClient.start();
     }
 
