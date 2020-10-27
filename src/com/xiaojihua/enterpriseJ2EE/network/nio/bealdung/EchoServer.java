@@ -37,6 +37,8 @@ public class EchoServer {
         while (true) {
             //8.在有任何channel事件触发前阻塞。（注意阻塞是当前线程停止，并让出CPU）
             //执行select操作来监控ready channels(有相关事件触发的channel)
+            //此方法还有一个重载的方法：select(long timeout)用于设置阻塞等待时间
+            //timeout为正值则等待指定时间或直到有事件触发，为0则一直等待或有事件触发，不能为负值
             selector.select();
             //9.获得监听到的有相关事件触发的channels的SelectionKey集合(具体内容看总结中的SelectionKey组成部分)
             Set<SelectionKey> selectedKeys = selector.selectedKeys();
