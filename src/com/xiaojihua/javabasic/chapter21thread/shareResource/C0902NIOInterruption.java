@@ -13,7 +13,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 通过使用NIO可以使用中断sleepblock阻塞一样的方式中断IO堵塞
+ * NIO提供了响应中断的方式:
+ * Future<?> f.cancle() 或 中断底层资源
  */
 class NIOBlocked implements Runnable{
     private final SocketChannel sc;

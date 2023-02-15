@@ -13,6 +13,8 @@ import java.util.concurrent.Executors;
  * 方法上使用synchronized，不必使用volatile
  * 3、可以使用原子类对方法进行改进从而去掉synchronized。比如打开注销掉的那几行。
  * 4、当任务本身交给多个线程的时候也会发生线程安全问题
+ *
+ * 原子操作是不能被线程调用机制中断的操作，一旦操作开始那么它一定可以在可能发生上下文切换之前执行完毕。
  */
 public class C05AtomicityTest implements Runnable {
     private int i = 0;

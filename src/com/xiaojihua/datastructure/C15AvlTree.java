@@ -69,7 +69,6 @@ public class C15AvlTree<AnyType extends Comparable<? super AnyType>> {
         return Math.max(heightForEpilogue(t.left),heightForEpilogue(t.right)) + 1;
     }
 
-
     /**
      * 内部方法：检查节点的平衡性
      * @param t
@@ -95,6 +94,7 @@ public class C15AvlTree<AnyType extends Comparable<? super AnyType>> {
         // 基本情况
         return height( t );
     }
+
     /**
      * 内部方法：删除元素
      * * 删除逻辑分析：
@@ -259,6 +259,7 @@ public class C15AvlTree<AnyType extends Comparable<? super AnyType>> {
         }
 
     }
+
     /**
      * 内部方法：插入元素
      * @param x

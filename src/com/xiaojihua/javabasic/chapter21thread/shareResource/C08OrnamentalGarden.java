@@ -54,6 +54,7 @@ class Entrence implements Runnable{
     //并且此赋值操作是原子性的，而且要求任何线程更改完此值后，其他线程
     //即刻可以看到，因此没有将其作为synchronized方式来访问，
     //volatile使其具有可视性
+    //当有多个程序使用共享资源时，尤其在有写操作时应该将资源设置成volatile.
     private static volatile boolean cancel = false;
 
     public static void cancel(){
@@ -128,7 +129,8 @@ public class C08OrnamentalGarden {
         //shutdown，注意他与shutdownNow的区别
         service.shutdown();
         //等待每个任务结束，如果所有任务在超时之前全部结束那么返回true，否则返回false
-        if(service.awaitTermination(250,TimeUnit.MILLISECONDS)){
+        //通过改变timeout的值小于100则会出现未结束的进程，因为有的线程下在sleep
+        if(!service.awaitTermination(250,TimeUnit.MILLISECONDS)){
             System.out.println("Some tasks were not terminated!");
         }
         System.out.println("Total:" + Entrence.getTotalCount());
