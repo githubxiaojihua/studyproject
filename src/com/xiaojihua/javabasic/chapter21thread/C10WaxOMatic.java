@@ -36,8 +36,8 @@ class Car1{
     private boolean waxOn = false;//是否已经上蜡
 
     /**
-     * 上蜡，并唤醒所有wait进程
-     * waxOn = true
+     * 设置car的上蜡状态，并唤醒所有wait进程
+     * waxOn = true，上蜡完成。
      */
     synchronized public void waxed(){
         waxOn = true;
@@ -45,8 +45,8 @@ class Car1{
     }
 
     /**
-     * 抛光，并唤醒所有wait进程
-     * waxOn = false
+     * 设置car有抛光状态，并唤醒所有wait进程
+     * waxOn = false 抛光完成。
      */
     synchronized public void buffed(){
         waxOn = false;
@@ -54,7 +54,7 @@ class Car1{
     }
 
     /**
-     * 检查是否上拉完成，再进行抛光，必须等到上蜡完成即waxOn = true
+     * 抛光后等待上蜡，上蜡完成（waxOn=true）前进行等待。必须等到上蜡完成即waxOn = true
      * @throws InterruptedException
      */
     synchronized public void waitForWaxint() throws InterruptedException {
@@ -71,7 +71,7 @@ class Car1{
     }
 
     /**
-     * 上蜡后等待抛光。涂另一层蜡，必须等待抛光完成即waxOn = false
+     * 上蜡后等待抛光，抛光完成（waxOn=false）前进行等待。必须等待抛光完成即waxOn = false
      * @throws InterruptedException
      */
     synchronized public void waitForBuffing() throws InterruptedException {
@@ -101,19 +101,17 @@ class WaxOn implements Runnable{
     public void run(){
        try{
            while(!Thread.interrupted()) {
-               System.out.println("wax on");
+               System.out.println("wax on，开始上蜡！");
                TimeUnit.MILLISECONDS.sleep(200);
-               //上蜡,waxOn = true，唤醒所有
+               //上蜡完成，设置car的上蜡状态,waxOn = true，唤醒所有等待的抛光任务
                car.waxed();
-               //如果waxOn = true挂起当前线程，等待notifyAll
+               //等待抛光任务设置上蜡状态为waxOn=false。 如果waxOn = true即仍是上蜡状态则挂起当前线程，等待notifyAll
                car.waitForBuffing();
            }
-
        }catch(InterruptedException e){
            System.out.println("Exiting via Interrupted");
        }
-
-       //try catch之外无论是否有异常抛出都执行。但如果打开下面这一句那么是不能执行的，编译也通过不了
+        //try catch之外无论是否有异常抛出都执行。但如果打开下面这一句那么是不能执行的，编译也通过不了
         //throw new RuntimeException();
         System.out.println("Ending Wax on task");
     }
@@ -130,11 +128,11 @@ class WaxOff implements Runnable{
     public void run(){
         try{
             while(!Thread.interrupted()){
-                //如果waxOn = false挂起当前线程，等待notityAll
+                //如果未上蜡完成即waxOn = false挂起当前线程，等待notityAll
                 car.waitForWaxint();
-                System.out.println("wax off");
+                System.out.println("wax off，上蜡完成，开始抛光！");
                 TimeUnit.MILLISECONDS.sleep(200);
-                //抛光，waxOn = false，唤醒所有
+                //抛光完成，设置上蜡状态waxOn = false，唤醒所有上蜡任务。
                 car.buffed();
             }
         }catch (InterruptedException e){
@@ -155,8 +153,9 @@ public class C10WaxOMatic {
          * 挂起等待抛光，并唤醒被挂起的抛光，
          * 抛光完成后，waxOn = false，并唤醒挂起的上蜡任务，然后再下一个while，挂起自己
          */
-        service.execute(new WaxOff(car));
         service.execute(new WaxOn(car));
+        service.execute(new WaxOff(car));
+
         TimeUnit.SECONDS.sleep(5);
         //调用shutdownNow会向所有线程发送Interrupt()
         //当分别去掉上蜡任务和抛光任务的sleep后也能实现中断

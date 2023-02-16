@@ -109,7 +109,7 @@ public class C0904InterruptingIdiom {
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread(new Block3());
         thread.start();
-        TimeUnit.MILLISECONDS.sleep(1001);
+        TimeUnit.MILLISECONDS.sleep(500);
         thread.interrupt();
     }
 }

@@ -20,6 +20,8 @@ class BlockedMutex{
     }
     public void f(){
         try {
+            //可中断锁的实现，如改成lock.lock()则不允许中断
+            //当线程因为调用此句而阻塞时，是允许进行中断的。
             lock.lockInterruptibly();//获取锁除非当前线程中断
             System.out.println("lock acquired in f()");
         } catch (InterruptedException e) {
